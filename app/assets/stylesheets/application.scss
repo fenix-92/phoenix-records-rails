@@ -11,3 +11,42 @@ body {
   border-bottom: 1px solid rgba(0,0,0,.0975);
   height: 77px;
 }
+
+
+// LOGIN Pages
+
+.box {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  padding: 10px 0;
+  text-align: center;
+  float: none;
+  margin: 0 auto;
+}
+
+
+.form-login {
+  width: 350px;
+
+
+  form {
+    padding: 0 40px;
+    .btn-primary {
+      width: 100%;
+      line-height: 14px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input {
+      border: 1px solid #efefef;
+    }
+
+    .form-check-label {
+      padding: 0;
+      font-size: 15px;
+      color: #262626;
+    }
+  }
+}
