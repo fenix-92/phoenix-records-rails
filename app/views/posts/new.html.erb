@@ -1,0 +1,9 @@
+<p> New record </p>
+
+<%= form_for :posts do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br><br>
+  <%= f.label :artist %><br>
+  <%= collection_select(:post, :artist_id, Artist.all, :id, :name_with_initial, prompt: true) %>
+  <%= f.submit %>
+<% end %>
