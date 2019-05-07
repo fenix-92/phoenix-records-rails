@@ -3,6 +3,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
     create_table :posts do |t|
       t.references :artist, foreign_key: true
       t.string :title
+      t.string :discogsid
+      t.integer :year
 
       t.timestamps
     end

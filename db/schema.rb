@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2019_04_30_201054) do
 
   create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.string "discogsid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -21,6 +22,8 @@ ActiveRecord::Schema.define(version: 2019_04_30_201054) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "artist_id"
     t.string "title"
+    t.string "discogsid"
+    t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_posts_on_artist_id"
