@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
 
+  get 'admin', to: 'admin#index'
+
   resources :posts, :artists
 
   devise_for :users
