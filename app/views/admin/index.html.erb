@@ -9,10 +9,26 @@
     		<header class="card-header"><h6 class="title">Database</h6></header>
     		<div class="filter-content">
     			<div class="list-group list-group-flush">
-    			  <a href="#" class="list-group-item">Artists<span class="float-right badge badge-light round">1</span> </a>
-    			  <a href="#" class="list-group-item">Posts<span class="float-right badge badge-light round">3</span>  </a>
-    			  <a href="#" class="list-group-item">Labels<span class="float-right badge badge-light round">32</span>  </a>
-    			  <a href="#" class="list-group-item">Formats<span class="float-right badge badge-light round">12</span>  </a>
+    			  <a href="#" class="list-group-item">Artists
+							<span class="float-right badge badge-light round">
+								<%= Artist.distinct.count('name') %>
+							</span>
+						</a>
+    			  <a href="#" class="list-group-item">Posts
+							<span class="float-right badge badge-light round">
+								<%= Post.distinct.count('title') %>
+							</span>
+						</a>
+    			  <a href="#" class="list-group-item">Labels
+							<span class="float-right badge badge-light round">
+								<%= Label.distinct.count('name') %>
+							</span>
+						</a>
+    			  <a href="#" class="list-group-item">Formats
+							<span class="float-right badge badge-light round">
+								<%= Format.distinct.count('name') %>
+							</span>
+						</a>
     			</div>  <!-- list-group .// -->
     		</div>
     	</article> <!-- card-group-item.// -->
