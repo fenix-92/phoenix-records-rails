@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PhoenixRecords</title>
+    <title>Phoenix Records</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,9 +12,9 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/message' %>
-    <!-- <p class="notice"><%= notice %></p> -->
+     <p class="notice"><%= notice %></p>
     <!-- <p class="alert"><%= alert %></p> -->
-    
+
 
     <%= yield %>
   </body>
