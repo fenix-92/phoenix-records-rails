@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_150016) do
+ActiveRecord::Schema.define(version: 2019_07_30_195859) do
 
   create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "discogsid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "img"
+    t.string "image"
   end
 
   create_table "formats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
