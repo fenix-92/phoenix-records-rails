@@ -1,12 +1,3 @@
 <h1>Artists index</h1>
 
-<table border="1">
-  <tbody>
-    <% @artists.each do |artist| %>
-      <tr>
-        <td> <%= artist.name %> </td>
-        <td> <%= artist.discogsid %> </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render @artists %>

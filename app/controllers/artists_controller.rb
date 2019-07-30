@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
 
   def index
-    @artists = Artist.all
+    @artists = Artist.order('created_at DESC')
   end
 
   def new
@@ -18,5 +18,4 @@ class ArtistsController < ApplicationController
   def artist_params
     params.require(:artist).permit(:name, :discogsid)
   end
-
 end
