@@ -20,7 +20,7 @@ class ArtistsController < ApplicationController
     @artist = Artist.new artist_params
     # @artist.avatar.attach(params[:avatar])
     if @artist.save
-      redirect_to artist_path
+      redirect_to artists_path
     else
       render 'new'
     end

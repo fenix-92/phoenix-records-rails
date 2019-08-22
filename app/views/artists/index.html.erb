@@ -14,7 +14,7 @@
       <td><%= artist.discogsid %></td>
       <td>
         <% if artist.avatar.attached? %>
-         <%= image_tag url_for(artist.avatar) %>
+         <%= image_tag url_for(artist.avatar), class: "rounded-circle" %>
         <% end %>
       </td>
       <td>
