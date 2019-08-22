@@ -9,11 +9,21 @@ class ArtistsController < ApplicationController
   def new
   end
 
+  def destroy
+    @artist = Artist.find(params[:id])
+    @artist.destroy
+
+    redirect_to artists_path
+  end
   def create
     # render plain: params[:artist].inspect
     @artist = Artist.new artist_params
     # @artist.avatar.attach(params[:avatar])
-    @artist.save
+    if @artist.save
+      redirect_to artist_path
+    else
+      render 'new'
+    end
   end
 
   def artist_params
