@@ -1,26 +1,10 @@
 <h1>Artists index</h1>
-  <% @artists.each_slice(4) do |artist| %>
+  <% @artists.each_slice(5) do |artist| %>
     <div class="row">
       <% artist.each do |art| %>
-        <!-- Card -->
-        <div class="card col-lg-3 col-md-6 mb-3 card-cascade">
-          <div class="view view-cascade overlay">
-          <!-- Card image -->
-           <%= image_tag(url_for(art.avatar), class: "card-img-top") %>
-           <a>
-             <div class="mask rgba-white-slight waves-effect waves-light"></div>
-           </a>
-         </div>
-         <!-- Card content -->
-         <div class="card-body">
-          <!-- Title -->
-          <h4 class="card-title"><a><%= art.name %></a></h4>
-          <!-- Text -->
-          <p class="card-text"></p>
-          <!-- Button -->
-          <a href="#" class="btn btn-primary">Button</a>
+        <div class="col">
+           <%= image_tag url_for(art.avatar), class: "rounded-circle", size: '250x250' %>
         </div>
-      </div>
       <!-- Card -->
     <% end %>
   </div>
