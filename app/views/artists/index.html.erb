@@ -1,6 +1,6 @@
 <div class="container artists-container">
   <% @artists.each_slice(4) do |artist| %>
-    <div class="row align-items-center">
+    <div class="row justify-content-center">
       <% artist.each do |art| %>
         <%= link_to art do %>
         <div class="col text-center">
