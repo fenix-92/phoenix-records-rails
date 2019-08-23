@@ -1,27 +1,27 @@
 <h1>Artists index</h1>
-
-<table border="1">
-  <tr>
-    <th>Name</th>
-    <th>Discogsid</th>
-    <th>Image</th>
-    <th>Actions</th>
-  </tr>
-
-  <% @artists.each do |artist| %>
-    <tr>
-      <td><%= artist.name %></td>
-      <td><%= artist.discogsid %></td>
-      <td>
-        <% if artist.avatar.attached? %>
-         <%= image_tag(url_for(artist.avatar), height: '128', width: 'auto', class: "rounded-circle") %>
-        <% end %>
-      </td>
-      <td>
-        <%= link_to 'Show', artist_path(artist) %> ·
-        <%= link_to 'Edit', edit_artist_path(artist) %> ·
-        <%= link_to 'Destroy', artist, :method => :delete, :confirm => "Are you sure?" %>
-      </td>
-    </tr>
+  <% @artists.each_slice(4) do |artist| %>
+    <div class="row">
+      <% artist.each do |art| %>
+        <!-- Card -->
+        <div class="card col-lg-3 col-md-6 mb-3 card-cascade">
+          <div class="view view-cascade overlay">
+          <!-- Card image -->
+           <%= image_tag(url_for(art.avatar), class: "card-img-top") %>
+           <a>
+             <div class="mask rgba-white-slight waves-effect waves-light"></div>
+           </a>
+         </div>
+         <!-- Card content -->
+         <div class="card-body">
+          <!-- Title -->
+          <h4 class="card-title"><a><%= art.name %></a></h4>
+          <!-- Text -->
+          <p class="card-text"></p>
+          <!-- Button -->
+          <a href="#" class="btn btn-primary">Button</a>
+        </div>
+      </div>
+      <!-- Card -->
+    <% end %>
+  </div>
   <% end %>
-</table>
