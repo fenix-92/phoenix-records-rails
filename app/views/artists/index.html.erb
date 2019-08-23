@@ -1,11 +1,12 @@
-<h1>Artists index</h1>
+<div class="container artists-container">
   <% @artists.each_slice(5) do |artist| %>
     <div class="row">
       <% artist.each do |art| %>
         <div class="col">
-           <%= image_tag url_for(art.avatar), class: "rounded-circle", size: '250x250' %>
+           <%= image_tag url_for(art.avatar), class: "rounded-circle", size: '230x230' %>
         </div>
       <!-- Card -->
     <% end %>
   </div>
   <% end %>
+</div>
