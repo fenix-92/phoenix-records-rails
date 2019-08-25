@@ -1,14 +1,16 @@
-<h1 class="text-center">New artist</h1>
-<div class="container text-center">
-<div class="col-md-6 text-center">
-<%= form_for :artist, url: artists_path do |f| %>
-  <%= f.label :name %><br>
-  <%= f.text_field :name, :class => "form-control" %><br><br>
-  <%= f.label :discogsid %><br>
-  <%= f.text_field :discogsid, :class => "form-control" %><br><br>
-  <%= f.label :image %><br>
-  <%= f.file_field :avatar %><br>
-  <%= f.submit %><br>
-<% end %>
-</div>
+<div align="center" class="container">
+  <br>
+  <h2>New artist</h2>
+  <br>
+    <div class="col-md-4 text-center">
+    <%= form_for :artist, url: artists_path do |f| %>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :class => "form-control" %><br><br>
+      <%= f.label :discogsid %><br>
+      <%= f.text_field :discogsid, :class => "form-control" %><br><br>
+      <%= f.label :image %><br>
+      <%= f.file_field :avatar %><br><br>
+      <%= f.submit %><br>
+    <% end %>
+    </div>
 </div>
