@@ -12430,3 +12430,57 @@ Checked in these paths:
   
 app/assets/stylesheets/application.css:17
 app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___927902771395841961_47376405908500'
+Started GET "/" for ::1 at 2019-08-25 21:05:56 +0200
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/nacho/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/nacho/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-08-25 21:05:56 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:3
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 536ms (Views: 533.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists" for ::1 at 2019-08-25 21:05:58 +0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `artists`[0m
+  ↳ app/views/artists/index.html.erb:2
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT `artists`.* FROM `artists` ORDER BY created_at DESC[0m
+  ↳ app/views/artists/index.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (17.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Artist' AND `active_storage_attachments`.`name` = 'avatar' AND `active_storage_attachments`.`record_id` IN (8, 7, 6, 5, 4, 3)[0m
+  ↳ app/views/artists/index.html.erb:2
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` IN (3, 4, 5, 6, 7)[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (151.8ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 37.6ms)
+
+
+  
+ActionView::Template::Error (to_model delegated to attachment, but attachment is nil):
+    4:       <% artist.each do |art| %>
+    5:         <%= link_to art do %>
+    6:         <div class="col text-center">
+    7:            <%= image_tag url_for(art.avatar), class: "rounded-circle", size: '230x230' %>
+    8:            <h3 style="color: #3C4858; font-weight: 300;">
+    9:              <%= art.name %>
+   10:            </h3>
+  
+app/views/artists/index.html.erb:7:in `block (3 levels) in _app_views_artists_index_html_erb__955076982858957110_69923074927660'
+app/views/artists/index.html.erb:5:in `block (2 levels) in _app_views_artists_index_html_erb__955076982858957110_69923074927660'
+app/views/artists/index.html.erb:4:in `each'
+app/views/artists/index.html.erb:4:in `block in _app_views_artists_index_html_erb__955076982858957110_69923074927660'
+app/views/artists/index.html.erb:2:in `each_slice'
+app/views/artists/index.html.erb:2:in `_app_views_artists_index_html_erb__955076982858957110_69923074927660'
