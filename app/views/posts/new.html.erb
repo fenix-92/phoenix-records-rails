@@ -1,13 +1,18 @@
-<p> New artist </p>
-
+<div align="center" class="container">
+  <br>
+  <h2>New artist</h2>
+  <br>
+    <div class="col-md-4 text-center">
 <%= form_for :post, url: posts_path do |f| %>
   <%= f.label :title %><br>
-  <%= f.text_field :title %><br><br>
+  <%= f.text_field :title, :class => "form-control" %><br><br>
   <%= f.label :artist %><br>
-  <%= collection_select(:post, :artist_id, Artist.all, :id, :name, {:prompt => true, :multiple=>false })  %><br><br>
+  <%= collection_select(:post, :artist_id, Artist.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
   <%= f.label :discogsid %><br>
-  <%= f.text_field :discogsid %><br><br>
+  <%= f.text_field :discogsid, :class => "form-control" %><br><br>
   <%= f.label :year %><br>
-  <%= f.text_field :year %><br><br>
+  <%= f.text_field :year, :class => "form-control" %><br><br>
   <%= f.submit %>
 <% end %>
+</div>
+</div>
