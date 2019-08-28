@@ -1,17 +1,16 @@
 <div class="container artists-container">
-  <% @artists.each_slice(4) do |artist| %>
-    <div class="row justify-content-center">
-      <% artist.each do |art| %>
-        <%= link_to art do %>
-        <div class="col text-center">
-           <%= image_tag url_for(art.avatar), class: "rounded-circle", size: '230x230' %>
-           <h3 style="color: #3C4858; font-weight: 300;">
-             <%= art.name %>
-           </h3>
-        </div>
-        <% end %>
-      <!-- Card -->
-    <% end %>
-  </div>
-  <% end %>
+  <ul id="Grid">
+      <% @artists.each do |artist| %>
+        <li>
+          <%= link_to artist do %>
+            <div class="text-center">
+              <%= image_tag url_for(artist.avatar), class: "rounded-circle", size: '230x230' %>
+              <h3 style="color: #3C4858; font-weight: 300;">
+                <%= artist.name %>
+              </h3>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+  </ul>
 </div>
