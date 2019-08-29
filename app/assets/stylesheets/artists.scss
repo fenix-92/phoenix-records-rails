@@ -31,12 +31,14 @@ div, ul, li{
   content: '';
   display: inline-block;
   width: 100%;
-  border-top: 10px dashed #922d8d; /* Border added to make element visible for demonstration purposes */
+  /* Border added to make element visible for demonstration purposes */
+  /* border-top: 10px dashed #922d8d;  */
 }
 
 #Grid .placeholder{
   padding: 0;
-  border-top: 10px solid #922d8d; /* Border added to make element visible for demonstration purposes */
+  /* Border added to make element visible for demonstration purposes */
+  /* border-top: 10px solid #922d8d;  */
 }
 
 /* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
