@@ -8,10 +8,8 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-!/tmp/
-!/log/
-!/log/.keep
-!/tmp/.keep
+tmp/
+log/
 
 # Ignore uploaded files in development
 /storage/*
@@ -25,3 +23,4 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+Gemfile.lock
