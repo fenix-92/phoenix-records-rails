@@ -1,1 +1,21 @@
 <h1>Posts index</h1>
+<div class="container posts-container">
+  <ul id="Grid">
+      <% @posts.each do |post| %>
+        <li>
+          <%= link_to post do %>
+            <div class="text-center">
+              <% if post.front.nil? %>
+                <%= image_tag url_for(post.front), class: "img-thumbnail", size: '250x250' %>
+              <% else %>
+                <%= image_tag url_for("default.png"), class: "img-thumbnail", size: '250x250' %>
+              <% end %>
+              <h3 style="color: #3C4858; font-weight: 300;">
+                <%= post.title %>
+              </h3>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+  </ul>
+</div>

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.order('created_at DESC')
+    @posts = Post.order('created_at DESC').with_attached_front
   end
 
   def new

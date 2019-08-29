@@ -18197,3 +18197,417 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 169ms (Views: 165.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 10:42:28 +0200
+  [1m[35m (28.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (11.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (1565.2ms)
+Completed 500 Internal Server Error in 1621ms (ActiveRecord: 16.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `artist' for #<#<Class:0x000055b089f12f90>:0x000055b089f02500>
+Did you mean?  artist_url):
+     5:         <li>
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <%= image_tag url_for(artist.avatar), class: "rounded-circle", size: '230x230' %>
+     9:               <h3 style="color: #3C4858; font-weight: 300;">
+    10:                 <%= artist.name %>
+    11:               </h3>
+  
+app/views/posts/index.html.erb:8:in `block (2 levels) in _app_views_posts_index_html_erb__823679695461144614_47108358432100'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__823679695461144614_47108358432100'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__823679695461144614_47108358432100'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 10:42:51 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (25.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar' for #<Post:0x000055b089f03608>):
+     5:         <li>
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <%= image_tag url_for(post.avatar), class: "rounded-circle", size: '230x230' %>
+     9:               <h3 style="color: #3C4858; font-weight: 300;">
+    10:                 <%= post.name %>
+    11:               </h3>
+  
+app/views/posts/index.html.erb:8:in `block (2 levels) in _app_views_posts_index_html_erb__823679695461144614_47108358320520'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__823679695461144614_47108358320520'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__823679695461144614_47108358320520'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 10:44:33 +0200
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 5, expected 1)):
+  
+app/models/post.rb:2:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:4:in `index'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 10:45:26 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (91.7ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar' for #<Post:0x000055b08a2068f0>):
+     5:         <li>
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <%= image_tag url_for(post.avatar), class: "rounded-circle", size: '230x230' %>
+     9:               <h3 style="color: #3C4858; font-weight: 300;">
+    10:                 <%= post.name %>
+    11:               </h3>
+  
+app/views/posts/index.html.erb:8:in `block (2 levels) in _app_views_posts_index_html_erb__823679695461144614_47108359011420'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__823679695461144614_47108359011420'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__823679695461144614_47108359011420'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 10:45:46 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (43.8ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar' for #<Post:0x000055b089469850>):
+     5:         <li>
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <%= image_tag url_for(post.avatar), class: "rounded-circle", size: '230x230' %>
+     9:               <h3 style="color: #3C4858; font-weight: 300;">
+    10:                 <%= post.name %>
+    11:               </h3>
+  
+app/views/posts/index.html.erb:8:in `block (2 levels) in _app_views_posts_index_html_erb__823679695461144614_47108352057660'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__823679695461144614_47108352057660'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__823679695461144614_47108352057660'
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT GET_LOCK('4265991796894494030', 0)[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('4265991796894494030')[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/bin/rake:23
+Started GET "/artists" for 127.0.0.1 at 2019-08-29 12:47:41 +0200
+  [1m[35m (11.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT `artists`.* FROM `artists` ORDER BY created_at DESC[0m
+  ↳ app/views/artists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (4.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Artist' AND `active_storage_attachments`.`name` = 'avatar' AND `active_storage_attachments`.`record_id` IN (5, 4, 3, 2, 1)[0m
+  ↳ app/views/artists/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` IN (1, 2, 3, 4, 5)[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (317.2ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 4191ms (Views: 4137.6ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bfc100b034b6f89175274d535ad2df6d6297e90b/1966.8_paisaje-al-atardecer.jpg" for 127.0.0.1 at 2019-08-29 12:47:46 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85c498fa4487ae6ca669d40bf7f9f3a71c376108/defleppard.jpg" for 127.0.0.1 at 2019-08-29 12:47:46 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2aa3fa10379c153dba4e828a0b89a6d9230ae63d/kiss.jpg" for 127.0.0.1 at 2019-08-29 12:47:46 +0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bfc100b034b6f89175274d535ad2df6d6297e90b", "filename"=>"1966.8_paisaje-al-atardecer"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2aa3fa10379c153dba4e828a0b89a6d9230ae63d", "filename"=>"kiss"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85c498fa4487ae6ca669d40bf7f9f3a71c376108", "filename"=>"defleppard"}
+  [1m[36mActiveStorage::Blob Load (11.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (10.4ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+[36m  Disk Storage (15.9ms) [0m[34mGenerated URL for file at key: vnSuS8rC1Uvp915dj9ntc54C (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjcyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4b1e5351c5c6db3abd058824e5d27da2deefb562/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (15.9ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f24fee3ecc23ad1b81a96f337cd562aac9b26220/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg" for 127.0.0.1 at 2019-08-29 12:47:46 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c30ac6559db6ece0ce1bc163b859bc4764a4669f/acdc.jpg" for 127.0.0.1 at 2019-08-29 12:47:46 +0200
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: pB1UqwkaUW4QJ3KnQtZucB4n (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjczM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1530c2fe5dd101ad5249a8831921f945f472738b/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjcyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4b1e5351c5c6db3abd058824e5d27da2deefb562/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjczM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1530c2fe5dd101ad5249a8831921f945f472738b/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c30ac6559db6ece0ce1bc163b859bc4764a4669f", "filename"=>"acdc"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f24fee3ecc23ad1b81a96f337cd562aac9b26220", "filename"=>"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped"}
+Completed 302 Found in 61ms (ActiveRecord: 15.9ms)
+
+
+  [1m[36mActiveStorage::Blob Load (6.1ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.4ms) [0m[34mGenerated URL for file at key: ZftcRKUfRGo8DHUUhNS3YSrv (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQxMDo1Mjo0Ni43NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--ac02167e247917b6da939395d7cee6a8e2597896/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQxMDo1Mjo0Ni43NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--ac02167e247917b6da939395d7cee6a8e2597896/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg
+Completed 302 Found in 70ms (ActiveRecord: 10.4ms)
+
+
+Completed 302 Found in 60ms (ActiveRecord: 11.5ms)
+
+
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: c7BzxWpkGGmcnBUY2enEK21M (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc3MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7cb7f9274eb8851c3c5a61490cc5a4ade84d4192/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc3MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7cb7f9274eb8851c3c5a61490cc5a4ade84d4192/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg
+Completed 302 Found in 26ms (ActiveRecord: 6.1ms)
+
+
+  [1m[36mActiveStorage::Blob Load (10.5ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: CKH8hQ2uhxQ5KdJLYc5gLb6f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fe0fe5a8a816ceff44d1dee98d43c85e7c937bba/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fe0fe5a8a816ceff44d1dee98d43c85e7c937bba/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg
+Completed 302 Found in 32ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjczM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1530c2fe5dd101ad5249a8831921f945f472738b/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg" for 127.0.0.1 at 2019-08-29 12:47:47 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"kiss.jpg\"; filename*=UTF-8''kiss.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjczM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1530c2fe5dd101ad5249a8831921f945f472738b", "filename"=>"kiss"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc3MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7cb7f9274eb8851c3c5a61490cc5a4ade84d4192/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg" for 127.0.0.1 at 2019-08-29 12:47:47 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjcyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4b1e5351c5c6db3abd058824e5d27da2deefb562/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg" for 127.0.0.1 at 2019-08-29 12:47:47 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQxMDo1Mjo0Ni43NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--ac02167e247917b6da939395d7cee6a8e2597896/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg" for 127.0.0.1 at 2019-08-29 12:47:47 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"acdc.jpg\"; filename*=UTF-8''acdc.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc3MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7cb7f9274eb8851c3c5a61490cc5a4ade84d4192", "filename"=>"acdc"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1966.8_paisaje-al-atardecer.jpg\"; filename*=UTF-8''1966.8_paisaje-al-atardecer.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2LjcyMFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--4b1e5351c5c6db3abd058824e5d27da2deefb562", "filename"=>"1966.8_paisaje-al-atardecer"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fe0fe5a8a816ceff44d1dee98d43c85e7c937bba/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg" for 127.0.0.1 at 2019-08-29 12:47:47 +0200
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"defleppard.jpg\"; filename*=UTF-8''defleppard.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQxMDo1Mjo0Ni43NDhaIiwicHVyIjoiYmxvYl9rZXkifX0=--ac02167e247917b6da939395d7cee6a8e2597896", "filename"=>"defleppard"}
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 28ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 10ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg\"; filename*=UTF-8''250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDEwOjUyOjQ2Ljc4MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fe0fe5a8a816ceff44d1dee98d43c85e7c937bba", "filename"=>"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped"}
+Completed 200 OK in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:47:54 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (1.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (100.8ms)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 25.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar' for #<Post:0x00007f48441a5098>):
+     5:         <li>
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <%= image_tag url_for(post.avatar), class: "rounded-circle", size: '230x230' %>
+     9:               <h3 style="color: #3C4858; font-weight: 300;">
+    10:                 <%= post.name %>
+    11:               </h3>
+  
+app/views/posts/index.html.erb:8:in `block (2 levels) in _app_views_posts_index_html_erb__58915013213997096_69974178128740'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__58915013213997096_69974178128740'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__58915013213997096_69974178128740'
+  [1m[35m (1.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` LIMIT 11[0m
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:48:36 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (6.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (37.1ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (to_model delegated to attachment, but attachment is nil):
+     5:         <li>
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <%= image_tag url_for(post.front), class: "rounded-circle", size: '230x230' %>
+     9:               <h3 style="color: #3C4858; font-weight: 300;">
+    10:                 <%= post.title %>
+    11:               </h3>
+  
+app/views/posts/index.html.erb:8:in `block (2 levels) in _app_views_posts_index_html_erb__58915013213997096_69974178557260'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__58915013213997096_69974178557260'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__58915013213997096_69974178557260'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:53:19 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (to_model delegated to attachment, but attachment is nil):
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <% if post.front %>
+     9:                 <%= image_tag url_for(post.front), class: "rounded-circle", size: '230x230' %>
+    10:               <% else %>
+    11:                 <%= image_tag url_for("default.png"), class: "rounded-circle", size: '230x230' %>
+    12:               <% end %>
+  
+app/views/posts/index.html.erb:9:in `block (2 levels) in _app_views_posts_index_html_erb__58915013213997096_69974149042620'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__58915013213997096_69974149042620'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__58915013213997096_69974149042620'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:53:30 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (7.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (30.5ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 9.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `front?' for #<Post:0x00007f48442ae458>
+Did you mean?  front
+               front=):
+     5:         <li>
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <% if post.front? %>
+     9:                 <%= image_tag url_for(post.front), class: "rounded-circle", size: '230x230' %>
+    10:               <% else %>
+    11:                 <%= image_tag url_for("default.png"), class: "rounded-circle", size: '230x230' %>
+  
+app/views/posts/index.html.erb:8:in `block (2 levels) in _app_views_posts_index_html_erb__58915013213997096_69974178950140'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__58915013213997096_69974178950140'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__58915013213997096_69974178950140'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:53:51 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (to_model delegated to attachment, but attachment is nil):
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <% if post.front.present? %>
+     9:                 <%= image_tag url_for(post.front), class: "rounded-circle", size: '230x230' %>
+    10:               <% else %>
+    11:                 <%= image_tag url_for("default.png"), class: "rounded-circle", size: '230x230' %>
+    12:               <% end %>
+  
+app/views/posts/index.html.erb:9:in `block (2 levels) in _app_views_posts_index_html_erb__58915013213997096_69974311903420'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__58915013213997096_69974311903420'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__58915013213997096_69974311903420'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:57:13 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (55.3ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 8.4ms)
+
+
+  
+ActionView::Template::Error (to_model delegated to attachment, but attachment is nil):
+     6:           <%= link_to post do %>
+     7:             <div class="text-center">
+     8:               <% if post.front != nil %>
+     9:                 <%= image_tag url_for(post.front), class: "rounded-circle", size: '230x230' %>
+    10:               <% else %>
+    11:                 <%= image_tag url_for("default.png"), class: "rounded-circle", size: '230x230' %>
+    12:               <% end %>
+  
+app/views/posts/index.html.erb:9:in `block (2 levels) in _app_views_posts_index_html_erb__58915013213997096_69974163480040'
+app/views/posts/index.html.erb:6:in `block in _app_views_posts_index_html_erb__58915013213997096_69974163480040'
+app/views/posts/index.html.erb:4:in `_app_views_posts_index_html_erb__58915013213997096_69974163480040'
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:57:38 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (2.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (27.4ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 218ms (Views: 213.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:59:07 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (27.7ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 507ms (Views: 495.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 12:59:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Post' AND `active_storage_attachments`.`name` = 'front' AND `active_storage_attachments`.`record_id` = 1[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (12.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 176ms (Views: 171.4ms | ActiveRecord: 2.2ms)
+
+
