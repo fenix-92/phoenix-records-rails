@@ -9,7 +9,10 @@
               <% else %>
                 <%= image_tag url_for("default.png"), class: "img-fluid box", size: '250x250' %>
               <% end %>
-              <h3 style="color: #3C4858; font-weight: 300;">
+              <h4 style="color: #3C4858; font-weight: 200; margin-top: 10px; margin-bottom: 0px;">
+                <%= post.artist.name %>
+              </h4>
+              <h3 style="color: #3C4858; font-weight: 300; margin: 0 0;">
                 <%= post.title %>
               </h3>
             </div>
