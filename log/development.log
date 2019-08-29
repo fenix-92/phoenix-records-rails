@@ -17812,3 +17812,388 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/artists/" for 127.0.0.1 at 2019-08-28 17:17:23 +0200
+  [1m[35m (20.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT `artists`.* FROM `artists` ORDER BY created_at DESC[0m
+  ↳ app/views/artists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Artist' AND `active_storage_attachments`.`name` = 'avatar' AND `active_storage_attachments`.`record_id` IN (5, 4, 3, 2, 1)[0m
+  ↳ app/views/artists/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (2.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` IN (1, 2, 3, 4, 5)[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (181.6ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 5088ms (Views: 5024.1ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bfc100b034b6f89175274d535ad2df6d6297e90b/1966.8_paisaje-al-atardecer.jpg" for 127.0.0.1 at 2019-08-28 17:17:28 +0200
+Processing by ActiveStorage::BlobsController#show as JPEG
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2aa3fa10379c153dba4e828a0b89a6d9230ae63d/kiss.jpg" for 127.0.0.1 at 2019-08-28 17:17:28 +0200
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bfc100b034b6f89175274d535ad2df6d6297e90b", "filename"=>"1966.8_paisaje-al-atardecer"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85c498fa4487ae6ca669d40bf7f9f3a71c376108/defleppard.jpg" for 127.0.0.1 at 2019-08-28 17:17:28 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f24fee3ecc23ad1b81a96f337cd562aac9b26220/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg" for 127.0.0.1 at 2019-08-28 17:17:28 +0200
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c30ac6559db6ece0ce1bc163b859bc4764a4669f/acdc.jpg" for 127.0.0.1 at 2019-08-28 17:17:28 +0200
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f24fee3ecc23ad1b81a96f337cd562aac9b26220", "filename"=>"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85c498fa4487ae6ca669d40bf7f9f3a71c376108", "filename"=>"defleppard"}
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2aa3fa10379c153dba4e828a0b89a6d9230ae63d", "filename"=>"kiss"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c30ac6559db6ece0ce1bc163b859bc4764a4669f", "filename"=>"acdc"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (6.1ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (44.3ms) [0m[34mGenerated URL for file at key: ZftcRKUfRGo8DHUUhNS3YSrv (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOFQxNToyMjoyOS4wNzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d7d6b42a4e3a857b6208c30e960d410bb816bf6/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (3.2ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+  [1m[36mActiveStorage::Blob Load (71.6ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+[36m  Disk Storage (77.9ms) [0m[34mGenerated URL for file at key: vnSuS8rC1Uvp915dj9ntc54C (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--79f4035a13e497728910c71e46c79557e723f0a3/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (79.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOFQxNToyMjoyOS4wNzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d7d6b42a4e3a857b6208c30e960d410bb816bf6/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg
+Completed 302 Found in 126ms (ActiveRecord: 6.1ms)
+
+
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.7ms) [0m[34mGenerated URL for file at key: c7BzxWpkGGmcnBUY2enEK21M (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e0ae1462d27064f1421cdd941c447f54875e485c/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg)[0m
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: CKH8hQ2uhxQ5KdJLYc5gLb6f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c59cbc60a21b7e10b1d8acf6679189be310aa47f/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e0ae1462d27064f1421cdd941c447f54875e485c/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c59cbc60a21b7e10b1d8acf6679189be310aa47f/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg
+Completed 302 Found in 111ms (ActiveRecord: 79.8ms)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--79f4035a13e497728910c71e46c79557e723f0a3/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 302 Found in 144ms (ActiveRecord: 3.2ms)
+
+
+Completed 302 Found in 175ms (ActiveRecord: 0.8ms)
+
+
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: pB1UqwkaUW4QJ3KnQtZucB4n (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjExNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c2ac6873872314c5f66ac5bb62651aabb6f5ea33/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjExNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c2ac6873872314c5f66ac5bb62651aabb6f5ea33/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg
+Completed 302 Found in 142ms (ActiveRecord: 71.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOFQxNToyMjoyOS4wNzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d7d6b42a4e3a857b6208c30e960d410bb816bf6/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg" for 127.0.0.1 at 2019-08-28 17:17:29 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"defleppard.jpg\"; filename*=UTF-8''defleppard.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOFQxNToyMjoyOS4wNzlaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d7d6b42a4e3a857b6208c30e960d410bb816bf6", "filename"=>"defleppard"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e0ae1462d27064f1421cdd941c447f54875e485c/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg" for 127.0.0.1 at 2019-08-28 17:17:29 +0200
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"acdc.jpg\"; filename*=UTF-8''acdc.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e0ae1462d27064f1421cdd941c447f54875e485c", "filename"=>"acdc"}
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c59cbc60a21b7e10b1d8acf6679189be310aa47f/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg" for 127.0.0.1 at 2019-08-28 17:17:29 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--79f4035a13e497728910c71e46c79557e723f0a3/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg" for 127.0.0.1 at 2019-08-28 17:17:29 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg\"; filename*=UTF-8''250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjEwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c59cbc60a21b7e10b1d8acf6679189be310aa47f", "filename"=>"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1966.8_paisaje-al-atardecer.jpg\"; filename*=UTF-8''1966.8_paisaje-al-atardecer.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjA5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--79f4035a13e497728910c71e46c79557e723f0a3", "filename"=>"1966.8_paisaje-al-atardecer"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjExNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c2ac6873872314c5f66ac5bb62651aabb6f5ea33/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg" for 127.0.0.1 at 2019-08-28 17:17:29 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"kiss.jpg\"; filename*=UTF-8''kiss.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI4VDE1OjIyOjI5LjExNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--c2ac6873872314c5f66ac5bb62651aabb6f5ea33", "filename"=>"kiss"}
+Completed 200 OK in 22ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-08-28 17:17:30 +0200
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-28 17:17:30 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered shared/_message.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 158ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-08-28 17:19:08 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT `artists`.* FROM `artists`[0m
+  ↳ app/views/posts/new.html.erb:10
+  Rendered posts/new.html.erb within layouts/application (60.0ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 328ms (Views: 322.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2019-08-28 17:19:25 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ym4opg0H77JXkVkwkSpG/pdpbJErtNIvqA9Iwd3ievuuGzRYytrkHXtHMtgJM5SSqOnCoiRKcg9sevOBSVzalw==", "post"=>{"title"=>"Hysteria", "artist_id"=>"4", "discogsid"=>"123123", "year"=>"1987"}, "commit"=>"Save Post"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[36mArtist Load (1.8ms)[0m  [1m[34mSELECT  `artists`.* FROM `artists` WHERE `artists`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[36mPost Create (3.4ms)[0m  [1m[32mINSERT INTO `posts` (`artist_id`, `title`, `discogsid`, `year`, `created_at`, `updated_at`) VALUES (4, 'Hysteria', '123123', 1987, '2019-08-28 15:19:25', '2019-08-28 15:19:25')[0m
+  ↳ app/controllers/posts_controller.rb:13
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:13
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 168ms (ActiveRecord: 37.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-08-28 17:19:28 +0200
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-28 17:19:28 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 277ms (Views: 272.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-08-29 08:35:09 +0200
+  [1m[35m (14.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 08:35:09 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered shared/_message.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 1040ms (Views: 1018.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2019-08-29 08:35:13 +0200
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.3ms)[0m  [1m[34mSELECT `artists`.* FROM `artists` ORDER BY created_at DESC[0m
+  ↳ app/views/artists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_type` = 'Artist' AND `active_storage_attachments`.`name` = 'avatar' AND `active_storage_attachments`.`record_id` IN (5, 4, 3, 2, 1)[0m
+  ↳ app/views/artists/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (1.2ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` IN (1, 2, 3, 4, 5)[0m
+  ↳ app/views/artists/index.html.erb:3
+  Rendered artists/index.html.erb within layouts/application (274.5ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 535ms (Views: 474.9ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bfc100b034b6f89175274d535ad2df6d6297e90b/1966.8_paisaje-al-atardecer.jpg" for 127.0.0.1 at 2019-08-29 08:35:13 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2aa3fa10379c153dba4e828a0b89a6d9230ae63d/kiss.jpg" for 127.0.0.1 at 2019-08-29 08:35:13 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c30ac6559db6ece0ce1bc163b859bc4764a4669f/acdc.jpg" for 127.0.0.1 at 2019-08-29 08:35:13 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85c498fa4487ae6ca669d40bf7f9f3a71c376108/defleppard.jpg" for 127.0.0.1 at 2019-08-29 08:35:13 +0200
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f24fee3ecc23ad1b81a96f337cd562aac9b26220/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg" for 127.0.0.1 at 2019-08-29 08:35:13 +0200
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (32.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bfc100b034b6f89175274d535ad2df6d6297e90b", "filename"=>"1966.8_paisaje-al-atardecer"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--85c498fa4487ae6ca669d40bf7f9f3a71c376108", "filename"=>"defleppard"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c30ac6559db6ece0ce1bc163b859bc4764a4669f", "filename"=>"acdc"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f24fee3ecc23ad1b81a96f337cd562aac9b26220", "filename"=>"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 4 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2aa3fa10379c153dba4e828a0b89a6d9230ae63d", "filename"=>"kiss"}
+  [1m[36mActiveStorage::Blob Load (4.0ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (25.4ms) [0m[34mGenerated URL for file at key: c7BzxWpkGGmcnBUY2enEK21M (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjgzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f69a8551aa71eba8597b9a4fba1365d62b9fb734/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (42.6ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 5 LIMIT 1[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjgzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f69a8551aa71eba8597b9a4fba1365d62b9fb734/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg
+Completed 302 Found in 59ms (ActiveRecord: 4.0ms)
+
+
+  [1m[36mActiveStorage::Blob Load (35.2ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (47.8ms)[0m  [1m[34mSELECT  `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 1 LIMIT 1[0m
+[36m  Disk Storage (43.8ms) [0m[34mGenerated URL for file at key: ZftcRKUfRGo8DHUUhNS3YSrv (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQwNjo0MDoxMy44NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--a8c40f7ed8e42245c5bf67d644a9ba3d5bf6c11d/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg)[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: vnSuS8rC1Uvp915dj9ntc54C (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9cffc86084fabddb39836b2698d224c5b00a8183/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg)[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQwNjo0MDoxMy44NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--a8c40f7ed8e42245c5bf67d644a9ba3d5bf6c11d/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: pB1UqwkaUW4QJ3KnQtZucB4n (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9b5aa93991d35a215ddea76246276ea8ae1b194/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9cffc86084fabddb39836b2698d224c5b00a8183/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: CKH8hQ2uhxQ5KdJLYc5gLb6f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg2MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0dcc85eb633ee2d66774b8d2005619db3a4227e4/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg)[0m
+Completed 302 Found in 73ms (ActiveRecord: 0.7ms)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9b5aa93991d35a215ddea76246276ea8ae1b194/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg
+Completed 302 Found in 78ms (ActiveRecord: 42.6ms)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg2MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0dcc85eb633ee2d66774b8d2005619db3a4227e4/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg
+Completed 302 Found in 52ms (ActiveRecord: 35.2ms)
+
+
+Completed 302 Found in 67ms (ActiveRecord: 47.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjgzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f69a8551aa71eba8597b9a4fba1365d62b9fb734/acdc.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22acdc.jpg%22%3B+filename%2A%3DUTF-8%27%27acdc.jpg" for 127.0.0.1 at 2019-08-29 08:35:14 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9cffc86084fabddb39836b2698d224c5b00a8183/1966.8_paisaje-al-atardecer.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%221966.8_paisaje-al-atardecer.jpg%22%3B+filename%2A%3DUTF-8%27%271966.8_paisaje-al-atardecer.jpg" for 127.0.0.1 at 2019-08-29 08:35:14 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"1966.8_paisaje-al-atardecer.jpg\"; filename*=UTF-8''1966.8_paisaje-al-atardecer.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkbTVUZFZNNGNrTXhWWFp3T1RFMVpHbzViblJqTlRSREJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnBhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVGsyTmk0NFgzQmhhWE5oYW1VdFlXd3RZWFJoY21SbFkyVnlMbXB3WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0Njbk1UazJOaTQ0WDNCaGFYTmhhbVV0WVd3dFlYUmhjbVJsWTJWeUxtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--9cffc86084fabddb39836b2698d224c5b00a8183", "filename"=>"1966.8_paisaje-al-atardecer"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"acdc.jpg\"; filename*=UTF-8''acdc.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZemRDZW5oWGNHdEhSMjFqYmtKVldUSmxia1ZMTWpGTkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZV05rWXk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZqWkdNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjgzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f69a8551aa71eba8597b9a4fba1365d62b9fb734", "filename"=>"acdc"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg2MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0dcc85eb633ee2d66774b8d2005619db3a4227e4/250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg%22%3B+filename%2A%3DUTF-8%27%27250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg" for 127.0.0.1 at 2019-08-29 08:35:14 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9b5aa93991d35a215ddea76246276ea8ae1b194/kiss.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22kiss.jpg%22%3B+filename%2A%3DUTF-8%27%27kiss.jpg" for 127.0.0.1 at 2019-08-29 08:35:14 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQwNjo0MDoxMy44NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--a8c40f7ed8e42245c5bf67d644a9ba3d5bf6c11d/defleppard.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22defleppard.jpg%22%3B+filename%2A%3DUTF-8%27%27defleppard.jpg" for 127.0.0.1 at 2019-08-29 08:35:14 +0200
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg\"; filename*=UTF-8''250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRMHRJT0doUk1uVm9lRkUxUzJSS1RGbGpOV2RNWWpabUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSUJ0R2x1YkdsdVpUc2dabWxzWlc1aGJXVTlJakkxTUhCNExVUmhkbWxrTFVKdmQybGxYME5vYVdOaFoyOWZNakF3TWkwd09DMHdPRjl3YUc5MGIySjVYMEZrWVcwdFFtbGxiR0YzYzJ0cExXTnliM0J3WldRdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN5TlRCd2VDMUVZWFpwWkMxQ2IzZHBaVjlEYUdsallXZHZYekl3TURJdE1EZ3RNRGhmY0dodmRHOWllVjlCWkdGdExVSnBaV3hoZDNOcmFTMWpjbTl3Y0dWa0xtcHdad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg2MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--0dcc85eb633ee2d66774b8d2005619db3a4227e4", "filename"=>"250px-David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"kiss.jpg\"; filename*=UTF-8''kiss.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjRUl4VlhGM2EyRlZWelJSU2pOTGJsRjBXblZqUWpSdUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhMmx6Y3k1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMnRwYzNNdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDE5LTA4LTI5VDA2OjQwOjEzLjg1OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a9b5aa93991d35a215ddea76246276ea8ae1b194", "filename"=>"kiss"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"defleppard.jpg\"; filename*=UTF-8''defleppard.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRXbVowWTFKTFZXWlNSMjg0UkVoVlZXaE9Vek5aVTNKMkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkhhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaR1ZtYkdWd2NHRnlaQzVxY0djaU95Qm1hV3hsYm1GdFpTbzlWVlJHTFRnbkoyUmxabXhsY0hCaGNtUXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE9IiwiZXhwIjoiMjAxOS0wOC0yOVQwNjo0MDoxMy44NDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--a8c40f7ed8e42245c5bf67d644a9ba3d5bf6c11d", "filename"=>"defleppard"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-08-29 08:48:24 +0200
+Processing by PagesController#home as HTML
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 08:48:24 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 210ms (Views: 206.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:00:59 +0200
+  [1m[35m (20.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /usr/local/rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_message.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 246ms (Views: 229.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:02:16 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 169ms (Views: 163.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:03:02 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 191ms (Views: 188.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:03:29 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 134ms (Views: 131.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:05:22 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 262ms (Views: 253.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:09:01 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  Rendered shared/_message.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 299ms (Views: 291.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:09:22 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (2.3ms)
+Completed 200 OK in 119ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-08-29 09:10:31 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 169ms (Views: 165.2ms | ActiveRecord: 0.0ms)
+
+
