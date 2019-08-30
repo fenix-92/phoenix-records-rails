@@ -12,14 +12,13 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require jquery
-//= require jquery_ujs
-//= require popper
-//= require material/bootstrap-material-design
-//= require material/perfect-scrollbar.jquery.min
-//= require material/chartist.min
-//= require material/arrive.min
-//= require material/bootstrap-notify
-//= require material/material-dashboard
-//= require material/demo
+//= require core/bootstrap-material-design.min
+//= require core/jquery.min
+//= require core/popper.min
+//= require plugins/jquery.sharrre
+//= require plugins/moment.min
+//= require plugins/nouislider.min
+//= require plugins/bootstrap-datetimepicker
+//= require material-kit
+//= require material-kit.min
 //= require_tree .
