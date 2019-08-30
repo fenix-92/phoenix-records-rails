@@ -6,6 +6,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    check_user_logged
   end
 
   def show
@@ -13,6 +14,7 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
+    check_user_logged
     @artist = Artist.find(params[:id])
     @artist.destroy
 
@@ -20,6 +22,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
+    check_user_logged
     # render plain: params[:artist].inspect
     @artist = Artist.new artist_params
     # @artist.avatar.attach(params[:avatar])
@@ -29,6 +32,16 @@ class ArtistsController < ApplicationController
       render 'new'
     end
   end
+
+  def check_user_logged
+    if !user_signed_in?
+      redirect_to new_user_session_path
+    else
+      # User is logged
+    end
+  end
+
+  private
 
   def artist_params
     params.require(:artist).permit(:name, :discogsid, :avatar)
