@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.order('created_at DESC').with_attached_front
+    if params[:q]
+      @posts = Post.where('title LIKE ?', "%#{params[:q]}%").with_attached_front
+    else
+      @posts = Post.order('created_at DESC').with_attached_front
+    end
   end
 
   def new
@@ -27,9 +31,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def search
+
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:title, :artist_id, :year, :discogsid, :front)
+    params.require(:post).permit(:title, :artist_id, :year, :discogsid, :front, :q)
   end
 end

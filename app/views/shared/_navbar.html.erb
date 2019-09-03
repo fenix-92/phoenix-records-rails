@@ -7,9 +7,9 @@
       </span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <form class="form-inline my-2 my-lg-0 ml-md-auto">
-        <input class="form-control mr-sm-2 text-center" type="search" placeholder="Search" aria-label="Search">
-      </form>
+      <%= form_tag(posts_path, method: :get, class: "form-inline my-2 my-lg-0 ml-md-auto") do %>
+        <%= text_field_tag :q, nil, placeholder: 'Search...', class: 'form-control mr-sm-2 text-center' %>
+      <% end %>
       <ul class="navbar-nav ml-md-auto">
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
