@@ -5,9 +5,9 @@
           <%= link_to post do %>
             <div class="text-center">
               <% if post.front.attached? %>
-                <%= image_tag url_for(post.front), class: "img-fluid box", size: '250x250' %>
+                <%= image_tag url_for(post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
               <% else %>
-                <%= image_tag url_for("default.png"), class: "img-fluid box", size: '250x250' %>
+                <%= image_tag url_for("default.png"), class: "img-fluid box", size: '300x300' %>
               <% end %>
               <h4 style="color: #3C4858; font-weight: 200; margin-top: 10px; margin-bottom: 0px;">
                 <%= post.artist.name %>
