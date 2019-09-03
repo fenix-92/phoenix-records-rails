@@ -5,7 +5,8 @@
   - Ruby 2.6.2
   - Rails 5.2.3
   - MariaDB or MySql
-  
+  - ImageMagick or GraphicsMagick
+
 ## Installation
 
 First things first, let's clone the repository:
