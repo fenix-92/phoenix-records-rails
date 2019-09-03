@@ -1,28 +1,45 @@
-<div class="container">
-  <div align="center">
-  <div class="col-lg-3 col-md-3 col-sm-3 form-login align-items-center justify-content-center">
-    <h2>Sign up</h2>
-
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
-      <div class="form-group">
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+<div class="section section-signup">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 ml-auto mr-auto">
+            <div class="card card-login">
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= render "devise/shared/error_messages", resource: resource %>
+                <div class="footer text-center">
+                  <h2>Sign up</h2>
+                </div>
+                <div class="card-body text-center">
+                  <span class="bmd-form-group"><div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">mail</i>
+                      </span>
+                    </div>
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+                  </div></span>
+                  <span class="bmd-form-group"><div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">lock_outline</i>
+                      </span>
+                    </div>
+                    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control"%>
+                  </div></span>
+                  <span class="bmd-form-group"><div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">lock_outline</i>
+                      </span>
+                    </div>
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class: "form-control" %>
+                  </div></span>
+                </div>
+                <div class="footer text-center" style="margin-top: 20px; margin-bottom: 20px;">
+                   <%= f.submit "Sign up", class: "btn btn-primary" %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="form-group">
-        <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control"%>
-      </div>
-
-      <div class="form-group">
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class: "form-control" %>
-      </div>
-
-      <div class="form-group">
-        <%= f.submit "Sign up", class: "btn btn-primary" %>
-      </div>
-      <%= render "devise/shared/links" %>
-    <% end %>
-  </div>
-  </div>
-</div>
+    </div>
