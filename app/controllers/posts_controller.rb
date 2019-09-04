@@ -32,7 +32,10 @@ class PostsController < ApplicationController
   end
 
   def search
+  end
 
+  def show
+    @post = Post.find(params[:id])
   end
 
   private
