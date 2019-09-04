@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'admin', to: 'admin#index'
   get 'blog', to: 'articles#index'
-  get 'search', to: 'posts#search'
 
   resources :posts, :artists, :labels, :formats, :articles
 
