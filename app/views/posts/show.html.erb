@@ -1,8 +1,10 @@
-<div class="container parallax">
+<script type="text/javascript">
+  document.getElementById('cont').style.backgroundImage="url(images/img.jpg)";
+</script>
+
+<div class="container parallax" id="cont" style="background-image: <%= url_for(@post.front) %> !important;">
   <div class="card" style="width: 94%; margin: 0 auto;">
-    <div class="card-body">
-      <br>
-      <%= image_tag url_for(@post.front.variant(resize: '300x300')), class: "img-fluid box", size: '300x300' %>
+    <div class="card-body text-center">
       <br>
       <h3 style="color: #3C4858; font-weight: 300; margin: 0 0;"><%= @post.artist.name %> - <%= @post.title %></h3>
       <h3 class="card-title"><%= @post.year %></h3>
