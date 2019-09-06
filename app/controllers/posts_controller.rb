@@ -36,6 +36,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    require "discogs"
+    wrapper = Discogs::Wrapper.new("Phoenix Records")
+    @release = wrapper.get_release(@post.discogsid)
   end
 
   private

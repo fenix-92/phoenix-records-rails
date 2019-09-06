@@ -1,14 +1,32 @@
+<style>
+  .col {
+    width: 49%;
+    float: left;
+  }
+</style>
 <script type="text/javascript">
-  document.getElementById('cont').style.backgroundImage="url(images/img.jpg)";
+  window.onload = function() {
+    // document.body.style.backgroundColor = "red";
+    document.body.style.backgroundImage = "url(<%= url_for(@post.front) %>)";
+  }
 </script>
-
-<div class="container parallax" id="cont" style="background-image: <%= url_for(@post.front) %> !important;">
+<div class="container">
   <div class="card" style="width: 94%; margin: 0 auto;">
     <div class="card-body text-center">
       <br>
       <h3 style="color: #3C4858; font-weight: 300; margin: 0 0;"><%= @post.artist.name %> - <%= @post.title %></h3>
       <h3 class="card-title"><%= @post.year %></h3>
       <p class="card-text"></p>
+      <div class="container" style="display: inline-block;">
+        <div class="col" style="text-align: left;">
+          <b>Artist: </b><%= @post.artist.name  %><br>
+          <b>Name: </b><%= @post.title %><br>
+          <b>Discogs Id: </b><a href="https://www.discogs.com/es/es/release/<%= @post.discogsid %>"><%= @post.discogsid %></a><br>
+        </div>
+        <div class="col">
+            <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -28,7 +28,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 #
 # Custom project gems
-gem 'discogs-wrapper'
 gem 'mini_racer'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -72,3 +71,4 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'popper_js', '>= 1.14.3'
 gem 'mini_magick'
+gem 'discogs-wrapper'
