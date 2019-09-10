@@ -4,7 +4,11 @@
         <li>
           <%= link_to artist do %>
             <div class="text-center">
+            <% if artist.avatar.attached? %>
               <%= image_tag url_for(artist.avatar), class: "rounded-circle", size: '230x230' %>
+            <% else %>
+              <%= image_tag url_for("user.png"), class: "rounded-circle", size: '230x230' %>
+            <% end %>
               <h3 style="color: #3C4858; font-weight: 300;">
                 <%= artist.name %>
               </h3>
