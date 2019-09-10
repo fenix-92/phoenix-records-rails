@@ -3,4 +3,10 @@ class AdminController < ApplicationController
 
   def index
   end
+
+  def records
+  end
+
+  def artists
+  end
 end
