@@ -37,7 +37,7 @@
           <div class="card card-stats">
             <div class="card-body table-responsive text-center">
               <h5>Advanced</h5>
-              	<%= button_to "New artist", destroy_user_session_path, class: "btn btn-primary" %>
+              <%= button_to 'New artist',{:controller => "artists", :action => "new"} , {:method=>:get, class: 'btn btn-primary'} %>
             </div>
           </div>
 
