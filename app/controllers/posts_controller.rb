@@ -12,6 +12,14 @@ class PostsController < ApplicationController
     check_user_logged
   end
 
+  def destroy
+    check_user_logged
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to admin_records_path
+  end
+
   def create
     check_user_logged
     #render plain: params[:post].inspect
@@ -39,6 +47,10 @@ class PostsController < ApplicationController
     require "discogs"
     wrapper = Discogs::Wrapper.new("Phoenix Records")
     @release = wrapper.get_release(@post.discogsid)
+  end
+
+  def edit
+    @post = Post.find(params[:id])
   end
 
   private
