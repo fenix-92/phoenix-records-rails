@@ -5,6 +5,10 @@ class ArtistsController < ApplicationController
     # render json: @artists.to_json(include: { avatar_attachment: { include: :blob } })
   end
 
+  def edit
+    @artist = Artist.find(params[:id])
+  end
+
   def new
     check_user_logged
   end
@@ -27,7 +31,7 @@ class ArtistsController < ApplicationController
     @artist = Artist.new artist_params
     # @artist.avatar.attach(params[:avatar])
     if @artist.save
-      redirect_to artists_path
+      redirect_to admin_artists_path
     else
       render 'new'
     end
