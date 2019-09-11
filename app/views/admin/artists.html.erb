@@ -1,6 +1,10 @@
-<style>
+<style type="text/css">
   .text-warning{
     color: #895392!important;
+  }
+  td {
+    display: table-cell!important;
+    vertical-align: inherit!important;
   }
 </style>
 <div class="container">
@@ -12,6 +16,7 @@
               <table class="table table-hover">
                 <thead class="text-warning">
                   <th>ID</th>
+                  <th>Image</th>
                   <th>Name</th>
                   <th>Discogs ID</th>
                   <th>Actions</th>
@@ -20,12 +25,17 @@
                   <% @artists.each do |artist| %>
                   <tr>
                     <td><%= artist.id %></td>
+                    <td>
+                      <% if artist.avatar.attached? %>
+                        <%= image_tag url_for(artist.avatar), class: "rounded-circle", size: '65x65' %>                      <% else %>
+                        <%= image_tag url_for("user.png"), class: "rounded-circle", size: '65x65' %>
+                      <% end %>
+                    </td>
                     <td><%= artist.name %></td>
                     <td><%= artist.discogsid %></td>
                     <td>
-                      <%= link_to 'Edit', edit_artist_path(artist) %> · 
+                      <%= link_to 'Edit', edit_artist_path(artist) %> ·
                       <%= link_to 'Delete',  artist,  method: :delete, data: { confirm: 'Are you sure?' } %>
-
                     </td>
                   </tr>
                   <% end %>
