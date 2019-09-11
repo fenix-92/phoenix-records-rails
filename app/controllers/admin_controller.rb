@@ -8,5 +8,6 @@ class AdminController < ApplicationController
   end
 
   def artists
+    @artists = Artist.order('created_at DESC').with_attached_avatar
   end
 end

@@ -18,7 +18,7 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
     @artist.destroy
 
-    redirect_to artists_path
+    redirect_to admin_artists_path
   end
 
   def create
