@@ -8,12 +8,6 @@ Rails.application.routes.draw do
 
   resources :posts, :artists, :labels, :formats, :articles
 
-  resources :artists do
-    collection do
-      get 'remove_all'
-    end
-  end
-
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
