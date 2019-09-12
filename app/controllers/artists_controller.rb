@@ -17,6 +17,13 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  def remove_all
+    check_user_logged
+    Artist.delete_all
+
+    redirect_to admin_artists_path
+  end
+
   def destroy
     check_user_logged
     @artist = Artist.find(params[:id])
