@@ -49,6 +49,16 @@ class PostsController < ApplicationController
     @release = wrapper.get_release(@post.discogsid)
   end
 
+  def update
+    @post = Post.find(params[:id])
+
+    if @post.update(post_params)
+      redirect_to admin_records_path
+    else
+      render 'edit'
+    end
+  end
+
   def edit
     @post = Post.find(params[:id])
   end
