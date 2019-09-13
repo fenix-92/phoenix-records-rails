@@ -13,6 +13,16 @@ class ArtistsController < ApplicationController
     check_user_logged
   end
 
+  def update
+    @artist = Artist.find(params[:id])
+
+    if @artist.update(artist_params)
+      redirect_to admin_artists_path
+    else
+      render 'edit'
+    end
+  end
+
   def show
     @artist = Artist.find(params[:id])
   end
