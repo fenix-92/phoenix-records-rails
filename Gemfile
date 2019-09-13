@@ -62,7 +62,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'devise'
 gem 'jquery-rails'
 gem 'toastr-rails', '~> 1.0'
@@ -72,4 +71,3 @@ gem 'font-awesome-rails'
 gem 'popper_js', '>= 1.14.3'
 gem 'mini_magick'
 gem 'discogs-wrapper'
-gem 'light_gallery_rails'
