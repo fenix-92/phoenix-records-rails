@@ -1,9 +1,13 @@
 <div align="center">
   <table border="0" class="admin-navbar">
     <tr>
-      <th><a href="/admin/artists">Artists</a></th>
+      <th><%= link_to "Artists", admin_artists_path %></th>
       <th> · </th>
-      <th><a href="/admin/records">Records</a></th>
+      <th><%= link_to "Records", admin_records_path %></th>
+      <th> | </th>
+      <th><a href="/admin/users">Users</a></th>
+      <th> · </th>
+      <th><a href="/admin/settings">Settings</a></th>
     </tr>
   </table>
 </div>
