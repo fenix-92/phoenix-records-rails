@@ -12,17 +12,19 @@
 </style>
 <div class="container">
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
       <div class="row">
           <div class="card card-stats">
             <div class="card-body table-responsive">
               <table class="table table-hover">
                 <thead class="text-warning">
                   <th>ID</th>
-                  <th>Image</th>
+                  <th>Front</th>
+                  <th>Back</th>
                   <th>Title</th>
                   <th>Discogs ID</th>
                   <th>Year</th>
+                  <th>Special attributes</th>
                   <th>Actions</th>
                 </thead>
                 <tbody>
@@ -35,9 +37,20 @@
                         <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
                       <% end %>
                     </td>
+                    <td>
+                      <% if post.back.attached? %>
+                        <%= image_tag url_for(post.back), class: "img-fuid front", size: '65x65' %>                      <% else %>
+                        <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
+                      <% end %>
+                    </td>
                     <td><%= post.title %></td>
                     <td><%= post.discogsid %></td>
                     <td><%= post.year %></td>
+                    <td>
+                      <% if post.featured? %>
+                        <b>Featured</b><br>
+                      <% end %>
+                    </td>
                     <td>
                       <%= link_to 'Edit', edit_post_path(post) %> ·
                       <%= link_to 'Delete',  post,  method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -50,14 +63,15 @@
           </div>
         </div>
     </div>
-    <div class="col-md-3">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
           <div class="card card-stats">
             <div class="card-body table-responsive text-center">
               <h5>Advanced</h5>
               <%= button_to 'New record',{:controller => "posts", :action => "new"} , {:method=>:get, class: 'btn btn-primary'} %>
             </div>
           </div>
-
+       </div>
     </div>
   </div>
-</div>
