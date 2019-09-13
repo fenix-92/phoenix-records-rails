@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'admin', to: 'admin#index'
   get 'blog', to: 'articles#index'
+
+  # Admin routes
   get 'admin/artists', to: 'admin#artists'
   get 'admin/records', to: 'admin#records'
+  get 'admin/users', to: 'admin#users'
+  get 'admin/settings', to: 'admin#settings'
 
   resources :posts, :artists, :labels, :formats, :articles
 
