@@ -1,0 +1,2 @@
+class SleeveGradingsController < ApplicationController
+end

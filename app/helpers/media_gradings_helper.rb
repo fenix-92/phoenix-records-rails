@@ -1,0 +1,2 @@
+module MediaGradingsHelper
+end

@@ -1,0 +1,2 @@
+class SleeveGrading < ApplicationRecord
+end

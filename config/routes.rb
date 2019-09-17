@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :media_gradings
+  resources :sleeve_gradings
   root 'pages#home'
   get 'admin', to: 'admin#index'
   get 'blog', to: 'articles#index'

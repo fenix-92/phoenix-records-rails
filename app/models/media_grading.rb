@@ -1,0 +1,2 @@
+class MediaGrading < ApplicationRecord
+end
