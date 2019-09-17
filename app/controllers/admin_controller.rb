@@ -8,6 +8,10 @@ class AdminController < ApplicationController
     @posts = Post.order('created_at DESC').with_attached_front
   end
 
+  def users
+    @users = User.all
+  end
+
   def artists
     @artists = Artist.order('created_at DESC').with_attached_avatar
   end
@@ -15,7 +19,7 @@ class AdminController < ApplicationController
   def delete_all_artists
     check_user_logged
     Artist.delete_all
-    
+
     redirect_to admin_artists_path
   end
 
