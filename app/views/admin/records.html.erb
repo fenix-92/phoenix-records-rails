@@ -21,6 +21,8 @@
                   <th>ID</th>
                   <th>Front</th>
                   <th>Back</th>
+                  <th>Media</th>
+                  <th>Sleeve</th>
                   <th>Title</th>
                   <th>Discogs ID</th>
                   <th>Year</th>
@@ -43,6 +45,8 @@
                         <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
                       <% end %>
                     </td>
+                    <td><%= post.media_grading.name %></td>
+                    <td><%= post.sleeve_grading.name %></td>
                     <td><%= post.title %></td>
                     <td><%= post.discogsid %></td>
                     <td><%= post.year %></td>
