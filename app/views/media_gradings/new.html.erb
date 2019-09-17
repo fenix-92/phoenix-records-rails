@@ -1,0 +1,14 @@
+<div align="center" class="container">
+  <br>
+  <h2>Add Media Grading value</h2>
+  <br>
+    <div class="col-md-4 text-center">
+    <%= form_for :media_grading, url: media_gradings_path do |f| %>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :class => "form-control" %><br><br>
+      <%= f.label :text %><br>
+      <%= f.text_field :text, :class => "form-control" %><br><br>
+      <%= f.submit %><br>
+    <% end %>
+    </div>
+</div>

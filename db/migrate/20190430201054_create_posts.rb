@@ -5,6 +5,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :discogsid
       t.integer :year
+      t.references :media_grading, foreign_key: true
+      t.references :sleeve_grading, foreign_key: true
 
       t.timestamps
     end

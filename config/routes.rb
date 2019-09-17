@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'admin/users', to: 'admin#users'
   get 'admin/settings', to: 'admin#settings'
 
-  resources :posts, :artists, :labels, :formats, :articles
+  resources :posts, :artists, :labels, :formats, :articles, :sleeve_gradings, :media_gradings
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

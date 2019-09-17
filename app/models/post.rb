@@ -4,4 +4,6 @@ class Post < ApplicationRecord
   has_one_attached :vinyl1
   has_one_attached :vinyl2
   belongs_to :artist
+  belongs_to :media_grading
+  belongs_to :sleeve_grading
 end

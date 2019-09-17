@@ -57,6 +57,13 @@ ActiveRecord::Schema.define(version: 2019_09_13_075029) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "media_gradings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "artist_id"
     t.string "title"
@@ -66,6 +73,13 @@ ActiveRecord::Schema.define(version: 2019_09_13_075029) do
     t.datetime "updated_at", null: false
     t.boolean "featured"
     t.index ["artist_id"], name: "index_posts_on_artist_id"
+  end
+
+  create_table "sleeve_gradings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
