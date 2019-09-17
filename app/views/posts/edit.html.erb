@@ -8,6 +8,10 @@
         <%= collection_select(:post, :artist_id, Artist.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
         <%= f.label :year %>
         <%= f.text_field :year, :class => "form-control" %><br><br>
+        <%= f.label :media_grading %>
+        <%= collection_select(:post, :media_grading_id, MediaGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+        <%= f.label :sleeve_grading %>
+        <%= collection_select(:post, :sleeve_grading_id, SleeveGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
         <%= f.label :featured %>
         <%= f.check_box :featured, :class => "" %><br><br>
         <%= f.label :discogsid %><br>
