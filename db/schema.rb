@@ -69,10 +69,14 @@ ActiveRecord::Schema.define(version: 2019_09_13_075029) do
     t.string "title"
     t.string "discogsid"
     t.integer "year"
+    t.bigint "media_grading_id"
+    t.bigint "sleeve_grading_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "featured"
     t.index ["artist_id"], name: "index_posts_on_artist_id"
+    t.index ["media_grading_id"], name: "index_posts_on_media_grading_id"
+    t.index ["sleeve_grading_id"], name: "index_posts_on_sleeve_grading_id"
   end
 
   create_table "sleeve_gradings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -96,4 +100,6 @@ ActiveRecord::Schema.define(version: 2019_09_13_075029) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "posts", "artists"
+  add_foreign_key "posts", "media_gradings"
+  add_foreign_key "posts", "sleeve_gradings"
 end

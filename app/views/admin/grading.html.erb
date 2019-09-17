@@ -20,10 +20,10 @@
                   <th>Actions</th>
                 </thead>
                 <tbody>
-                  <% @media.each do |med| %>
+                  <% @media.each do |m| %>
                   <tr>
-                    <td><%= med.id %></td>
-                    <td><%= med.name %></td>
+                    <td><%= m.name %></td>
+                    <td><%= m.text %></td>
                     <td></td>
                   </tr>
                   <% end %>
@@ -46,8 +46,8 @@
             <tbody>
               <% @sleeve.each do |s| %>
               <tr>
-                <td><%= s.id %></td>
                 <td><%= s.name %></td>
+                <td><%= s.text %></td>
                 <td></td>
               </tr>
               <% end %>
