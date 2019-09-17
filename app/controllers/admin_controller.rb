@@ -12,6 +12,11 @@ class AdminController < ApplicationController
     @users = User.all
   end
 
+  def grading
+    @sleeve = SleeveGrading.all
+    @media = MediaGrading.all
+  end
+
   def artists
     @artists = Artist.order('created_at DESC').with_attached_avatar
   end

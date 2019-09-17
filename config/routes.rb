@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'admin/records', to: 'admin#records'
   get 'admin/users', to: 'admin#users'
   get 'admin/settings', to: 'admin#settings'
+  get 'admin/grading', to: 'admin#grading'
 
   resources :posts, :artists, :labels, :formats, :articles, :sleeve_gradings, :media_gradings
 
