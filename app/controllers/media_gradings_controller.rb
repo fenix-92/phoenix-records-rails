@@ -26,6 +26,14 @@ class MediaGradingsController < ApplicationController
     end
   end
 
+  def destroy
+    check_user_logged
+    @media = MediaGrading.find(params[:id])
+    @media.destroy
+
+    redirect_to admin_grading_path
+  end
+
   private
 
   def media_params

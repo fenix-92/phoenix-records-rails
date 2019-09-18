@@ -24,7 +24,7 @@
                   <tr>
                     <td><%= m.name %></td>
                     <td><%= m.text %></td>
-                    <td></td>
+                    <td><%= link_to 'Delete',  m,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
                   <% end %>
                 </tbody>
@@ -48,7 +48,7 @@
               <tr>
                 <td><%= s.name %></td>
                 <td><%= s.text %></td>
-                <td></td>
+                <td><%= link_to 'Delete',  s,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
               <% end %>
             </tbody>

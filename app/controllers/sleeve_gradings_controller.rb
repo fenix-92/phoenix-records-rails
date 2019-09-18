@@ -26,6 +26,14 @@ class SleeveGradingsController < ApplicationController
     end
   end
 
+  def destroy
+    check_user_logged
+    @sleeve = SleeveGrading.find(params[:id])
+    @sleeve.destroy
+
+    redirect_to admin_grading_path
+  end
+
   private
 
   def sleeve_params
