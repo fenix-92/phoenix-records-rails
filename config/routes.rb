@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :countries
   resources :media_gradings
   resources :sleeve_gradings
   root 'pages#home'
