@@ -17,6 +17,10 @@ class AdminController < ApplicationController
     @media = MediaGrading.all
   end
 
+  def country
+    @country = Country.all
+  end
+
   def artists
     @artists = Artist.order('created_at DESC').with_attached_avatar
   end

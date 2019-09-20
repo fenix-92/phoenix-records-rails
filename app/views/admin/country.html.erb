@@ -12,48 +12,40 @@
     <div class="col-md-6">
           <div class="card card-stats">
             <div class="card-body table-responsive">
-              <center><h3>Media grading</h3></center>
+              <center><h3>Countries</h3></center>
               <table class="table table-hover">
                 <thead class="text-warning">
                   <th>Name</th>
-                  <th>Text</th>
+                  <th>Shortname</th>
+                  <th>Flag</th>
                   <th>Actions</th>
                 </thead>
                 <tbody>
-                  <% @media.each do |m| %>
+                  <% @country.each do |c| %>
                   <tr>
-                    <td><%= m.name %></td>
-                    <td><%= m.text %></td>
-                    <td><%= link_to 'Delete',  m,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <td><%= c.name %></td>
+                    <td><%= c.short_name %></td>
+                    <td></td>
+                    <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
                   <% end %>
                 </tbody>
               </table>
-              <center><%= link_to "New", new_media_grading_path %></center>
           </div>
         </div>
     </div>
     <div class="col-md-6">
       <div class="card card-stats">
         <div class="card-body table-responsive">
-          <center><h3>Sleeve grading</h3></center>
-          <table class="table table-hover">
-            <thead class="text-warning">
-              <th>Name</th>
-              <th>Text</th>
-              <th>Actions</th>
-            </thead>
-            <tbody>
-              <% @sleeve.each do |s| %>
-              <tr>
-                <td><%= s.name %></td>
-                <td><%= s.text %></td>
-                <td><%= link_to 'Delete',  s,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-          <center><%= link_to "New", new_sleeve_grading_path %></center>
+          <center><h3>Add new country</h3></center>
+          <%= form_for :country, url: countries_path do |c| %>
+            <%= c.label :name %>
+            <%= c.text_field :name, :class => "form-control" %><br><br>
+            <%= c.label :short_name %>
+            <%= c.text_field :short_name, :class => "form-control" %><br><br>
+            <%= c.submit %>
+          <% end %>
+          <center><%= link_to "New", new_country_path %></center>
       </div>
     </div>
     </div>
