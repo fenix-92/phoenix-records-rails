@@ -7,6 +7,12 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.integer :year
       t.references :media_grading, foreign_key: true
       t.references :sleeve_grading, foreign_key: true
+      t.boolean :featured
+      t.boolean :gatefold
+      t.boolean :misprint
+      t.boolean :colored
+      t.string :hex_color
+      t.boolean :first_press
 
       t.timestamps
     end
