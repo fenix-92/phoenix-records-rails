@@ -24,7 +24,7 @@
                   <th>Media</th>
                   <th>Sleeve</th>
                   <th>Title</th>
-                  <th>Discogs ID</th>
+                  <th>Flag</th>
                   <th>Year</th>
                   <th>Special attributes</th>
                   <th>Actions</th>
@@ -41,14 +41,21 @@
                     </td>
                     <td>
                       <% if post.back.attached? %>
-                        <%= image_tag url_for(post.back.variant(resize: '200x200')), class: "img-fuid front", size: '65x65' %>                      <% else %>
+                        <%= image_tag url_for(post.back.variant(resize: '200x200')), class: "img-fuid front", size: '65x65' %>
+                      <% else %>
                         <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
                       <% end %>
                     </td>
                     <td><%= post.media_grading.name %></td>
                     <td><%= post.sleeve_grading.name %></td>
                     <td><%= post.title %></td>
-                    <td><%= post.discogsid %></td>
+                    <td>
+                      <% if post.country.flag.attached? %>
+                        <%= image_tag url_for(post.country.flag.variant(resize: '65x65')), class: "img-fuid front" %>
+                      <% else %>
+                        <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
+                      <% end %>
+                    </td>
                     <td><%= post.year %></td>
                     <!-- Special attributes -->
                     <td>
