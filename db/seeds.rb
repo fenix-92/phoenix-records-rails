@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.create! :email => 'admin@gmail.com', :password => 'admin1', :password_confirmation => 'admin1'
+artists = Artist.create([{ name: 'Def Leppard', discogsid: '252443'}])
