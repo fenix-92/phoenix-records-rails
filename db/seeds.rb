@@ -7,11 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create! :email => 'admin@gmail.com', :password => 'admin1', :password_confirmation => 'admin1'
-artists = Artist.create([{ name: 'Def Leppard', discogsid: '252443'},
-                              { name: 'Kiss', discogsid: '153073'},
-                              { name: 'Pink Floyd', discogsid: '45467'},
-                              { name: 'Phil Collins', discogsid: '101028'}
-                              ])
+defleppard = Artist.create( name: 'Def Leppard', discogsid: '252443')
+defleppard.avatar.attach(io: File.open("#{Rails.root}/resources/artists/defleppard.jpg"), filename: "defleppard.jpg")
+kiss = Artist.create( name: 'Kiss', discogsid: '153073')
+kiss.avatar.attach(io: File.open("#{Rails.root}/resources/artists/kiss.jpg"), filename: "kiss.jpg")
 media = MediaGrading.create([{ name: '-', text: 'Not present'},
                               { name: 'F', text: 'Fair'},
                               { name: 'P', text: 'Poor'},
