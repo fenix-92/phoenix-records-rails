@@ -20,6 +20,8 @@ cinderella = Artist.create( name: 'Cinderella', discogsid: '196350')
 cinderella.avatar.attach(io: File.open("#{Rails.root}/resources/artists/cinderella.jpg"), filename: "cinderella.jpg")
 bowie = Artist.create( name: 'David Bowie', discogsid: '10263')
 bowie.avatar.attach(io: File.open("#{Rails.root}/resources/artists/bowie.jpg"), filename: "bowie.jpg")
+therollingstones = Artist.create( name: 'The Rolling Stones', discogsid: '20991')
+therollingstones.avatar.attach(io: File.open("#{Rails.root}/resources/artists/the-rolling-stones.jpg"), filename: "the-rolling-stones.jpg")
 
 # countries
 uk = Country.create(name: 'United Kingdom', country_code: 'UK')
