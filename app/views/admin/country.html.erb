@@ -25,7 +25,13 @@
                   <tr>
                     <td><%= c.name %></td>
                     <td><%= c.country_code %></td>
-                    <td><%= image_tag url_for(c.flag), class: "img-fluid", size: '65x65' %>  </td>
+                    <td>
+                    <% if c.flag.attached? %>
+                      <%= image_tag url_for(c.flag), class: "img-fluid", size: '65x65' %>
+                    <% else %>
+                      
+                    <% end %>
+                    </td>
                     <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
                   <% end %>
