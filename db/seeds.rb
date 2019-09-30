@@ -7,7 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create! :email => 'admin@gmail.com', :password => 'admin1', :password_confirmation => 'admin1'
-artists = Artist.create([{ name: 'Def Leppard', discogsid: '252443'}])
+artists = Artist.create([{ name: 'Def Leppard', discogsid: '252443'},
+                              { name: 'Kiss', discogsid: '153073'},
+                              { name: 'Pink Floyd', discogsid: '45467'},
+                              { name: 'Phil Collins', discogsid: '101028'}
+                              ])
 media = MediaGrading.create([{ name: '-', text: 'Not present'},
                               { name: 'F', text: 'Fair'},
                               { name: 'P', text: 'Poor'},
@@ -28,4 +32,14 @@ sleeve = SleeveGrading.create([{ name: '-', text: 'Not present'},
                               { name: 'NM', text: 'Near Mint'},
                               { name: 'M', text: 'Mint'},
                               { name: 'S', text: 'Sealed'}
+                              ])
+countries = Country.create([{ name: 'United Kingdom', country_code: 'UK'},
+                              { name: 'United States', country_code: 'US'},
+                              { name: 'Spain', country_code: 'SP'},
+                              { name: 'Europe', text: 'EU'},
+                              { name: 'Mexico', text: 'MX'},
+                              { name: 'Canada', text: 'CA'},
+                              { name: 'Bolivia', text: 'BO'},
+                              { name: 'Japan', text: 'JP'},
+                              { name: 'Portugal', text: 'PT'}
                               ])
