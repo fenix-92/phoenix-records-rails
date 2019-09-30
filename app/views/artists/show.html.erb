@@ -2,8 +2,13 @@
   <div class="col-md-8">
     <div class="card card-profile">
       <div class="card-avatar">
-        <a href="#pablo">
+        <br><br>
+        <a href="">
+        <% if @artist.avatar.attached? %>
           <%= image_tag url_for(@artist.avatar) %>
+        <% else %>
+            <%= image_tag url_for("user.png"), class: "rounded-circle", size: '230x230' %>
+        <% end %>
         </a>
       </div>
       <div class="card-body">
