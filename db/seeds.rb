@@ -36,10 +36,10 @@ sleeve = SleeveGrading.create([{ name: '-', text: 'Not present'},
 countries = Country.create([{ name: 'United Kingdom', country_code: 'UK'},
                               { name: 'United States', country_code: 'US'},
                               { name: 'Spain', country_code: 'SP'},
-                              { name: 'Europe', text: 'EU'},
-                              { name: 'Mexico', text: 'MX'},
-                              { name: 'Canada', text: 'CA'},
-                              { name: 'Bolivia', text: 'BO'},
-                              { name: 'Japan', text: 'JP'},
-                              { name: 'Portugal', text: 'PT'}
+                              { name: 'Europe', country_code: 'EU'},
+                              { name: 'Mexico', country_code: 'MX'},
+                              { name: 'Canada', country_code: 'CA'},
+                              { name: 'Bolivia', country_code: 'BO'},
+                              { name: 'Japan', country_code: 'JP'},
+                              { name: 'Portugal', country_code: 'PT'}
                               ])
