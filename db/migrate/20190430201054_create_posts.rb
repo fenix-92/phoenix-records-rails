@@ -11,9 +11,11 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.boolean :featured
       t.boolean :gatefold
       t.boolean :misprint
+      t.boolean :original_inner
       t.boolean :colored
       t.string :hex_color
       t.boolean :first_press
+      t.string :notes
 
       t.timestamps
     end

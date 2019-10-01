@@ -82,9 +82,11 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
     t.boolean "featured"
     t.boolean "gatefold"
     t.boolean "misprint"
+    t.boolean "original_inner"
     t.boolean "colored"
     t.string "hex_color"
     t.boolean "first_press"
+    t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_posts_on_artist_id"
