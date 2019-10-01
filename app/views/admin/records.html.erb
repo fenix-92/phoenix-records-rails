@@ -35,7 +35,8 @@
                     <td><%= post.id %></td>
                     <td>
                       <% if post.front.attached? %>
-                        <%= image_tag url_for(post.front.variant(resize: '200x200')), class: "img-fuid front", size: '65x65' %>                      <% else %>
+                        <%= image_tag url_for(post.front.variant(resize: '200x200')), class: "img-fuid front", size: '65x65' %>
+                      <% else %>
                         <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
                       <% end %>
                     </td>

@@ -4,14 +4,6 @@
     float: left;
   }
 </style>
-<!--
-DISABLED BACKGROUND FRONT PICTURE
-<script type="text/javascript">
-  window.onload = function() {
-    // document.body.style.backgroundColor = "red";
-    document.body.style.backgroundImage = "url(<%= url_for(@post.front) %>)";
-  }
-</script>-->
 <div class="container">
   <div class="card" style="width: 94%; margin: 0 auto;">
     <div class="card-body text-center">
@@ -20,13 +12,30 @@ DISABLED BACKGROUND FRONT PICTURE
       <h3 class="card-title"><%= @post.year %></h3>
       <p class="card-text"></p>
       <div class="container" style="display: inline-block;">
-        <div class="col" style="text-align: left;">
-          <b>Artist: </b><%= @post.artist.name  %><br>
-          <b>Name: </b><%= @post.title %><br>
-          <b>Discogs Id: </b><a href="https://www.discogs.com/es/es/release/<%= @post.discogsid %>"><%= @post.discogsid %></a><br>
-        </div>
         <div class="col">
+          <% if @post.front.attached? %>
             <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
+          <% else %>
+              <%= image_tag url_for("default.png"), class: "img-fuid front", size: '300x300' %>
+          <% end %>
+        </div>
+        <div class="col" style="text-align: left;">
+          <table border="0">
+            <th></th>
+            <th></th>
+            <tr>
+              <td>Artist:</td>
+              <td><%= @post.artist.name  %></td>
+            </tr>
+            <tr>
+              <td>Name:</td>
+              <td><%= @post.title  %></td>
+            </tr>
+            <tr>
+              <td>Discogs id:</td>
+              <td><%= @post.discogsid %> </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

@@ -15,15 +15,15 @@
         <%= f.label :sleeve_grading %>
         <%= collection_select(:post, :sleeve_grading_id, SleeveGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
         <%= f.label :featured %>
-        <%= f.check_box :featured, :class => "" %><br><br>
+        <%= f.check_box :featured, :class => "" %>
         <%= f.label :gatefold %>
-        <%= f.check_box :gatefold, :class => "" %><br><br>
+        <%= f.check_box :gatefold, :class => "" %>
         <%= f.label :misprint %>
         <%= f.check_box :misprint, :class => "" %><br><br>
-        <%= f.label :originalinner %>
-        <%= f.check_box :originalinner, :class => "" %><br><br>
+        <%= f.label :original_inner %>
+        <%= f.check_box :original_inner, :class => "" %>
         <%= f.label :colored %>
-        <%= f.check_box :colored, :class => "" %><br><br>
+        <%= f.check_box :colored, :class => "" %>
         <%= f.label :first_press %>
         <%= f.check_box :first_press, :class => "" %><br><br>
         <%= f.label :discogsid %><br>
@@ -33,7 +33,7 @@
         <%= f.label :back %><br>
         <%= f.file_field :back %><br><br>
         <%= f.label :notes %>
-        <%= f.textarea :notes, :class => "form-control" %><br><br>
+        <%= f.text_area :notes, :class => "form-control" %><br><br>
         <%= f.submit %>
       <% end %>
 </div>
