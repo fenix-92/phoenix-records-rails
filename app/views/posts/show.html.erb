@@ -9,8 +9,7 @@
     <div class="card-body text-center">
       <br>
       <h3 style="color: #3C4858; font-weight: 300; margin: 0 0;"><%= @post.artist.name %> - <%= @post.title %></h3>
-      <h3 class="card-title"><%= @post.year %></h3>
-      <p class="card-text"></p>
+      <p class="card-text"></p><br>
       <div class="container" style="display: inline-block;">
         <div class="col">
           <% if @post.front.attached? %>
@@ -24,18 +23,28 @@
             <th></th>
             <th></th>
             <tr>
-              <td>Artist:</td>
-              <td><%= @post.artist.name  %></td>
+              <td><b>Artist:</b></td>
+              <td><a href="#"><%= @post.artist.name %></a></td>
             </tr>
             <tr>
-              <td>Name:</td>
-              <td><%= @post.title  %></td>
+              <td><b>Label:</b></td>
+              <td></td>
             </tr>
             <tr>
-              <td>Discogs id:</td>
-              <td><%= @post.discogsid %> </td>
+              <td><b>Country:</b></td>
+              <td>
+                <% if @post.country.flag.attached? %>
+                  <%= image_tag url_for(@post.country.flag), class: "img-fluid", size: '30x30' %>
+                <% end %>
+              </td>
+            </tr>
+            <tr>
+              <td><b>Released:</b></td>
+              <td><%= @post.year %></td>
             </tr>
           </table>
+          <br>
+          <p><b>Audio</b></p>
         </div>
       </div>
     </div>
