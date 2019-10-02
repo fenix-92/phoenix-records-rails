@@ -11,7 +11,8 @@
   </head>
 
   <body>
-    <%= render :partial => 'shared/message', :flash => flash %>
+    <%= javascript_include_tag "application" %>
+    <%= custom_bootstrap_flash %>
     <%= render 'shared/navbar' %>
     <% if user_signed_in? %>
       <%= render 'shared/adminnavbar' %>

@@ -6,6 +6,7 @@ class ArtistsController < ApplicationController
   end
 
   def edit
+    check_user_logged
     @artist = Artist.find(params[:id])
   end
 
@@ -15,7 +16,6 @@ class ArtistsController < ApplicationController
 
   def update
     @artist = Artist.find(params[:id])
-
     if @artist.update(artist_params)
       redirect_to admin_artists_path
     else
@@ -47,19 +47,16 @@ class ArtistsController < ApplicationController
     # render plain: params[:artist].inspect
     @artist = Artist.new artist_params
     # @artist.avatar.attach(params[:avatar])
-    respond_to do |format|
-      if @artist.save
-        format.html { redirect_to @artist, success: 'Artist was successfully created' }
-        format.json { render :show, status: :created, location: @artist }
-      else
-        render 'new'
-      end
+    if @artist.save
+      redirect_to admin_artists_path, notice: "Artist created"
+    else
+      render 'new', alert: "Artist wasn't created"
     end
   end
 
   def check_user_logged
     if !user_signed_in?
-      redirect_to new_user_session_path
+      redirect_to new_user_session_path, info: "Please, log in"
     else
       # User is logged
     end
