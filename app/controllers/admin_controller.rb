@@ -25,6 +25,14 @@ class AdminController < ApplicationController
     @artists = Artist.order('created_at DESC').with_attached_avatar
   end
 
+  def articles
+    @articles = Articles.order('created_at DESC')
+  end
+
+  def labels
+    @labels = Labels.order('created_at DESC')
+  end
+
   def delete_all_artists
     check_user_logged
     Artist.delete_all
