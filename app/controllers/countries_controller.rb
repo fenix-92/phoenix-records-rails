@@ -12,15 +12,15 @@ class CountriesController < ApplicationController
     @country = Country.new country_params
     # @artist.avatar.attach(params[:avatar])
     if @country.save
-      redirect_to admin_countries_path
+      redirect_to admin_countries_path, success: "Country created"
     else
-      render 'new'
+      render 'new', alert: "Country don't created"
     end
   end
 
   def check_user_logged
     if !user_signed_in?
-      redirect_to new_user_session_path
+      redirect_to new_user_session_path, info: "Please, log in"
     else
       # User is logged
     end
@@ -31,7 +31,7 @@ class CountriesController < ApplicationController
     @country = Country.find(params[:id])
     @country.destroy
 
-    redirect_to admin_countries_path
+    redirect_to admin_countries_path, success: "Country deleted"
   end
 
   private

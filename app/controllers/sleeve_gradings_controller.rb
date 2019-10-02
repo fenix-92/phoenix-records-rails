@@ -12,15 +12,15 @@ class SleeveGradingsController < ApplicationController
     @sleeve = SleeveGrading.new sleeve_params
     # @artist.avatar.attach(params[:avatar])
     if @sleeve.save
-      redirect_to admin_grading_path
+      redirect_to admin_grading_path, success: "Grading created"
     else
-      render 'new'
+      render 'new', alert: "Grading not created"
     end
   end
 
   def check_user_logged
     if !user_signed_in?
-      redirect_to new_user_session_path
+      redirect_to new_user_session_path, info: "Please, log in"
     else
       # User is logged
     end
@@ -31,7 +31,7 @@ class SleeveGradingsController < ApplicationController
     @sleeve = SleeveGrading.find(params[:id])
     @sleeve.destroy
 
-    redirect_to admin_grading_path
+    redirect_to admin_grading_path, success: "Grading deleted"
   end
 
   private
