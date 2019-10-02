@@ -1,0 +1,49 @@
+<style type="text/css">
+  .text-warning{
+    color: #895392!important;
+  }
+  td {
+    display: table-cell!important;
+    vertical-align: inherit!important;
+  }
+  .front {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+          <div class="card card-stats">
+            <div class="card-body table-responsive">
+              <div align="center">
+                  <%= button_to 'New post',{:controller => "articles", :action => "new"} , {:method=>:get, class: 'btn btn-primary'} %>
+              </div>
+              <br>
+              <table class="table table-hover">
+                <thead class="text-warning">
+                  <th>Title</th>
+                  <th>Subtitle</th>
+                  <th>Text</th>
+                  <th>Actions</th>
+                </thead>
+                <tbody>
+                  <% @articles.each do |a| %>
+                  <tr>
+                    <td><%= a.title %></td>
+                    <td><%= a.subtitle %></td>
+                    <td><%= a.text %></td>
+                    <td>
+                      <%= link_to 'Edit', edit_article_path(a) %> ·
+                      <%= link_to 'Delete',  a,  method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </td>
+                  </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

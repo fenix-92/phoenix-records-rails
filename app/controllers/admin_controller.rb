@@ -26,18 +26,11 @@ class AdminController < ApplicationController
   end
 
   def articles
-    @articles = Articles.order('created_at DESC')
+    @articles = Article.order('created_at DESC')
   end
 
   def labels
-    @labels = Labels.order('created_at DESC')
-  end
-
-  def delete_all_artists
-    check_user_logged
-    Artist.delete_all
-
-    redirect_to admin_artists_path
+    @labels = RecordCompany.order('created_at DESC')
   end
 
     def check_user_logged

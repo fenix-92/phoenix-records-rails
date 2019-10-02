@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LabelsControllerTest < ActionDispatch::IntegrationTest
+class RecordCompanyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

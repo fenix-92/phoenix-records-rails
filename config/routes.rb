@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :labels
+  resources :record_companies
   resources :countries
   resources :media_gradings
   resources :sleeve_gradings
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'admin/articles', to: 'admin#articles'
   get 'admin/labels', to: 'admin#labels'
 
-  resources :posts, :artists, :labels, :formats, :articles, :sleeve_gradings, :media_gradings
+  resources :posts, :artists, :record_companies, :formats, :articles, :sleeve_gradings, :media_gradings, :countries
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

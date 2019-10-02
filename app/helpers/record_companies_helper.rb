@@ -1,0 +1,2 @@
+module RecordCompaniesHelper
+end

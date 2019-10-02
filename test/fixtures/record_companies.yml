@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  long_name: MyString
 
 two:
   name: MyString
+  long_name: MyString
