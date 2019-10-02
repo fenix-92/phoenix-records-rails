@@ -25,15 +25,15 @@ class PostsController < ApplicationController
     #render plain: params[:post].inspect
     @post = Post.new post_params
     if @post.save
-      redirect_to admin_records_path
+      redirect_to admin_records_path, notice: "Record created"
     else
-      render 'new'
+      render 'new', alert: "Record don't created"
     end
   end
 
   def check_user_logged
     if !user_signed_in?
-      redirect_to new_user_session_path
+      redirect_to new_user_session_path, info: "Please, log in"
     else
       # User is logged
     end
@@ -50,16 +50,17 @@ class PostsController < ApplicationController
   end
 
   def update
+    check_user_logged
     @post = Post.find(params[:id])
-
     if @post.update(post_params)
-      redirect_to admin_records_path
+      redirect_to admin_records_path, success: "Record updated"
     else
-      render 'edit'
+      render 'edit', alert: "Record don't updated"
     end
   end
 
   def edit
+    check_user_logged
     @post = Post.find(params[:id])
   end
 
