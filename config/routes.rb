@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :labels
   resources :countries
   resources :media_gradings
   resources :sleeve_gradings
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   get 'admin/settings', to: 'admin#settings'
   get 'admin/grading', to: 'admin#grading'
   get 'admin/countries', to: 'admin#country'
+  get 'admin/articles', to: 'admin#articles'
 
   resources :posts, :artists, :labels, :formats, :articles, :sleeve_gradings, :media_gradings
 
