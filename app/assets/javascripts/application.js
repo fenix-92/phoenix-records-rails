@@ -21,4 +21,6 @@
 //= require plugins/bootstrap-datetimepicker
 //= require material-kit
 //= require material-kit.min
+//= require toastr.js
+//= require toastr.min
 //= require_tree .

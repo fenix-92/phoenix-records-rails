@@ -11,12 +11,12 @@
   </head>
 
   <body>
+    <%= render :partial => 'shared/message', :flash => flash %>
     <%= render 'shared/navbar' %>
     <% if user_signed_in? %>
-    <%= render 'shared/adminnavbar' %>
+      <%= render 'shared/adminnavbar' %>
     <% end %>
-    <%= render 'shared/message' %>
-     <p class="notice"><%= notice %></p>
+
 
 
     <%= yield %>

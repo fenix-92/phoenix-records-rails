@@ -47,10 +47,13 @@ class ArtistsController < ApplicationController
     # render plain: params[:artist].inspect
     @artist = Artist.new artist_params
     # @artist.avatar.attach(params[:avatar])
-    if @artist.save
-      redirect_to admin_artists_path
-    else
-      render 'new'
+    respond_to do |format|
+      if @artist.save
+        format.html { redirect_to @artist, success: 'Artist was successfully created' }
+        format.json { render :show, status: :created, location: @artist }
+      else
+        render 'new'
+      end
     end
   end
 
