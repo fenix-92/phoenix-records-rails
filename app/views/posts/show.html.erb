@@ -15,8 +15,22 @@
           <% if @post.front.attached? %>
             <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
           <% else %>
-              <%= image_tag url_for("default.png"), class: "img-fuid front", size: '300x300' %>
+              <%= image_tag url_for("default.png"), class: "img-fuid" %>
           <% end %>
+          <script type="text/javascript">
+          ;( function( $ ) {
+
+          	$( '.swipebox' ).swipebox();
+
+          } )( jQuery );
+          </script>
+          <ul id="lightGallery" style="display: inline-block;">
+            <a href="<% url_for @post.front %>" class="swipebox" title="My Caption">
+                <%= image_tag url_for(@post.front.variant(resize: '100x100')), class: "img-fluid box", size: '300x300' %>
+            </a>
+          </ul>
+        </div>
+        <div class="row">
         </div>
         <div class="col" style="text-align: left;">
           <table border="0">
@@ -44,7 +58,9 @@
             </tr>
           </table>
           <br>
-          <p><b>Audio</b></p>
+          <% if @post.audio_sample.attached? %>
+            <p><b>Audio</b></p>
+          <% end %>
         </div>
       </div>
     </div>

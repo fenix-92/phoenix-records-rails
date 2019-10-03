@@ -22,5 +22,6 @@
 //= require material-kit
 //= require material-kit.min
 //= require toastr.js
+//= require swipebox
 //= require toastr.min
 //= require_tree .
