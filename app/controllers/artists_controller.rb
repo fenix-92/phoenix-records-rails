@@ -56,7 +56,7 @@ class ArtistsController < ApplicationController
 
   def check_user_logged
     if !user_signed_in?
-      redirect_to new_user_session_path
+      redirect_to new_user_session_path, info: "Please, log in before continue"
     else
       # User is logged
     end

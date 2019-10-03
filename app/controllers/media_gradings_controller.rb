@@ -20,7 +20,7 @@ class MediaGradingsController < ApplicationController
 
   def check_user_logged
     if !user_signed_in?
-      redirect_to new_user_session_path, info: "Please, log in"
+      redirect_to new_user_session_path, success: "Please, log in before continue"
     else
       # User is logged
     end
@@ -31,7 +31,7 @@ class MediaGradingsController < ApplicationController
     @media = MediaGrading.find(params[:id])
     @media.destroy
 
-    redirect_to admin_grading_path, success: "Grading deleted"
+    redirect_to admin_grading_path, info: "Grading deleted"
   end
 
   private
