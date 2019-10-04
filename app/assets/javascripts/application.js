@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require turbolinks
 //= require core/bootstrap-material-design.min
 //= require core/jquery.min
@@ -22,6 +23,10 @@
 //= require material-kit
 //= require material-kit.min
 //= require toastr.js
-//= require swipebox
 //= require toastr.min
+//= require lightgallery
 //= require_tree .
+
+$(document).on('turbolinks:load', function(){
+  var gallery = $("#lightGallery").lightGallery();
+});

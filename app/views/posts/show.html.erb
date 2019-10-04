@@ -12,23 +12,26 @@
       <p class="card-text"></p><br>
       <div class="container" style="display: inline-block;">
         <div class="col">
-          <% if @post.front.attached? %>
-            <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
-          <% else %>
-              <%= image_tag url_for("default.png"), class: "img-fuid" %>
-          <% end %>
           <script type="text/javascript">
-          ;( function( $ ) {
-
-          	$( '.swipebox' ).swipebox();
-
-          } )( jQuery );
+              $(document).ready(function() {
+                  $("#lightgallery").lightGallery();
+              });
           </script>
-          <ul id="lightGallery" style="display: inline-block;">
-            <a href="<% url_for @post.front %>" class="swipebox" title="My Caption">
-                <%= image_tag url_for(@post.front.variant(resize: '100x100')), class: "img-fluid box", size: '300x300' %>
-            </a>
-          </ul>
+          <% if @post.front.attached? %>
+            <div id="lightgallery">
+              <a href="<%= url_for @post.front %>">
+                <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
+              </a>
+            <% if @post.back.attached? %>
+
+              <a href="<%= url_for @post.back %>">
+                <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
+              </a>
+            <% end %>
+          <% else %>
+            <%= image_tag url_for("default.png"), class: "img-fuid" %>
+          <% end %>
+          </div>
         </div>
         <div class="row">
         </div>
