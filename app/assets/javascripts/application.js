@@ -28,5 +28,7 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function(){
-  var gallery = $("#lightGallery").lightGallery();
+  var gallery = $("#lightGallery").lightGallery({
+    mode      : 'slide',  // Type of transition between images. Either 'slide' or 'fade'.
+  });
 });

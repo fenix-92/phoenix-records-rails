@@ -10,27 +10,39 @@
       <br>
       <h3 style="color: #3C4858; font-weight: 300; margin: 0 0;"><%= @post.artist.name %> - <%= @post.title %></h3>
       <p class="card-text"></p><br>
-      <div class="container" style="display: inline-block;">
+      <div class="container">
         <div class="col">
           <script type="text/javascript">
               $(document).ready(function() {
-                  $("#lightgallery").lightGallery();
+                  $("#lightgallery").lightGallery({
+                    mode      : 'slide'  // Type of transition between images. Either 'slide' or 'fade'.
+                  });
+                  $('#selector2').lightGallery({
+                    selector: 'this'
+                  });
+
+
               });
           </script>
           <% if @post.front.attached? %>
-            <div id="lightgallery">
-              <a href="<%= url_for @post.front %>">
+            <ul id="lightgallery">
+              <a title="View images" href="<%= url_for @post.front %>">
                 <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
               </a>
-            <% if @post.back.attached? %>
-
-              <a href="<%= url_for @post.back %>">
-                <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '300x300' %>
-              </a>
-            <% end %>
+              <% if @post.back.attached? %>
+                <li data-src="<%= url_for @post.back %>"></li>
+              <% end %>
+              <% if @post.vinyl1.attached? %>
+                <li data-src="<%= url_for @post.vinyl1 %>"></li>
+              <% end %>
+              <% if @post.vinyl2.attached? %>
+                <li data-src="<%= url_for @post.vinyl2 %>"></li>
+              <% end %>
+              </ul>
           <% else %>
             <%= image_tag url_for("default.png"), class: "img-fuid" %>
           <% end %>
+          <br>
           </div>
         </div>
         <div class="row">
