@@ -9,4 +9,5 @@ class Post < ApplicationRecord
   belongs_to :sleeve_grading
   belongs_to :country
   belongs_to :record_company
+  belongs_to :store
 end

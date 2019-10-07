@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
 
   create_table "formats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.string "long_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -79,6 +80,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
     t.bigint "country_id"
     t.bigint "media_grading_id"
     t.bigint "sleeve_grading_id"
+    t.bigint "store_id"
     t.boolean "featured"
     t.boolean "double_lp"
     t.boolean "gatefold"
@@ -95,6 +97,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
     t.index ["country_id"], name: "index_posts_on_country_id"
     t.index ["media_grading_id"], name: "index_posts_on_media_grading_id"
     t.index ["sleeve_grading_id"], name: "index_posts_on_sleeve_grading_id"
+    t.index ["store_id"], name: "index_posts_on_store_id"
   end
 
   create_table "record_companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -107,6 +110,15 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
   create_table "sleeve_gradings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.boolean "online"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -128,4 +140,5 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
   add_foreign_key "posts", "countries"
   add_foreign_key "posts", "media_gradings"
   add_foreign_key "posts", "sleeve_gradings"
+  add_foreign_key "posts", "stores"
 end
