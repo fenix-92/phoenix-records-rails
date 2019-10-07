@@ -42,7 +42,7 @@ class AdminController < ApplicationController
   end
 
   def labels
-    @labels = RecordCompany.order('created_at DESC')
+    @labels = RecordCompany.order('created_at DESC').with_attached_photo
   end
 
     def check_user_logged

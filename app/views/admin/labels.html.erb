@@ -17,6 +17,7 @@
                 <thead class="text-warning">
                   <th>Name</th>
                   <th>Shortname</th>
+                  <th>Image</th>
                   <th>Actions</th>
                 </thead>
                 <tbody>
@@ -24,6 +25,11 @@
                   <tr>
                     <td><%= c.name %></td>
                     <td><%= c.long_name %></td>
+                    <td>
+                      <% if c.photo.attached? %>
+                        <%= image_tag url_for(c.photo), class: "img-fluid", size: '65x65' %>
+                      <% end %>
+                    </td>
                     <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
                   </tr>
                   <% end %>
