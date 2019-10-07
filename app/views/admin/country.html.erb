@@ -29,7 +29,7 @@
                     <% if c.flag.attached? %>
                       <%= image_tag url_for(c.flag), class: "img-fluid", size: '65x65' %>
                     <% else %>
-                      
+
                     <% end %>
                     </td>
                     <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -43,7 +43,8 @@
     <div class="col-md-6">
       <div class="card card-stats">
         <div class="card-body table-responsive">
-          <center><%= link_to "New", new_country_path %></center>
+          <center><h3>Actions</h3></center>
+          <center><%= button_to 'New',{:controller => "countries", :action => "new"} , {:method=>:get, class: 'btn btn-primary'} %></center>
         </div>
       </div>
     </div>

@@ -12,6 +12,14 @@ class AdminController < ApplicationController
     @labels = RecordCompany.order('created_at DESC')
   end
 
+  def formats
+    @formats = Format.order('created_at DESC')
+  end
+
+  def stores
+    @stores = Store.order('created_at DESC')
+  end
+
   def users
     @users = User.all
   end

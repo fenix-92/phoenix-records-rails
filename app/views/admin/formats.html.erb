@@ -12,7 +12,7 @@
     <div class="col-md-6">
           <div class="card card-stats">
             <div class="card-body table-responsive">
-              <center><h3>Labels</h3></center>
+              <center><h3>Formats</h3></center>
               <table class="table table-hover">
                 <thead class="text-warning">
                   <th>Name</th>
@@ -20,7 +20,7 @@
                   <th>Actions</th>
                 </thead>
                 <tbody>
-                  <% @labels.each do |c| %>
+                  <% @formats.each do |c| %>
                   <tr>
                     <td><%= c.name %></td>
                     <td><%= c.long_name %></td>
@@ -36,7 +36,7 @@
       <div class="card card-stats">
         <div class="card-body table-responsive">
           <center><h3>Actions</h3></center>
-          <center><%= button_to 'New',{:controller => "record_companies", :action => "new"} , {:method=>:get, class: 'btn btn-primary'} %></center>
+          <center><%= button_to 'New',{:controller => "formats", :action => "new"} , {:method=>:get, class: 'btn btn-primary'} %></center>
         </div>
       </div>
     </div>
