@@ -38,7 +38,7 @@ bundle install
 
 If the last command succeds, it's time to create the database and execute the migrations:
 ```
-db:drop db:create db:migrate
+rake db:drop db:create db:migrate
 ```
 
 Now we're ready to start the application:
