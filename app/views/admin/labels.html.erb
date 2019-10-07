@@ -1,0 +1,43 @@
+<style type="text/css">
+  .text-warning{
+    color: #895392!important;
+  }
+  td {
+    display: table-cell!important;
+    vertical-align: inherit!important;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+          <div class="card card-stats">
+            <div class="card-body table-responsive">
+              <center><h3>Labels</h3></center>
+              <table class="table table-hover">
+                <thead class="text-warning">
+                  <th>Name</th>
+                  <th>Shortname</th>
+                  <th>Actions</th>
+                </thead>
+                <tbody>
+                  <% @labels.each do |c| %>
+                  <tr>
+                    <td><%= c.name %></td>
+                    <td><%= c.long_name %></td>
+                    <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                  <% end %>
+                </tbody>
+              </table>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card card-stats">
+        <div class="card-body table-responsive">
+          <center><%= link_to "New", new_record_company_path %></center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

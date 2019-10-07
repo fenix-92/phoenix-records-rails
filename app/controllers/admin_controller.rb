@@ -8,6 +8,10 @@ class AdminController < ApplicationController
     @posts = Post.order('created_at DESC').with_attached_front
   end
 
+  def labels
+    @labels = RecordCompany.order('created_at DESC')
+  end
+
   def users
     @users = User.all
   end
