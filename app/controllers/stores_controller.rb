@@ -10,12 +10,28 @@ class StoresController < ApplicationController
     [country, city, street].compact.join(‘, ‘)
   end
 
+  def update
+    check_user_logged
+    @store = Store.find(params[:id])
+    if @store.update(store_params)
+      redirect_to admin_stores_path, success: "Store updated"
+    else
+      render 'edit', alert: "Store don't updated"
+    end
+  end
+
+  def edit
+    check_user_logged
+    @store = Store.find(params[:id])
+  end
+
   def create
     check_user_logged
     # render plain: params[:artist].inspect
     @store = Store.new store_params
     # @artist.avatar.attach(params[:avatar])
     if @store.save
+      full_address
       redirect_to admin_stores_path, success: "Store created"
     else
       render 'new', alert: "Store don't created"

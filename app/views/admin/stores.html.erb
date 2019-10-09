@@ -27,7 +27,7 @@
                     <td><%= c.name %></td>
                     <td><%= c.description %></td>
                     <td><%= c.address %></td>
-                    <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <td><%= link_to 'Edit', edit_store_path(c) %> · <%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
                     <td width="30%">
                       <% if c.address.present? %>
                       <iframe
