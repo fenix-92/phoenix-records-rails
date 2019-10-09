@@ -7,7 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-user = User.create! :email => 'admin@gmail.com', :password => 'admin1', :password_confirmation => 'admin1'
+user = User.create! :email => 'admin@admin.com', :password => 'admin1', :password_confirmation => 'admin1'
+
+# Formats
+format = Format.create([{ name: 'LP', long_name: 'Vinyl'},
+                              { name: '7"', long_name: 'Single'},
+                              { name: 'Cassette', long_name: 'Cassette'},
+                              { name: 'Maxi', long_name: 'Maxi-Single'},
+                              { name: 'CD', long_name: 'CD'},
+                              { name: 'CD Single', long_name: 'CD Single'},
+                              { name: '10"', long_name: 'Shellac'},
+                              { name: 'Cassette Single', long_name: 'Cassette Single'}
+                              ])
 
 # Artists
 defleppard = Artist.create( name: 'Def Leppard', discogsid: '252443')
@@ -34,6 +45,14 @@ japan = Country.create(name: 'Japan', country_code: 'JP')
 japan.flag.attach(io: File.open("#{Rails.root}/resources/flags/japan.png"), filename: "japan.png")
 europe = Country.create(name: 'Europe', country_code: 'EU')
 europe.flag.attach(io: File.open("#{Rails.root}/resources/flags/europe.png"), filename: "europe.png")
+
+# Labels
+geffen = RecordCompany.create(name: 'Geffen', long_name: 'Geffen Records')
+geffen.photo.attach(io: File.open("#{Rails.root}/resources/labels/geffen.png"), filename: "geffen.png")
+rca = RecordCompany.create(name: 'RCA', long_name: 'RCA Records')
+rca.photo.attach(io: File.open("#{Rails.root}/resources/labels/rca.png"), filename: "rca.png")
+wea = RecordCompany.create(name: 'WEA', long_name: 'WEA Records')
+wea.photo.attach(io: File.open("#{Rails.root}/resources/labels/wea.png"), filename: "wea.png")
 
 # Gradings
 media = MediaGrading.create([{ name: '-', text: 'Not present'},
