@@ -29,6 +29,7 @@
                     <td><%= c.address %></td>
                     <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>
                     <td width="30%">
+                      <% if c.address.present? %>
                       <iframe
                         width="300"
                         height="170"
@@ -38,6 +39,7 @@
                         marginwidth="0"
                         src="https://maps.google.com/maps?q=<%= c.latitude %>,<%= c.longitude %>&hl=es;z=14&amp;output=embed">
                        </iframe>
+                      <% end %>
                     </td>
                   </tr>
                   <% end %>
