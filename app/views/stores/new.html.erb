@@ -1,0 +1,16 @@
+<div align="center" class="container">
+  <br>
+  <h2>New Store</h2>
+  <br>
+    <div class="col-md-4 text-center">
+    <%= form_for :store, url: stores_path do |f| %>
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :class => "form-control" %><br><br>
+      <%= f.label :description %><br>
+      <%= f.text_field :description, :class => "form-control" %><br><br>
+      <%= f.label :photo %><br>
+      <%= f.file_field :photo, :class => ""  %><br><br>
+      <%= f.submit %><br>
+    <% end %>
+    </div>
+</div>

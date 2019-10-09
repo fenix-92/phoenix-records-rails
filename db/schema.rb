@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_071540) do
+ActiveRecord::Schema.define(version: 2019_08_24_130951) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_071540) do
     t.bigint "media_grading_id"
     t.bigint "sleeve_grading_id"
     t.bigint "store_id"
+    t.bigint "format_id"
     t.boolean "featured"
     t.boolean "double_lp"
     t.boolean "gatefold"
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_071540) do
     t.datetime "updated_at", null: false
     t.index ["artist_id"], name: "index_posts_on_artist_id"
     t.index ["country_id"], name: "index_posts_on_country_id"
+    t.index ["format_id"], name: "index_posts_on_format_id"
     t.index ["media_grading_id"], name: "index_posts_on_media_grading_id"
     t.index ["sleeve_grading_id"], name: "index_posts_on_sleeve_grading_id"
     t.index ["store_id"], name: "index_posts_on_store_id"
@@ -118,7 +120,9 @@ ActiveRecord::Schema.define(version: 2019_10_08_071540) do
     t.string "name"
     t.string "description"
     t.boolean "online"
-    t.string "location"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -138,6 +142,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_071540) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "posts", "artists"
   add_foreign_key "posts", "countries"
+  add_foreign_key "posts", "formats"
   add_foreign_key "posts", "media_gradings"
   add_foreign_key "posts", "sleeve_gradings"
   add_foreign_key "posts", "stores"

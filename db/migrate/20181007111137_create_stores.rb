@@ -4,7 +4,9 @@ class CreateStores < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.boolean :online
-      t.string :location
+      t.string :address
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

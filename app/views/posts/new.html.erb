@@ -48,6 +48,8 @@
       <%= f.file_field :back, :class => ""  %><br><br>
       <%= f.label :notes %>
       <%= f.text_area :notes, :class => "form-control" %><br><br>
+      <%= f.label :store %>
+      <%= collection_select(:post, :store_id, Store.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
       <%= f.label :audio_sample %><br>
       <%= f.file_field :audio_sample, :class => ""  %><br><br>
       <%= f.submit %>
