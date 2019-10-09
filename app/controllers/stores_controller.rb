@@ -6,6 +6,10 @@ class StoresController < ApplicationController
   def show
   end
 
+  def full_address
+    [country, city, street].compact.join(‘, ‘)
+  end
+
   def create
     check_user_logged
     # render plain: params[:artist].inspect
