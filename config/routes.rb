@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :formats
   resources :stores
   resources :record_companies
   resources :countries
