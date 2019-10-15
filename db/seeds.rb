@@ -78,5 +78,5 @@ sleeve = SleeveGrading.create([{ name: '-', text: 'Not present'},
                               ])
 
 store = Store.create([{ name: 'Unknown'},
-                      { name: 'Discogs', description: 'Discogs is a website and crowdsourced database of information about audio recordings, including commercial releases, promotional releases, and bootleg or off-label releases. The Discogs servers, currently hosted under the domain name discogs.com, are owned by Zink Media, Inc., and are located in Portland, Oregon, US.'}
+                      { name: 'Discogs', description: 'Discogs is a website and crowdsourced database of information about audio recordings, including commercial releases, promotional releases, and bootleg or off-label releases. The Discogs servers, currently hosted under the domain name discogs.com, are owned by Zink Media, Inc., and are located in Portland, Oregon, US.', online: '1'}
                       ])
