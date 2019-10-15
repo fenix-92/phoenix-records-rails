@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
     t.bigint "sleeve_grading_id"
     t.bigint "store_id"
     t.bigint "format_id"
+    t.bigint "record_company_id"
     t.boolean "featured"
     t.boolean "double_lp"
     t.boolean "gatefold"
@@ -98,6 +99,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
     t.index ["country_id"], name: "index_posts_on_country_id"
     t.index ["format_id"], name: "index_posts_on_format_id"
     t.index ["media_grading_id"], name: "index_posts_on_media_grading_id"
+    t.index ["record_company_id"], name: "index_posts_on_record_company_id"
     t.index ["sleeve_grading_id"], name: "index_posts_on_sleeve_grading_id"
     t.index ["store_id"], name: "index_posts_on_store_id"
   end
@@ -144,6 +146,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
   add_foreign_key "posts", "countries"
   add_foreign_key "posts", "formats"
   add_foreign_key "posts", "media_gradings"
+  add_foreign_key "posts", "record_companies"
   add_foreign_key "posts", "sleeve_gradings"
   add_foreign_key "posts", "stores"
 end

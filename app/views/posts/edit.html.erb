@@ -16,6 +16,8 @@
         <%= collection_select(:post, :media_grading_id, MediaGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
         <%= f.label :sleeve_grading %>
         <%= collection_select(:post, :sleeve_grading_id, SleeveGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+        <%= f.label :label %>
+        <%= collection_select(:post, :record_company_id, RecordCompany.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
         <%= f.label :featured %>
         <%= f.check_box :featured, :class => "" %>
         <%= f.label :gatefold %>

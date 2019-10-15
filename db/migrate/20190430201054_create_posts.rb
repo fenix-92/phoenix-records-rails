@@ -13,6 +13,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.references :sleeve_grading, foreign_key: true
       t.references :store, foreign_key: true
       t.references :format, foreign_key: true
+      t.references :record_company, foreign_key: true
       t.boolean :featured
       t.boolean :double_lp
       t.boolean :gatefold

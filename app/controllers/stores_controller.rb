@@ -31,7 +31,9 @@ class StoresController < ApplicationController
     @store = Store.new store_params
     # @artist.avatar.attach(params[:avatar])
     if @store.save
-      full_address
+      if @store.address.present?
+        full_address
+      end
       redirect_to admin_stores_path, success: "Store created"
     else
       render 'new', alert: "Store don't created"
