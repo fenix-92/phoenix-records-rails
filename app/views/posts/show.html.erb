@@ -75,6 +75,10 @@
               <td><b>Released:</b></td>
               <td><%= @post.year %></td>
             </tr>
+            <tr>
+              <td><b>Store:</b></td>
+              <td><%= @post.store.name %></td>
+            </tr>
             <% if @post.notes.present? %>
             <tr>
               <td><b>Notes:</b></td>

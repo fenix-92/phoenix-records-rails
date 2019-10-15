@@ -14,6 +14,8 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.references :store, foreign_key: true
       t.references :format, foreign_key: true
       t.references :record_company, foreign_key: true
+      t.boolean :inshrink
+      t.boolean :sealed
       t.boolean :featured
       t.boolean :double_lp
       t.boolean :gatefold
@@ -24,6 +26,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :hex_color
       t.boolean :first_press
       t.string :notes
+      t.date :buyed_at
 
       t.timestamps
     end
