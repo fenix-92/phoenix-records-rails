@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    if params[:q]
-      @posts = Post.where('title LIKE ?', "%#{params[:q]}%").with_attached_front
-    else
+    if params[:t]
+      @posts = Post.where('title LIKE ?', "%#{params[:q]}%")
+    elsif params[:a]
+      @posts = Post.joins(:artist).where(:artists => {:name => params[:a]})
+    elsif
       @posts = Post.order('created_at DESC').with_attached_front
     end
   end

@@ -75,6 +75,12 @@
               <td><b>Released:</b></td>
               <td><%= @post.year %></td>
             </tr>
+            <% if @post.notes.present? %>
+            <tr>
+              <td><b>Notes:</b></td>
+              <td><%= @post.notes %></td>
+            </tr>
+            <% end %>
           </table>
           <br>
           <% if @post.audio_sample.attached? %>
