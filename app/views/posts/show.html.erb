@@ -57,7 +57,11 @@
             </tr>
             <tr>
               <td><b>Label:</b></td>
-              <td></td>
+              <td>  <%= @post.record_company.name %>
+                <% if @post.serial_no.present? %>
+                - <%= @post.serial_no %>
+                <% end %>
+              </td>
             </tr>
             <tr>
               <td><b>Country:</b></td>
@@ -77,6 +81,15 @@
             <p><b>Audio</b></p>
           <% end %>
         </div>
+      </div>
+      <div class="card-body">
+        <hr>
+        <% if @post.matrix_a.present? %>
+          Matrix / Runout (side a): <%= @post.matrix_a %>
+        <% end %>
+        <% if @post.matrix_b.present? %>
+          Matrix / Runout (side b): <%= @post.matrix_b %>
+        <% end %>
       </div>
     </div>
   </div>
