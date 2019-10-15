@@ -120,7 +120,7 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
 
   create_table "stores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.boolean "online"
     t.string "address"
     t.float "latitude"

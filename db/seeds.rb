@@ -11,14 +11,14 @@ user = User.create! :email => 'admin@admin.com', :password => 'admin1', :passwor
 
 # Formats
 format = Format.create([{ name: 'LP', long_name: 'Vinyl'},
-                              { name: '7"', long_name: 'Single'},
-                              { name: 'Cassette', long_name: 'Cassette'},
-                              { name: 'Maxi', long_name: 'Maxi-Single'},
-                              { name: 'CD', long_name: 'CD'},
-                              { name: 'CD Single', long_name: 'CD Single'},
-                              { name: '10"', long_name: 'Shellac'},
-                              { name: 'Cassette Single', long_name: 'Cassette Single'}
-                              ])
+                        { name: '7"', long_name: 'Single'},
+                        { name: 'Cassette', long_name: 'Cassette'},
+                        { name: 'Maxi', long_name: 'Maxi-Single'},
+                        { name: 'CD', long_name: 'CD'},
+                        { name: 'CD Single', long_name: 'CD Single'},
+                        { name: '10"', long_name: 'Shellac'},
+                        { name: 'Cassette Single', long_name: 'Cassette Single'}
+                        ])
 
 # Artists
 defleppard = Artist.create( name: 'Def Leppard', discogsid: '252443')
@@ -76,3 +76,7 @@ sleeve = SleeveGrading.create([{ name: '-', text: 'Not present'},
                               { name: 'M', text: 'Mint'},
                               { name: 'S', text: 'Sealed'}
                               ])
+
+store = Store.create([{ name: 'Unknown'},
+                      { name: 'Discogs', description: 'Discogs is a website and crowdsourced database of information about audio recordings, including commercial releases, promotional releases, and bootleg or off-label releases. The Discogs servers, currently hosted under the domain name discogs.com, are owned by Zink Media, Inc., and are located in Portland, Oregon, US.'}
+                      ])
