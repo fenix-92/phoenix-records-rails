@@ -22,8 +22,8 @@
       <%= collection_select(:post, :record_company_id, RecordCompany.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
       <%= f.label :featured %>
       <%= f.check_box :featured, :class => "" %>
-      <%= f.label :inshrink %>
-      <%= f.check_box :inshrink, :class => "" %><br><br>
+      <%= f.label :in_shrink %>
+      <%= f.check_box :inshrink, :class => "" %>
       <%= f.label :sealed %>
       <%= f.check_box :sealed, :class => "" %><br><br>
       <%= f.label :gatefold %>
