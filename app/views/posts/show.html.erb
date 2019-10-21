@@ -59,7 +59,7 @@
             </tr>
             <tr>
               <td><b>Label:</b></td>
-              <td>  <%= @post.record_company.name %>
+              <td>  <%= link_to @post.record_company.name, posts_path(l: @post.record_company.name) %>
                 <% if @post.serial_no.present? %>
                 - <%= @post.serial_no %>
                 <% end %>
@@ -69,7 +69,7 @@
               <td><b>Country:</b></td>
               <td>
                 <% if @post.country.flag.attached? %>
-                  <%= image_tag url_for(@post.country.flag), class: "img-fluid", size: '30x30' %>
+                  <%= (link_to (image_tag url_for(@post.country.flag), class: "img-fluid", size: '30x30'), posts_path(c: @post.country.name)) %>
                 <% end %>
               </td>
             </tr>

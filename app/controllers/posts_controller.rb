@@ -5,6 +5,10 @@ class PostsController < ApplicationController
       @posts = Post.where("title LIKE '%#{params[:t]}%'").order('created_at DESC')
     elsif params[:a]
       @posts = Post.joins(:artist).where("name LIKE '%#{params[:a]}%'").order('created_at DESC')
+    elsif params[:l]
+      @posts = Post.joins(:record_company).where("name LIKE '%#{params[:l]}%'").order('created_at DESC')
+    elsif params[:c]
+      @posts = Post.joins(:country).where("name LIKE '%#{params[:c]}%'").order('created_at DESC')
     elsif
       @posts = Post.order('created_at DESC')
     end
