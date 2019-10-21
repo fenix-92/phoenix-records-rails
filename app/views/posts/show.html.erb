@@ -53,7 +53,9 @@
             <th></th>
             <tr>
               <td><b>Artist:</b></td>
-              <td><a href="#"><%= @post.artist.name %></a></td>
+              <td>
+                <%= link_to @post.artist.name, posts_path(a: @post.artist.name) %>
+              </td>
             </tr>
             <tr>
               <td><b>Label:</b></td>
