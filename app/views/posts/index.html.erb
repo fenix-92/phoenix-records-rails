@@ -20,6 +20,11 @@
     <h3>Country: <b><%= params[:country] %></b></h3>
     </center>
     <% end %>
+    <% if params[:year] %>
+    <center>
+    <h3>Year: <b><%= params[:year] %></b></h3>
+    </center>
+    <% end %>
       <% @posts.each do |post| %>
         <li>
           <%= link_to post do %>

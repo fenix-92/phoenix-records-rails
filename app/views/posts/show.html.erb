@@ -75,7 +75,7 @@
             </tr>
             <tr>
               <td><b>Released:</b></td>
-              <td><%= @post.year %></td>
+              <td><%= link_to @post.year, posts_path(year: @post.year) %></td>
             </tr>
             <tr>
               <td><b>Store:</b></td>

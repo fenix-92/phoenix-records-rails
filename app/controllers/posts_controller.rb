@@ -9,6 +9,8 @@ class PostsController < ApplicationController
       @posts = Post.joins(:record_company).where("name LIKE '%#{params[:label]}%'").order('created_at DESC')
     elsif params[:country]
       @posts = Post.joins(:country).where("name LIKE '%#{params[:country]}%'").order('created_at DESC')
+    elsif params[:year]
+      @posts = Post.where("year LIKE '%#{params[:year]}%'").order('created_at DESC')
     elsif
       @posts = Post.order('created_at DESC')
     end
