@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
 
   def index
-    if params[:t]
-      @posts = Post.where("title LIKE '%#{params[:t]}%'").order('created_at DESC')
-    elsif params[:a]
-      @posts = Post.joins(:artist).where("name LIKE '%#{params[:a]}%'").order('created_at DESC')
-    elsif params[:l]
-      @posts = Post.joins(:record_company).where("name LIKE '%#{params[:l]}%'").order('created_at DESC')
-    elsif params[:c]
-      @posts = Post.joins(:country).where("name LIKE '%#{params[:c]}%'").order('created_at DESC')
+    if params[:title]
+      @posts = Post.where("title LIKE '%#{params[:title]}%'").order('created_at DESC')
+    elsif params[:artist]
+      @posts = Post.joins(:artist).where("name LIKE '%#{params[:artist]}%'").order('created_at DESC')
+    elsif params[:label]
+      @posts = Post.joins(:record_company).where("name LIKE '%#{params[:label]}%'").order('created_at DESC')
+    elsif params[:country]
+      @posts = Post.joins(:country).where("name LIKE '%#{params[:country]}%'").order('created_at DESC')
     elsif
       @posts = Post.order('created_at DESC')
     end
