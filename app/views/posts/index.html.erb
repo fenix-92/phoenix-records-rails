@@ -1,5 +1,25 @@
 <div class="container posts-container">
   <ul id="Grid">
+    <% if params[:title] %>
+    <center>
+    <h3>Title: <b><%= params[:title] %></b></h3>
+    </center>
+    <% end %>
+    <% if params[:artist] %>
+    <center>
+    <h3>Artist: <b><%= params[:artist] %></b></h3>
+    </center>
+    <% end %>
+    <% if params[:label] %>
+    <center>
+    <h3>Label: <b><%= params[:label] %></b></h3>
+    </center>
+    <% end %>
+    <% if params[:country] %>
+    <center>
+    <h3>Country: <b><%= params[:country] %></b></h3>
+    </center>
+    <% end %>
       <% @posts.each do |post| %>
         <li>
           <%= link_to post do %>
