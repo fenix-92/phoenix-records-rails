@@ -83,6 +83,8 @@ ActiveRecord::Schema.define(version: 2019_08_24_130951) do
     t.bigint "store_id"
     t.bigint "format_id"
     t.bigint "record_company_id"
+    t.boolean "inshrink"
+    t.boolean "sealed"
     t.boolean "featured"
     t.boolean "double_lp"
     t.boolean "gatefold"

@@ -5,9 +5,9 @@
           <%= link_to artist do %>
             <div class="text-center">
             <% if artist.avatar.attached? %>
-              <%= image_tag url_for(artist.avatar), class: "rounded-circle", size: '230x230' %>
+              <%= (link_to (image_tag url_for(artist.avatar), class: "rounded-circle", size: '230x230'), posts_path(artist: artist.name)) %>
             <% else %>
-              <%= image_tag url_for("user.png"), class: "rounded-circle", size: '230x230' %>
+              <%= (link_to (image_tag url_for("user.png"), class: "rounded-circle", size: '230x230'), posts_path(artist: artist.name)) %>
             <% end %>
               <h3 style="color: #3C4858; font-weight: 300;">
                 <%= artist.name %>
