@@ -79,7 +79,11 @@
             </tr>
             <tr>
               <td><b>Store:</b></td>
-              <td><%= @post.store.name %></td>
+              <td><%= link_to @post.store.name, posts_path(store: @post.store.name) %></td>
+            </tr>
+            <tr>
+              <td><b>Buyed:</b></td>
+              <td><%= link_to @post.buyed_at, posts_path(buyed: @post.buyed_at.year) %></td>
             </tr>
             <% if @post.notes.present? %>
             <tr>

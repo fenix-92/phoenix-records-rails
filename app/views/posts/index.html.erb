@@ -25,6 +25,16 @@
     <h3>Year: <b><%= params[:year] %></b></h3>
     </center>
     <% end %>
+    <% if params[:store] %>
+    <center>
+    <h3>Store: <b><%= params[:store] %></b></h3>
+    </center>
+    <% end %>
+    <% if params[:buyed] %>
+    <center>
+    <h3>Buyed at <b><%= params[:buyed] %></b></h3>
+    </center>
+    <% end %>
       <% @posts.each do |post| %>
         <li>
           <%= link_to post do %>

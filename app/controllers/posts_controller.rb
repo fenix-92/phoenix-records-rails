@@ -11,6 +11,10 @@ class PostsController < ApplicationController
       @posts = Post.joins(:country).where("name LIKE '%#{params[:country]}%'").order('created_at DESC')
     elsif params[:year]
       @posts = Post.where("year LIKE '%#{params[:year]}%'").order('created_at DESC')
+    elsif params[:store]
+      @posts = Post.joins(:store).where("name LIKE '%#{params[:store]}%'").order('created_at DESC')
+    elsif params[:buyed]
+      @posts = Post.where("buyed_at LIKE '%#{params[:buyed]}%'").order('created_at DESC')
     elsif
       @posts = Post.order('created_at DESC')
     end
