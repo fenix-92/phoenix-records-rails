@@ -82,7 +82,7 @@ no_store = Store.create(name: 'No Store', online: 0)
 ebay = Store.create(name: 'eBay', online: 1)
 metralleta = Store.create(name: 'La Metralleta', address: 'Calle del Postigo de San Martín, 1, 28013', online: 0)
 discogs = Store.create( name: 'Discogs', description: 'Discogs is a website and crowdsourced database of information about audio recordings, including commercial releases, promotional releases, and bootleg or off-label releases. The Discogs servers, currently hosted under the domain name discogs.com, are owned by Zink Media, Inc., and are located in Portland, Oregon, US.', online: '1')
-sevilla_record = Store.create(name: 'Record Sevilla', address: 'Amor de Dios, 17, 41002 Sevilla', online: 0)
+sevilla_record = Store.create(name: 'Record Sevilla', address: 'Calle Amor de Dios, 17, 41002 Sevilla', online: 0)
 
 
 no_plan = Post.create( title: 'No Plan', artist_id: bowie.id, year: '2016', country_id: europe.id, format_id: lp.id, store_id: sevilla_record.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_near_mint.id, record_company_id: iso_records.id, discogsid: '10150675', serial_no: '88985419651', inshrink: 1, buyed_at: DateTime.parse("12/11/2017 11:58") )
