@@ -65,14 +65,14 @@
                 <% end %>
               </td>
             </tr>
+            <% if @post.country.flag.attached? %>
             <tr>
               <td><b>Country:</b></td>
               <td>
-                <% if @post.country.flag.attached? %>
                   <%= (link_to (image_tag url_for(@post.country.flag), class: "img-fluid", size: '30x30'), posts_path(country: @post.country.name)) %>
-                <% end %>
               </td>
             </tr>
+            <% end %>
             <tr>
               <td><b>Released:</b></td>
               <td><%= link_to @post.year, posts_path(year: @post.year) %></td>
@@ -81,10 +81,12 @@
               <td><b>Store:</b></td>
               <td><%= link_to @post.store.name, posts_path(store: @post.store.name) %></td>
             </tr>
+            <% if @post.buyed_at? %>
             <tr>
               <td><b>Buyed:</b></td>
               <td><%= link_to @post.buyed_at, posts_path(buyed: @post.buyed_at.year) %></td>
             </tr>
+            <% end %>
             <% if @post.notes.present? %>
             <tr>
               <td><b>Notes:</b></td>
