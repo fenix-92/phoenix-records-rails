@@ -97,6 +97,6 @@ no_plan.back.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-
 but_seriously = Post.create( title: '...But Seriously', artist_id: philcollins.id, year: '1989', country_id: europe.id, format_id: lp.id, store_id: no_store.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good.id, record_company_id: wea.id, discogsid: '499511', serial_no: '256919 -1')
 but_seriously.front.attach(io: File.open("#{Rails.root}/resources/records/phil_collins_-_but_seriously/front.png"), filename: "front.png")
 
-dreams_in_the_dark = Post.create( title: 'Dreams in the dark', artist_id: badlands.id, year: '1989', country_id: us.id, format_id: seven_inch.id, store_id: discogs.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: atlantic.id, discogsid: '6807670', serial_no: '7-88888')
+dreams_in_the_dark = Post.create( title: 'Dreams in the dark', artist_id: badlands.id, year: '1989', country_id: us.id, format_id: seven_inch.id, store_id: discogs.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: atlantic.id, discogsid: '6807670', serial_no: '7-88888', notes: 'Signed by Eric Singer in 2018', featured: 1)
 dreams_in_the_dark.front.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/front.jpg"), filename: "front.jpg")
 dreams_in_the_dark.back.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/back.jpg"), filename: "back.jpg")
