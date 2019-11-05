@@ -1,10 +1,26 @@
-<button class="btn btn-primary">></button>
-  <table border="1">
-    <tr>
-      <td>Test</td>
-    </tr>
-  </table>
+<script type="text/javascript">
+  var checkBoxes = document.querySelectorAll(".form-check-input");
+  var form = document.getElementById('search_form');
+
+  for (const check of checkBoxes) {
+  check.addEventListener( 'change', function() {
+    Rails.fire(form, 'submit');
+  });
+  }
+</script>
 <div class="container posts-container">
+  <div class="col-xs-12 col-sm-4">
+     <div class="position-sticky sticky-form">
+       <h1>Cocktails</h1>
+       <hr>
+       <%= simple_form_for :search, url: root_path, method: "GET", remote: true do |f| %>
+         <%= f.input :flavors, label: "Category",  collection: $categories, as: :check_boxes, onClick: "test"%>
+         <%= f.input :strengths, label: "Flavor", collection: $flavors, as: :check_boxes  %>
+         <%= link_to "Reset", root_path  %>
+       <% end %>
+     </div>
+   </div>
+   <div class="col-xs-12 col-sm-8">
   <ul id="Grid">
     <% if params[:title] %>
     <center>
@@ -41,32 +57,7 @@
     <h3>Buyed at <b><%= params[:buyed] %></b></h3>
     </center>
     <% end %>
-      <% @posts.each do |post| %>
-        <li>
-          <%= link_to post do %>
-            <div class="text-center">
-              <% if post.front.attached? %>
-              <div class="record">
-                <% if post.format.name == "LP" %>
-                  <%= image_tag url_for("vinyl.png"), class: "img-fluid vinyl", size: '300x300' %>
-                <% end %>
-                <% if post.format.name == '7"' %>
-                  <%= image_tag url_for("seven_inch.png"), class: "img-fluid vinyl", size: '300x300' %>
-                <% end %>
-                <%= image_tag url_for(post.front.variant(resize: '500x500')), class: "img-fluid box sleeve", size: '300x300' %>
-              </div>
-              <% else %>
-                <%= image_tag url_for("default.png"), class: "img-fluid box", size: '300x300' %>
-              <% end %>
-              <h4 style="color: #3C4858; font-weight: 200; margin-top: 10px; margin-bottom: 0px;">
-                <%= post.artist.name %>
-              </h4>
-              <h3 style="color: #3C4858; font-weight: 300; margin: 0 0;">
-                <%= post.title %>
-              </h3>
-            </div>
-          <% end %>
-        </li>
-      <% end %>
+    <%= render 'post', posts: @posts %>
   </ul>
+  </div>
 </div>

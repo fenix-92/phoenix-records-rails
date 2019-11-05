@@ -1,4 +1,16 @@
 class Post < ApplicationRecord
+  include PgSearch::Model
+
+  pg_search_scope :global_search,
+  against: [:year, :format ],
+  associated_against: {
+    flavors: [:year],
+    categories: [:format]
+  },
+  using: {
+    tsearch: {any_word: true}
+  }
+
   has_one_attached :front
   has_one_attached :back
   has_one_attached :vinyl1

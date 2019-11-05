@@ -1,6 +1,18 @@
 class PostsController < ApplicationController
 
   def index
+
+    if params[:search]
+      @filter = params["search"]["flavors"].concat(params["search"]["strengths"]).flatten.reject(&:blank?)
+      @posts = Post.all.global_search("#{@filter}")
+    else
+      @posts = Post.all
+    end
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
     if params[:title]
       @posts = Post.where("title LIKE '%#{params[:title]}%'").order('created_at DESC')
     elsif params[:artist]
