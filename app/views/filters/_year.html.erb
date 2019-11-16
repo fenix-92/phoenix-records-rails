@@ -1,0 +1,22 @@
+<% if params[:year] %>
+<% else %>
+<div class="filter-year">
+  <span style="font-weight: bold;">Year</span>
+  <br>
+  <% years = Array.new %>
+  <% @posts.each do |post| %>
+     <% years << post.year %>
+  <% end %>
+  <% b = Hash.new(0) %>
+  <% years.each do |v| %>
+     <% b[v] += 1 %>
+  <% end %>
+  <% b.each do |k, v| %>
+    <span>
+      <%= link_to k, posts_path(:year => k) %>
+    </span>
+    <br>
+  <% end %>
+ </div>
+<% end %>
+<br>

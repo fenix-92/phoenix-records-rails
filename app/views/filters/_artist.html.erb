@@ -1,0 +1,22 @@
+<% if params[:artist] %>
+<% else %>
+<div class="filter-year">
+  <span style="font-weight: bold;">Artist</span>
+  <br>
+  <% artists = Array.new %>
+  <% @posts.each do |post| %>
+     <% artists << post.artist.name %>
+  <% end %>
+  <% b = Hash.new(0) %>
+  <% artists.each do |v| %>
+     <% b[v] += 1 %>
+  <% end %>
+  <% b.each do |k, v| %>
+    <span>
+      <%= link_to k, posts_path(:artist => k) %>
+    </span>
+    <br>
+  <% end %>
+ </div>
+<% end %>
+<br>
