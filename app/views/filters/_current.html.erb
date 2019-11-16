@@ -1,35 +1,38 @@
 <% if params[:title] %>
-<center>
-<h3>Title: <b><%= params[:title] %></b></h3>
-</center>
+<div class="alert alert-info">
+<span>Title: <b><%= params[:title] %></b></span>
+
 <% end %>
 <% if params[:artist] %>
-<center>
-<h3>Artist: <b><%= params[:artist] %></b></h3>
-</center>
+<div class="alert alert-primary row">
+<p>Artist: <br><b><%= params[:artist] %></b></p>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true"><i class="material-icons">clear</i></span>
+</button>
+</div>
 <% end %>
 <% if params[:label] %>
 <center>
-<h3>Label: <b><%= params[:label] %></b></h3>
+<span>Label: <b><%= params[:label] %></b></span>
 </center>
 <% end %>
 <% if params[:country] %>
 <center>
-<h3>Country: <b><%= params[:country] %></b></h3>
+<span>Country: <b><%= params[:country] %></b></span>
 </center>
 <% end %>
 <% if params[:year] %>
 <center>
-<h3>Year: <b><%= params[:year] %></b></h3>
+<span>Year: <b><%= params[:year] %></b></span>
 </center>
 <% end %>
 <% if params[:store] %>
 <center>
-<h3>Store: <b><%= params[:store] %></b></h3>
+<span>Store: <b><%= params[:store] %></b></span>
 </center>
 <% end %>
 <% if params[:buyed] %>
 <center>
-<h3>Buyed at <b><%= params[:buyed] %></b></h3>
+<span>Buyed at <b><%= params[:buyed] %></b></span>
 </center>
 <% end %>
