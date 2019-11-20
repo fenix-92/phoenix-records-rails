@@ -4,10 +4,10 @@
 
 <% end %>
 <% if params[:artist] %>
-<div class="alert alert-primary row">
-<p>Artist: <br><b><%= params[:artist] %></b></p>
+<div class="alert alert-primary row filter-close-button">
+<p class="filter">Artist: <br><b><%= params[:artist] %></b></p>
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true"><i class="material-icons">clear</i></span>
+<span aria-hidden="true"><i class="material-icons">clear</i></span>
 </button>
 </div>
 <% end %>

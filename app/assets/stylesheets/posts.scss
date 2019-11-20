@@ -6,6 +6,18 @@
     margin-top: 50px;
 }
 
+.filter-close-button {
+  display: flex;
+     justify-content: space-between;
+}
+
+.filter-close-button .close {
+  float: right!important;
+}
+.filter-close-button .filter {
+  float: left!important;
+}
+
 .record {
   position: relative;
   top: 0;
