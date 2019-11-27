@@ -24,7 +24,6 @@
 //= require toastr.js
 //= require toastr.min
 //= require lightgallery
-//= require pace/pace
 //= require_tree .
 
 $(document).on('turbolinks:load', function(){
