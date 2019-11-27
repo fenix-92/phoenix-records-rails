@@ -13,10 +13,9 @@
   <% end %>
   <% b.each do |k, v| %>
     <span>
-      <%= link_to k, posts_path(:year => k) %>
+      <%= link_to k, params.merge({:year => k}).to_enum.to_h %>
     </span>
     <br>
   <% end %>
-  <br>
  </div>
 <% end %>

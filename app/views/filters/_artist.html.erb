@@ -13,10 +13,9 @@
   <% end %>
   <% b.each do |k, v| %>
     <span>
-      <%= link_to k, posts_path(:artist => k) %>
+      <%= link_to k, params.merge({:artist => k}).to_enum.to_h  %>
     </span>
     <br>
   <% end %>
-  <br>
  </div>
 <% end %>
