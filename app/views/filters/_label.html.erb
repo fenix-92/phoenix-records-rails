@@ -1,0 +1,22 @@
+<% if params[:label] %>
+<% else %>
+<div class="filter-year">
+  <span style="font-weight: bold;">Label</span>
+  <br>
+  <% labels = Array.new %>
+  <% @posts.each do |post| %>
+     <% labels << post.record_company.name %>
+  <% end %>
+  <% b = Hash.new(0) %>
+  <% labels.each do |v| %>
+     <% b[v] += 1 %>
+  <% end %>
+  <% b.each do |k, v| %>
+    <span>
+      <%= link_to k, posts_path(:label => k) %>
+    </span>
+    <br>
+  <% end %>
+  <br>
+ </div>
+<% end %>

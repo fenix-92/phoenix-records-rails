@@ -1,7 +1,3 @@
-<% if params[:title] %>
-<div class="alert alert-info">
-<span>Title: <b><%= params[:title] %></b></span>
-<% end %>
 <% if params[:artist] %>
 <div class="alert alert-primary row filter-close-button">
 <p class="filter">Artist: <br><b><%= params[:artist] %></b></p>
@@ -11,9 +7,12 @@
 </div>
 <% end %>
 <% if params[:label] %>
-<center>
-<span>Label: <b><%= params[:label] %></b></span>
-</center>
+<div class="alert alert-primary row filter-close-button">
+<p class="filter">Label: <br><b><%= params[:label] %></b></p>
+<%= link_to secure_path_for(params, :label) do %>
+  <span aria-hidden="true"><i class="material-icons">clear</i></span>
+<% end %>
+</div>
 <% end %>
 <% if params[:country] %>
 <center>
@@ -21,9 +20,12 @@
 </center>
 <% end %>
 <% if params[:year] %>
-<center>
-<span>Year: <b><%= params[:year] %></b></span>
-</center>
+<div class="alert alert-primary row filter-close-button">
+<p class="filter">Year: <br><b><%= params[:year] %></b></p>
+<%= link_to secure_path_for(params, :year) do %>
+  <span aria-hidden="true"><i class="material-icons">clear</i></span>
+<% end %>
+</div>
 <% end %>
 <% if params[:store] %>
 <center>
