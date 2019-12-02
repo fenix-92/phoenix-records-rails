@@ -1,4 +1,4 @@
- // 
+ //
  // =========================================================
  // * Material Kit - v2.0.5
  // =========================================================
@@ -13,7 +13,6 @@
  // * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 
-<!DOCTYPE html>
 var big_image;
 
 $(document).ready(function() {
