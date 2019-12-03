@@ -35,6 +35,7 @@ bowie = Artist.create( name: 'David Bowie', discogsid: '10263')
 bowie.avatar.attach(io: File.open("#{Rails.root}/resources/artists/bowie.jpg"), filename: "bowie.jpg")
 therollingstones = Artist.create( name: 'The Rolling Stones', discogsid: '20991')
 therollingstones.avatar.attach(io: File.open("#{Rails.root}/resources/artists/the-rolling-stones.jpg"), filename: "the-rolling-stones.jpg")
+ledzeppelin = Artist.create( name: 'Led Zeppelin', discogsid: '34278')
 
 # countries
 uk = Country.create(name: 'United Kingdom', country_code: 'UK')
@@ -47,6 +48,7 @@ japan = Country.create(name: 'Japan', country_code: 'JP')
 japan.flag.attach(io: File.open("#{Rails.root}/resources/flags/japan.png"), filename: "japan.png")
 europe = Country.create(name: 'Europe', country_code: 'EU')
 europe.flag.attach(io: File.open("#{Rails.root}/resources/flags/europe.png"), filename: "europe.png")
+france = Country.create(name: 'France', country_code: 'FR')
 
 # Labels
 geffen = RecordCompany.create(name: 'Geffen', long_name: 'Geffen Records')
@@ -88,7 +90,7 @@ ebay = Store.create(name: 'eBay', online: 1)
 metralleta = Store.create(name: 'La Metralleta', address: 'Calle del Postigo de San Martín, 1, 28013', online: 0)
 discogs = Store.create( name: 'Discogs', description: 'Discogs is a website and crowdsourced database of information about audio recordings, including commercial releases, promotional releases, and bootleg or off-label releases. The Discogs servers, currently hosted under the domain name discogs.com, are owned by Zink Media, Inc., and are located in Portland, Oregon, US.', online: '1')
 sevilla_record = Store.create(name: 'Record Sevilla', address: 'Calle Amor de Dios, 17, 41002 Sevilla', online: 0)
-
+todocoleccion = Store.create(name: 'Todocolección', address: '', online: 1)
 
 no_plan = Post.create( title: 'No Plan', artist_id: bowie.id, year: '2016', country_id: europe.id, format_id: lp.id, store_id: sevilla_record.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_near_mint.id, record_company_id: iso_records.id, discogsid: '10150675', serial_no: '88985419651', inshrink: 1, featured: 1, buyed_at: DateTime.parse("12/11/2017 11:58") )
 no_plan.front.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-_no_plan/front.jpg"), filename: "front.jpg")
@@ -100,3 +102,7 @@ but_seriously.front.attach(io: File.open("#{Rails.root}/resources/records/phil_c
 dreams_in_the_dark = Post.create( title: 'Dreams in the dark', artist_id: badlands.id, year: '1989', country_id: us.id, format_id: seven_inch.id, store_id: discogs.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: atlantic.id, discogsid: '6807670', serial_no: '7-88888', notes: 'Signed by Eric Singer in 2018', featured: 1)
 dreams_in_the_dark.front.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/front.jpg"), filename: "front.jpg")
 dreams_in_the_dark.back.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/back.jpg"), filename: "back.jpg")
+
+whole_lotta_love = Post.create( title: 'Whole Lotta Love', artist_id: ledzeppelin.id, year: '1969', country_id: france.id, format_id: seven_inch.id, store_id: todocoleccion.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good.id, record_company_id: atlantic.id, discogsid: '10081492', serial_no: '650.186', featured: 0)
+whole_lotta_love.front.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/front.jpg"), filename: "front.jpg")
+whole_lotta_love.back.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/back.jpg"), filename: "back.jpg")
