@@ -82,18 +82,32 @@ div, ul, li{
 
 /* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
 
+/* 4 COL */
+
+@media (max-width: 4900px){
+  #Grid li{
+    width: 22%;
+    margin-bottom: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+
 /* 3 COL */
 
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   #Grid li{
     width: 31%;
     margin-bottom: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
   }
 }
 
 /* 2 COL */
 
-@media (max-width: 800px){
+@media (max-width: 600px){
   #Grid li{
     width: 48%;
     margin-bottom: 4%;
