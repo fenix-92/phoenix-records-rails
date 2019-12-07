@@ -1,4 +1,4 @@
-<div class="container posts-container row">
+<div class="posts-container row">
   <div class="col-sm-2">
      <div class="position-sticky sticky-form">
        <h3>Filter</h3>
@@ -9,7 +9,7 @@
        <%= render 'filters/year' %>
      </div>
    </div>
-   <div class="col-xs-12 col-sm-10">
+   <div class="col-sm-10">
   <ul id="Grid">
     <%= render 'post', posts: @posts %>
   </ul>
