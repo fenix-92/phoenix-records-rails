@@ -36,6 +36,7 @@ bowie.avatar.attach(io: File.open("#{Rails.root}/resources/artists/bowie.jpg"), 
 therollingstones = Artist.create( name: 'The Rolling Stones', discogsid: '20991')
 therollingstones.avatar.attach(io: File.open("#{Rails.root}/resources/artists/the-rolling-stones.jpg"), filename: "the-rolling-stones.jpg")
 ledzeppelin = Artist.create( name: 'Led Zeppelin', discogsid: '34278')
+ledzeppelin.avatar.attach(io: File.open("#{Rails.root}/resources/artists/ledzeppelin.jpg"), filename: "ledzeppelin.jpg")
 
 # countries
 uk = Country.create(name: 'United Kingdom', country_code: 'UK')
