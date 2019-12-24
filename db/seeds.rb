@@ -101,7 +101,7 @@ discogs = Store.create( name: 'Discogs', description: '', online: '1')
 sevilla_record = Store.create(name: 'Record Sevilla', address: 'Calle Amor de Dios, 17, 41002 Sevilla', online: 0)
 todocoleccion = Store.create(name: 'Todocolección', address: '', online: 1)
 
-no_plan = Post.create( title: 'No Plan', artist_id: bowie.id, year: '2016', country_id: europe.id, format_id: lp.id, store_id: sevilla_record.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_near_mint.id, record_company_id: iso_records.id, discogsid: '10150675', serial_no: '88985419651', inshrink: 1, featured: 1, buyed_at: DateTime.parse("12/11/2017 11:58") )
+no_plan = Post.create( title: 'No Plan', artist_id: bowie.id, year: '2016', country_id: europe.id, format_id: lp.id, store_id: sevilla_record.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_near_mint.id, record_company_id: iso_records.id, discogsid: '10150675', serial_no: '88985419651', inshrink: 1, featured: 0, buyed_at: DateTime.parse("12/11/2017 11:58") )
 no_plan.front.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-_no_plan/front.jpg"), filename: "front.jpg")
 no_plan.back.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-_no_plan/back.jpg"), filename: "back.jpg")
 
@@ -111,7 +111,7 @@ but_seriously.back.attach(io: File.open("#{Rails.root}/resources/records/phil_co
 but_seriously.vinyl1.attach(io: File.open("#{Rails.root}/resources/records/phil_collins_-_but_seriously/vinyl1.jpg"), filename: "vinyl1.jpg")
 
 
-dreams_in_the_dark = Post.create( title: 'Dreams in the dark', artist_id: badlands.id, year: '1989', country_id: us.id, format_id: seven_inch.id, store_id: discogs.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: atlantic.id, discogsid: '6807670', serial_no: '7-88888', notes: 'Signed by Eric Singer in 2018', featured: 1)
+dreams_in_the_dark = Post.create( title: 'Dreams in the dark', artist_id: badlands.id, year: '1989', country_id: us.id, format_id: seven_inch.id, store_id: discogs.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: atlantic.id, discogsid: '6807670', serial_no: '7-88888', notes: 'Signed by Eric Singer in 2018', buyed_at: DateTime.parse("23/11/2015 14:50"), featured: 1)
 dreams_in_the_dark.front.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/front.jpg"), filename: "front.jpg")
 dreams_in_the_dark.back.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/back.jpg"), filename: "back.jpg")
 

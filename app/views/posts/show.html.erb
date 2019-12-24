@@ -92,7 +92,23 @@
               <td><%= link_to @post.buyed_at, posts_path(buyed: @post.buyed_at.year) %></td>
             </tr>
             <% end %>
+            <% if @post.matrix_a.present? %>
+            <tr>
+              <td><b>Matrix / Runout (side a):</b></td>
+              <td><%= @post.matrix_a %></td>
+            </tr>
+            <% end %>
+            <% if @post.matrix_b.present? %>
+            <tr>
+              <td><b>Matrix / Runout (side b):</b></td>
+              <td><%= @post.matrix_b %></td>
+            </tr>
+            <% end %>
           </table>
+          <% if @post.notes.present? %>
+            <b>Notes:</b><br>
+            <p><%= @post.notes %></p>
+          <% end %>
           <br>
           <% if @post.audio_sample.attached? %>
             <p><b>Audio</b></p>
@@ -101,16 +117,7 @@
       </div>
       <div class="card-body">
         <hr>
-        <% if @post.matrix_a.present? %>
-          Matrix / Runout (side a): <%= @post.matrix_a %>
-        <% end %>
-        <% if @post.matrix_b.present? %>
-          Matrix / Runout (side b): <%= @post.matrix_b %>
-        <% end %>
-        <% if @post.notes.present? %>
-          <b>Notes:</b><br>
-          <p><%= @post.notes %></p>
-        <% end %>
+
       </div>
     </div>
   </div>

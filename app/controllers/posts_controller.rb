@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     elsif params[:buyed]
       @posts = Post.where("buyed_at LIKE '%#{params[:buyed]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif
-      @posts = Post.paginate(:page => params[:page])
+      @posts = Post.paginate(:page => params[:page]).order(featured: :desc)
     end
   end
 
