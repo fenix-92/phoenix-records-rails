@@ -94,7 +94,7 @@ sleeve_sealed = SleeveGrading.create( name: 'S', text: 'Sealed')
 no_store = Store.create(name: 'No Store', online: 0)
 ebay = Store.create(name: 'eBay', online: 1)
 metralleta = Store.create(name: 'La Metralleta', address: 'Calle del Postigo de San Martín, 1, 28013', online: 0)
-discogs = Store.create( name: 'Discogs', description: 'Discogs is a website and crowdsourced database of information about audio recordings, including commercial releases, promotional releases, and bootleg or off-label releases. The Discogs servers, currently hosted under the domain name discogs.com, are owned by Zink Media, Inc., and are located in Portland, Oregon, US.', online: '1')
+discogs = Store.create( name: 'Discogs', description: '', online: '1')
 sevilla_record = Store.create(name: 'Record Sevilla', address: 'Calle Amor de Dios, 17, 41002 Sevilla', online: 0)
 todocoleccion = Store.create(name: 'Todocolección', address: '', online: 1)
 
@@ -104,6 +104,7 @@ no_plan.back.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-
 
 but_seriously = Post.create( title: '...But Seriously', artist_id: philcollins.id, year: '1989', country_id: europe.id, format_id: lp.id, store_id: no_store.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good.id, record_company_id: wea.id, discogsid: '499511', serial_no: '256919 -1')
 but_seriously.front.attach(io: File.open("#{Rails.root}/resources/records/phil_collins_-_but_seriously/front.png"), filename: "front.png")
+but_seriously.front.attach(io: File.open("#{Rails.root}/resources/records/phil_collins_-_but_seriously/back.jpg"), filename: "back.jpg")
 
 dreams_in_the_dark = Post.create( title: 'Dreams in the dark', artist_id: badlands.id, year: '1989', country_id: us.id, format_id: seven_inch.id, store_id: discogs.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: atlantic.id, discogsid: '6807670', serial_no: '7-88888', notes: 'Signed by Eric Singer in 2018', featured: 1)
 dreams_in_the_dark.front.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/front.jpg"), filename: "front.jpg")
