@@ -37,6 +37,8 @@ therollingstones = Artist.create( name: 'The Rolling Stones', discogsid: '20991'
 therollingstones.avatar.attach(io: File.open("#{Rails.root}/resources/artists/the-rolling-stones.jpg"), filename: "the-rolling-stones.jpg")
 ledzeppelin = Artist.create( name: 'Led Zeppelin', discogsid: '34278')
 ledzeppelin.avatar.attach(io: File.open("#{Rails.root}/resources/artists/ledzeppelin.jpg"), filename: "ledzeppelin.jpg")
+pinkfloyd = Artist.create( name: 'Pink Floyd', discogsid: '45467')
+pinkfloyd.avatar.attach(io: File.open("#{Rails.root}/resources/artists/pinkfloyd.jpg"), filename: "pinkfloyd.jpg")
 
 # countries
 uk = Country.create(name: 'United Kingdom', country_code: 'UK')
@@ -67,6 +69,7 @@ iso_records = RecordCompany.create(name: 'ISO', long_name: 'ISO Records')
 virgin = RecordCompany.create(name: 'Virgin', long_name: 'Virgin Records')
 virgin.photo.attach(io: File.open("#{Rails.root}/resources/labels/virgin.png"), filename: "virgin.png")
 atlantic = RecordCompany.create(name: 'Atlantic', long_name: 'Atlantic Records')
+harvest = RecordCompany.create(name: 'Harvest', long_name: 'Harvest Records')
 
 # Gradings
 media_not_present = MediaGrading.create(name: '-', text: 'Not present')
@@ -115,3 +118,6 @@ dreams_in_the_dark.back.attach(io: File.open("#{Rails.root}/resources/records/ba
 whole_lotta_love = Post.create( title: 'Whole Lotta Love', artist_id: ledzeppelin.id, year: '1969', country_id: france.id, format_id: seven_inch.id, store_id: todocoleccion.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good.id, record_company_id: atlantic.id, discogsid: '10081492', serial_no: '650.186', featured: 0)
 whole_lotta_love.front.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/front.jpg"), filename: "front.jpg")
 whole_lotta_love.back.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/back.jpg"), filename: "back.jpg")
+
+wish_you_were_here = Post.create( title: 'Wish You Were Here', artist_id: pinkfloyd.id, year: '1975', country_id: spain.id, format_id: lp.id, store_id: no_store.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: harvest.id, discogsid: '10657950', serial_no: 'J066-96918', featured: 0)
+wish_you_were_here.front.attach(io: File.open("#{Rails.root}/resources/records/pink_floyd_wish_you_were_here/front.png"), filename: "front.png")
