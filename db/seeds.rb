@@ -50,6 +50,11 @@ japan.flag.attach(io: File.open("#{Rails.root}/resources/flags/japan.png"), file
 europe = Country.create(name: 'Europe', country_code: 'EU')
 europe.flag.attach(io: File.open("#{Rails.root}/resources/flags/europe.png"), filename: "europe.png")
 france = Country.create(name: 'France', country_code: 'FR')
+france.flag.attach(io: File.open("#{Rails.root}/resources/flags/france.png"), filename: "france.png")
+belgium = Country.create(name: 'Belgium', country_code: 'BG')
+belgium.flag.attach(io: File.open("#{Rails.root}/resources/flags/belgium.png"), filename: "belgium.png")
+germany = Country.create(name: 'Germany', country_code: 'G')
+germany.flag.attach(io: File.open("#{Rails.root}/resources/flags/germany.png"), filename: "germany.png")
 
 # Labels
 geffen = RecordCompany.create(name: 'Geffen', long_name: 'Geffen Records')
