@@ -1,0 +1,21 @@
+<% if params[:country] %>
+<% else %>
+<div class="filter-year">
+  <span style="font-weight: bold;">Country</span>
+  <br>
+  <% countries = Array.new %>
+  <% @posts.each do |post| %>
+     <% countries << post.country.name %>
+  <% end %>
+  <% b = Hash.new(0) %>
+  <% countries.each do |v| %>
+     <% b[v] += 1 %>
+  <% end %>
+  <% b.each do |k, v| %>
+    <span>
+      <%= link_to k, params.merge({:country => k}).to_enum.to_h  %>
+    </span>
+    <br>
+  <% end %>
+ </div>
+<% end %>

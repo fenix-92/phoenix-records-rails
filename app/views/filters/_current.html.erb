@@ -15,9 +15,12 @@
 </div>
 <% end %>
 <% if params[:country] %>
-<center>
-<span>Country: <b><%= params[:country] %></b></span>
-</center>
+<div class="alert alert-primary row filter-close-button">
+<p class="filter">Country: <br><b><%= params[:country] %></b></p>
+<%= link_to secure_path_for(params, :country) do %>
+  <span aria-hidden="true"><i class="material-icons">clear</i></span>
+<% end %>
+</div>
 <% end %>
 <% if params[:year] %>
 <div class="alert alert-primary row filter-close-button">
