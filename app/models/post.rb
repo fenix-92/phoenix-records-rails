@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   include PgSearch::Model
-
+  self.per_page = 4
   pg_search_scope :global_search,
   against: [:year, :format ],
   associated_against: {

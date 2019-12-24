@@ -13,5 +13,11 @@
   <ul id="Grid">
     <%= render 'post', posts: @posts %>
   </ul>
+  <div class="apple_pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @posts, :container => false %>
+  </div>
   </div>
 </div>

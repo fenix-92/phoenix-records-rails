@@ -1,34 +1,22 @@
 class PostsController < ApplicationController
 
   def index
-
-    if params[:search]
-      @filter = params["search"]["flavors"].concat(params["search"]["strengths"]).flatten.reject(&:blank?)
-      @posts = Post.all.global_search("#{@filter}")
-    else
-      @posts = Post.all
-    end
-    respond_to do |format|
-      format.html
-      format.js
-    end
-
     if params[:title]
-      @posts = Post.where("title LIKE '%#{params[:title]}%'").order('created_at DESC')
+      @posts = Post.where("title LIKE '%#{params[:title]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif params[:artist]
-      @posts = Post.joins(:artist).where("name LIKE '%#{params[:artist]}%'").order('created_at DESC')
+      @posts = Post.joins(:artist).where("name LIKE '%#{params[:artist]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif params[:label]
-      @posts = Post.joins(:record_company).where("name LIKE '%#{params[:label]}%'").order('created_at DESC')
+      @posts = Post.joins(:record_company).where("name LIKE '%#{params[:label]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif params[:country]
-      @posts = Post.joins(:country).where("name LIKE '%#{params[:country]}%'").order('created_at DESC')
+      @posts = Post.joins(:country).where("name LIKE '%#{params[:country]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif params[:year]
-      @posts = Post.where("year LIKE '%#{params[:year]}%'").order('created_at DESC')
+      @posts = Post.where("year LIKE '%#{params[:year]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif params[:store]
-      @posts = Post.joins(:store).where("name LIKE '%#{params[:store]}%'").order('created_at DESC')
+      @posts = Post.joins(:store).where("name LIKE '%#{params[:store]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif params[:buyed]
-      @posts = Post.where("buyed_at LIKE '%#{params[:buyed]}%'").order('created_at DESC')
+      @posts = Post.where("buyed_at LIKE '%#{params[:buyed]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif
-      @posts = Post.order('created_at DESC')
+      @posts = Post.paginate(:page => params[:page])
     end
   end
 
