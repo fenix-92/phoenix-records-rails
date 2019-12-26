@@ -4,7 +4,7 @@
   <span style="font-weight: bold;">Country</span>
   <br>
   <% countries = Array.new %>
-  <% @posts.each do |post| %>
+  <% @posts_all.each do |post| %>
      <% countries << post.country.name %>
   <% end %>
   <% b = Hash.new(0) %>
