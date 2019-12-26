@@ -4,7 +4,7 @@
   <span style="font-weight: bold;">Artist</span>
   <br>
   <% artists = Array.new %>
-  <% @posts.each do |post| %>
+  <% @posts_all.each do |post| %>
      <% artists << post.artist.name %>
   <% end %>
   <% b = Hash.new(0) %>

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def index
+    @posts_all = Post.order(featured: :desc)
     if params[:title]
       @posts = Post.where("title LIKE '%#{params[:title]}%'").paginate(:page => params[:page]).order('created_at DESC')
     elsif params[:artist]

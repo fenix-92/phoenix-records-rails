@@ -118,6 +118,7 @@ dreams_in_the_dark.back.attach(io: File.open("#{Rails.root}/resources/records/ba
 whole_lotta_love = Post.create( title: 'Whole Lotta Love', artist_id: ledzeppelin.id, year: '1969', country_id: france.id, format_id: seven_inch.id, store_id: todocoleccion.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good.id, record_company_id: atlantic.id, discogsid: '10081492', serial_no: '650.186', featured: 0)
 whole_lotta_love.front.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/front.jpg"), filename: "front.jpg")
 whole_lotta_love.back.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/back.jpg"), filename: "back.jpg")
+whole_lotta_love.vinyl1.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/vinyl_a.jpg"), filename: "vinyl_a.jpg")
 
 wish_you_were_here = Post.create( title: 'Wish You Were Here', artist_id: pinkfloyd.id, year: '1975', country_id: spain.id, format_id: lp.id, store_id: no_store.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: harvest.id, discogsid: '10657950', serial_no: 'J066-96918', featured: 0)
 wish_you_were_here.front.attach(io: File.open("#{Rails.root}/resources/records/pink_floyd_wish_you_were_here/front.png"), filename: "front.png")

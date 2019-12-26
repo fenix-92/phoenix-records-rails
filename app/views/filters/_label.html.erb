@@ -4,7 +4,7 @@
   <span style="font-weight: bold;">Label</span>
   <br>
   <% labels = Array.new %>
-  <% @posts.each do |post| %>
+  <% @posts_all.each do |post| %>
      <% labels << post.record_company.name %>
   <% end %>
   <% b = Hash.new(0) %>
