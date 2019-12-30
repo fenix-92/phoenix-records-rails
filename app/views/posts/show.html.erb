@@ -104,6 +104,27 @@
               <td><%= @post.matrix_b %></td>
             </tr>
             <% end %>
+            <% if @post.discogsid.present? %>
+            <script type="text/javascript">
+              var marketplace = require('discogs-marketplace-js');
+              var search_parameters = {
+              	id: "Black Sabbath",
+              	type: "string",
+              	pagination : {
+              		page: 1
+              	}
+              }
+
+              marketplace.search(search_parameters, function(result){
+              	if(!(result instanceof Error))
+              		console.log(result);
+              });
+            </script>
+            <tr>
+              <td><b>Discogs Marketplace</b></td>
+              <td><%= @post.matrix_b %></td>
+            </tr>
+            <% end %>
           </table>
           <% if @post.notes.present? %>
             <b>Notes:</b><br>

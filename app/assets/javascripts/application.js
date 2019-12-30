@@ -19,6 +19,8 @@
 //= require plugins/moment.min
 //= require plugins/nouislider.min
 //= require plugins/bootstrap-datetimepicker
+//= require discogs-marketplace-js/search
+//= require discogs-marketplace-js/util
 //= require material-kit
 //= require material-kit.min
 //= require toastr.js
