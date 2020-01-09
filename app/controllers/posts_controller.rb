@@ -1,31 +1,20 @@
 class PostsController < ApplicationController
 
   def index
-    if params[:title]
-      @posts_all= Post.where("title LIKE '%#{params[:title]}%'").order('created_at DESC')
-      @posts = Post.where("title LIKE '%#{params[:title]}%'").paginate(:page => params[:page]).order('created_at DESC')
-    elsif params[:artist]
-      @posts_all = Post.joins(:artist).where("name LIKE '%#{params[:artist]}%'").order('created_at DESC')
-      @posts = Post.joins(:artist).where("name LIKE '%#{params[:artist]}%'").paginate(:page => params[:page]).order('created_at DESC')
-    elsif params[:label]
-      @posts_all = Post.joins(:record_company).where("name LIKE '%#{params[:label]}%'").order('created_at DESC')
-      @posts = Post.joins(:record_company).where("name LIKE '%#{params[:label]}%'").paginate(:page => params[:page]).order('created_at DESC')
-    elsif params[:country]
-      @posts_all = Post.joins(:country).where("name LIKE '%#{params[:country]}%'").order('created_at DESC')
-      @posts = Post.joins(:country).where("name LIKE '%#{params[:country]}%'").paginate(:page => params[:page]).order('created_at DESC')
-    elsif params[:year]
-      @posts_all = Post.where("year LIKE '%#{params[:year]}%'").order('created_at DESC')
-      @posts = Post.where("year LIKE '%#{params[:year]}%'").paginate(:page => params[:page]).order('created_at DESC')
-    elsif params[:store]
-      @posts_all = Post.joins(:store).where("name LIKE '%#{params[:store]}%'").order('created_at DESC')
-      @posts = Post.joins(:store).where("name LIKE '%#{params[:store]}%'").paginate(:page => params[:page]).order('created_at DESC')
-    elsif params[:buyed]
-      @posts_all = Post.where("buyed_at LIKE '%#{params[:buyed]}%'").order('created_at DESC')
-      @posts = Post.where("buyed_at LIKE '%#{params[:buyed]}%'").paginate(:page => params[:page]).order('created_at DESC')
-    elsif
-      @posts_all = Post.order(featured: :desc)
-      @posts = Post.paginate(:page => params[:page]).order(featured: :desc)
-    end
+    @posts = Post.all.paginate(:page => params[:page])
+    @posts_all = Post.all
+    # Year filter
+    @posts = @posts.by_year(params[:year]).paginate(:page => params[:page]) if params[:year].present?
+    @posts_all = @posts.by_year(params[:year]) if params[:year].present?
+    # Artist filter
+    @posts = @posts.by_artist(params[:artist]).paginate(:page => params[:page]) if params[:artist].present?
+    @posts_all = @posts.by_artist(params[:artist]) if params[:artist].present?
+    # Country filter
+    @posts = @posts.by_country(params[:country]).paginate(:page => params[:page]) if params[:country].present?
+    @posts_all = @posts.by_country(params[:country]) if params[:country].present?
+    # Label filter
+    @posts = @posts.by_label(params[:label]).paginate(:page => params[:page]) if params[:label].present?
+    @posts_all = @posts.by_label(params[:label]) if params[:label].present?
   end
 
   def new
