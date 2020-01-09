@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.paginate(:page => params[:page])
     @posts_all = Post.all
+    # Featured
+    @posts = @posts.featured.paginate(:page => params[:page]) if params[:featured].present?
+    @posts_all = @posts.featured if params[:featured].present?
     # Year filter
     @posts = @posts.by_year(params[:year]).paginate(:page => params[:page]) if params[:year].present?
     @posts_all = @posts.by_year(params[:year]) if params[:year].present?

@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   include PgSearch::Model
   self.per_page = 12
   scope :by_year, lambda { | year | where(:year => year)}
+  scope :featured, -> { where(:featured => true) }
   scope :by_artist, lambda { | artist |
     joins(:artist).where(artists: { name: artist })
   }
