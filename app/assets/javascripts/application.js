@@ -24,6 +24,7 @@
 //= require material-kit
 //= require material-kit.min
 //= require toastr.js
+//= require activestorage
 //= require toastr.min
 //= require lightgallery
 //= require_tree .
