@@ -73,6 +73,10 @@ ActiveRecord::Schema.define(version: 2019_12_02_125529) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "artist_id"
+    t.string "image_front"
+    t.string "image_back"
+    t.string "image_vinyl_a"
+    t.string "image_vinyl_b"
     t.string "title"
     t.string "discogsid"
     t.string "serial_no"

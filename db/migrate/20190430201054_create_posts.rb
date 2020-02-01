@@ -2,6 +2,10 @@ class CreatePosts < ActiveRecord::Migration[5.2]
   def change
     create_table :posts do |t|
       t.references :artist, foreign_key: true
+      t.string :image_front
+      t.string :image_back
+      t.string :image_vinyl_a
+      t.string :image_vinyl_b
       t.string :title
       t.string :discogsid
       t.string :serial_no
