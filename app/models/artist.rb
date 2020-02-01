@@ -1,4 +1,4 @@
 class Artist < ApplicationRecord
-  has_one_attached :avatar
+  mount_uploader :artistimg, ArtistimgUploader
   has_many :posts
 end

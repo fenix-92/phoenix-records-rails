@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
 
   def index
-    @artists = Artist.order('created_at DESC').with_attached_avatar
+    @artists = Artist.order('created_at DESC')
     # render json: @artists.to_json(include: { avatar_attachment: { include: :blob } })
   end
 

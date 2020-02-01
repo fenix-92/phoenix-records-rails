@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-user = User.create! :email => 'admin@admin.com', :password => 'admin1', :password_confirmation => 'admin1'
+user = User.create! :email => 'ignacio.granero@hotmail.com', :password => 'admin1', :password_confirmation => 'admin1'
 
 # Formats
 lp = Format.create( name: 'LP', long_name: 'Vinyl')
@@ -21,55 +21,55 @@ cassette_single = Format.create(name: 'Cassette Single', long_name: 'Cassette Si
 
 
 # Artists
-badlands = Artist.create( name: 'Badlands', discogsid: '323881')
-badlands.avatar.attach(io: File.open("#{Rails.root}/resources/artists/badlands.jpg"), filename: "badlands.jpg")
+badlands = Artist.create( name: 'Badlands', discogsid: '323881', image_url: "https://res.cloudinary.com/hbjmnmqbr/image/upload/v1579384923/artists/badlands_lc9voy.jpg")
+#badlands.avatar.attach(io: File.open("#{Rails.root}/resources/artists/badlands.jpg"), filename: "badlands.jpg")
 defleppard = Artist.create( name: 'Def Leppard', discogsid: '252443')
-defleppard.avatar.attach(io: File.open("#{Rails.root}/resources/artists/def-leppard.jpg"), filename: "def-leppard.jpg")
+#defleppard.avatar.attach(io: File.open("#{Rails.root}/resources/artists/def-leppard.jpg"), filename: "def-leppard.jpg")
 kiss = Artist.create( name: 'Kiss', discogsid: '153073')
-kiss.avatar.attach(io: File.open("#{Rails.root}/resources/artists/kiss.jpg"), filename: "kiss.jpg")
+#kiss.avatar.attach(io: File.open("#{Rails.root}/resources/artists/kiss.jpg"), filename: "kiss.jpg")
 philcollins = Artist.create( name: 'Phil Collins', discogsid: '101028')
-philcollins.avatar.attach(io: File.open("#{Rails.root}/resources/artists/phil-collins.jpg"), filename: "phil-collins.jpg")
+#philcollins.avatar.attach(io: File.open("#{Rails.root}/resources/artists/phil-collins.jpg"), filename: "phil-collins.jpg")
 cinderella = Artist.create( name: 'Cinderella', discogsid: '196350')
-cinderella.avatar.attach(io: File.open("#{Rails.root}/resources/artists/cinderella.jpg"), filename: "cinderella.jpg")
+#cinderella.avatar.attach(io: File.open("#{Rails.root}/resources/artists/cinderella.jpg"), filename: "cinderella.jpg")
 bowie = Artist.create( name: 'David Bowie', discogsid: '10263')
-bowie.avatar.attach(io: File.open("#{Rails.root}/resources/artists/bowie.jpg"), filename: "bowie.jpg")
+#bowie.avatar.attach(io: File.open("#{Rails.root}/resources/artists/bowie.jpg"), filename: "bowie.jpg")
 therollingstones = Artist.create( name: 'The Rolling Stones', discogsid: '20991')
-therollingstones.avatar.attach(io: File.open("#{Rails.root}/resources/artists/the-rolling-stones.jpg"), filename: "the-rolling-stones.jpg")
+#therollingstones.avatar.attach(io: File.open("#{Rails.root}/resources/artists/the-rolling-stones.jpg"), filename: "the-rolling-stones.jpg")
 ledzeppelin = Artist.create( name: 'Led Zeppelin', discogsid: '34278')
-ledzeppelin.avatar.attach(io: File.open("#{Rails.root}/resources/artists/ledzeppelin.jpg"), filename: "ledzeppelin.jpg")
+#ledzeppelin.avatar.attach(io: File.open("#{Rails.root}/resources/artists/ledzeppelin.jpg"), filename: "ledzeppelin.jpg")
 pinkfloyd = Artist.create( name: 'Pink Floyd', discogsid: '45467')
-pinkfloyd.avatar.attach(io: File.open("#{Rails.root}/resources/artists/pinkfloyd.jpg"), filename: "pinkfloyd.jpg")
+#pinkfloyd.avatar.attach(io: File.open("#{Rails.root}/resources/artists/pinkfloyd.jpg"), filename: "pinkfloyd.jpg")
 badenglish = Artist.create( name: 'Bad English', discogsid: '254404')
 
 # countries
 uk = Country.create(name: 'United Kingdom', country_code: 'UK')
-uk.flag.attach(io: File.open("#{Rails.root}/resources/flags/united-kingdom.png"), filename: "united-kingdom.png")
+#uk.flag.attach(io: File.open("#{Rails.root}/resources/flags/united-kingdom.png"), filename: "united-kingdom.png")
 us = Country.create(name: 'United States', country_code: 'US')
-us.flag.attach(io: File.open("#{Rails.root}/resources/flags/united-states-of-america.png"), filename: "united-states-of-america.png")
+#us.flag.attach(io: File.open("#{Rails.root}/resources/flags/united-states-of-america.png"), filename: "united-states-of-america.png")
 spain = Country.create(name: 'Spain', country_code: 'SP')
-spain.flag.attach(io: File.open("#{Rails.root}/resources/flags/spain.png"), filename: "spain.png")
+#spain.flag.attach(io: File.open("#{Rails.root}/resources/flags/spain.png"), filename: "spain.png")
 japan = Country.create(name: 'Japan', country_code: 'JP')
-japan.flag.attach(io: File.open("#{Rails.root}/resources/flags/japan.png"), filename: "japan.png")
+#japan.flag.attach(io: File.open("#{Rails.root}/resources/flags/japan.png"), filename: "japan.png")
 europe = Country.create(name: 'Europe', country_code: 'EU')
-europe.flag.attach(io: File.open("#{Rails.root}/resources/flags/europe.png"), filename: "europe.png")
+#europe.flag.attach(io: File.open("#{Rails.root}/resources/flags/europe.png"), filename: "europe.png")
 france = Country.create(name: 'France', country_code: 'FR')
-france.flag.attach(io: File.open("#{Rails.root}/resources/flags/france.png"), filename: "france.png")
+#france.flag.attach(io: File.open("#{Rails.root}/resources/flags/france.png"), filename: "france.png")
 belgium = Country.create(name: 'Belgium', country_code: 'BG')
-belgium.flag.attach(io: File.open("#{Rails.root}/resources/flags/belgium.png"), filename: "belgium.png")
+#belgium.flag.attach(io: File.open("#{Rails.root}/resources/flags/belgium.png"), filename: "belgium.png")
 germany = Country.create(name: 'Germany', country_code: 'G')
-germany.flag.attach(io: File.open("#{Rails.root}/resources/flags/germany.png"), filename: "germany.png")
+#germany.flag.attach(io: File.open("#{Rails.root}/resources/flags/germany.png"), filename: "germany.png")
 
 # Labels
 geffen = RecordCompany.create(name: 'Geffen', long_name: 'Geffen Records')
-geffen.photo.attach(io: File.open("#{Rails.root}/resources/labels/geffen.png"), filename: "geffen.png")
+# geffen.photo.attach(io: File.open("#{Rails.root}/resources/labels/geffen.png"), filename: "geffen.png")
 epic = RecordCompany.create(name: 'Epic', long_name: 'Epic Records')
 rca = RecordCompany.create(name: 'RCA', long_name: 'RCA Records')
-rca.photo.attach(io: File.open("#{Rails.root}/resources/labels/rca.png"), filename: "rca.png")
+#rca.photo.attach(io: File.open("#{Rails.root}/resources/labels/rca.png"), filename: "rca.png")
 wea = RecordCompany.create(name: 'WEA', long_name: 'WEA Records')
-wea.photo.attach(io: File.open("#{Rails.root}/resources/labels/wea.png"), filename: "wea.png")
+#wea.photo.attach(io: File.open("#{Rails.root}/resources/labels/wea.png"), filename: "wea.png")
 iso_records = RecordCompany.create(name: 'ISO', long_name: 'ISO Records')
 virgin = RecordCompany.create(name: 'Virgin', long_name: 'Virgin Records')
-virgin.photo.attach(io: File.open("#{Rails.root}/resources/labels/virgin.png"), filename: "virgin.png")
+#virgin.photo.attach(io: File.open("#{Rails.root}/resources/labels/virgin.png"), filename: "virgin.png")
 atlantic = RecordCompany.create(name: 'Atlantic', long_name: 'Atlantic Records')
 harvest = RecordCompany.create(name: 'Harvest', long_name: 'Harvest Records')
 
@@ -102,34 +102,3 @@ metralleta = Store.create(name: 'La Metralleta', address: 'Calle del Postigo de 
 discogs = Store.create( name: 'Discogs', description: '', online: '1')
 sevilla_record = Store.create(name: 'Record Sevilla', address: 'Calle Amor de Dios, 17, 41002 Sevilla', online: 0)
 todocoleccion = Store.create(name: 'Todocolección', address: '', online: 1)
-
-no_plan = Post.create( title: 'No Plan', artist_id: bowie.id, year: '2016', country_id: europe.id, format_id: lp.id, store_id: sevilla_record.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_near_mint.id, record_company_id: iso_records.id, discogsid: '10150675', serial_no: '88985419651', inshrink: 1, featured: 0, buyed_at: DateTime.parse("12/11/2017 11:58") )
-no_plan.front.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-_no_plan/front.jpg"), filename: "front.jpg")
-no_plan.back.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-_no_plan/back.jpg"), filename: "back.jpg")
-no_plan.vinyl1.attach(io: File.open("#{Rails.root}/resources/records/david_bowie_-_no_plan/vinyl1.jpg"), filename: "vinyl1.jpg")
-
-but_seriously = Post.create( title: '...But Seriously', artist_id: philcollins.id, year: '1989', country_id: europe.id, format_id: lp.id, store_id: no_store.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good.id, record_company_id: wea.id, discogsid: '499511', serial_no: '256919 -1')
-but_seriously.front.attach(io: File.open("#{Rails.root}/resources/records/phil_collins_-_but_seriously/front.png"), filename: "front.png")
-but_seriously.back.attach(io: File.open("#{Rails.root}/resources/records/phil_collins_-_but_seriously/back.jpg"), filename: "back.jpg")
-but_seriously.vinyl1.attach(io: File.open("#{Rails.root}/resources/records/phil_collins_-_but_seriously/vinyl1.jpg"), filename: "vinyl1.jpg")
-
-
-dreams_in_the_dark = Post.create( title: 'Dreams in the dark', artist_id: badlands.id, year: '1989', country_id: us.id, format_id: seven_inch.id, store_id: discogs.id, media_grading_id: media_near_mint.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: atlantic.id, discogsid: '6807670', serial_no: '7-88888', notes: 'Signed by Eric Singer in 2018', buyed_at: DateTime.parse("23/11/2015 14:50"), featured: 1)
-dreams_in_the_dark.front.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/front.jpg"), filename: "front.jpg")
-dreams_in_the_dark.back.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/back.jpg"), filename: "back.jpg")
-dreams_in_the_dark.vinyl1.attach(io: File.open("#{Rails.root}/resources/records/badlands_-_dreams_in_the_dark/vinyl-a.jpg"), filename: "vinyl-a.jpg")
-
-whole_lotta_love = Post.create( title: 'Whole Lotta Love', artist_id: ledzeppelin.id, year: '1969', country_id: france.id, format_id: seven_inch.id, store_id: todocoleccion.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good.id, record_company_id: atlantic.id, discogsid: '10081492', serial_no: '650.186', featured: 0)
-whole_lotta_love.front.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/front.jpg"), filename: "front.jpg")
-whole_lotta_love.back.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/back.jpg"), filename: "back.jpg")
-whole_lotta_love.vinyl1.attach(io: File.open("#{Rails.root}/resources/records/led_zeppelin_-_whole_lotta_love/vinyl_a.jpg"), filename: "vinyl_a.jpg")
-
-wish_you_were_here = Post.create( title: 'Wish You Were Here', artist_id: pinkfloyd.id, year: '1975', country_id: spain.id, format_id: lp.id, store_id: no_store.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: harvest.id, discogsid: '10657950', serial_no: 'J066-96918', featured: 0)
-wish_you_were_here.front.attach(io: File.open("#{Rails.root}/resources/records/pink_floyd_wish_you_were_here/front.png"), filename: "front.png")
-wish_you_were_here.back.attach(io: File.open("#{Rails.root}/resources/records/pink_floyd_wish_you_were_here/back.jpg"), filename: "front.jpg")
-
-bad_english_bad_english = Post.create( title: 'Bad English', artist_id: badenglish.id, year: '1989', country_id: us.id, format_id: lp.id, store_id: discogs.id, media_grading_id: media_very_good_plus.id, sleeve_grading_id: sleeve_very_good_plus.id, record_company_id: epic.id, discogsid: '1957874', serial_no: 'OE 45083', featured: 1, notes: 'Signed by Deen Castronovo in 2018')
-bad_english_bad_english.front.attach(io: File.open("#{Rails.root}/resources/records/bad_english_bad_english/front.jpg"), filename: "front.jpg")
-bad_english_bad_english.back.attach(io: File.open("#{Rails.root}/resources/records/bad_english_bad_english/back.jpg"), filename: "back.jpg")
-bad_english_bad_english.vinyl1.attach(io: File.open("#{Rails.root}/resources/records/bad_english_bad_english/vinyl1.jpg"), filename: "vinyl1.jpg")
-bad_english_bad_english.vinyl2.attach(io: File.open("#{Rails.root}/resources/records/bad_english_bad_english/vinyl2.jpg"), filename: "vinyl2.jpg")

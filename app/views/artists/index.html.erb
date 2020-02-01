@@ -5,7 +5,7 @@
           <%= link_to artist do %>
             <div class="text-center">
             <% if artist.avatar.attached? %>
-              <%= (link_to (image_tag url_for(artist.avatar), class: "rounded-circle", size: '230x230'), posts_path(artist: artist.name)) %>
+              <%= (link_to (image_tag artist.image_url, class: "rounded-circle", size: '230x230'), posts_path(artist: artist.name)) %>
             <% else %>
               <%= (link_to (image_tag url_for("user.png"), class: "rounded-circle", size: '230x230'), posts_path(artist: artist.name)) %>
             <% end %>

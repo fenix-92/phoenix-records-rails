@@ -12,10 +12,7 @@ class Post < ApplicationRecord
   scope :by_label, lambda { | label |
     joins(:record_company).where(record_companies: { name: label })
   }
-  has_one_attached :front
-  has_one_attached :back
-  has_one_attached :vinyl1
-  has_one_attached :vinyl2
+  mount_uploader :front, FrontUploader
   has_one_attached :audio_sample
   belongs_to :format
   belongs_to :artist
