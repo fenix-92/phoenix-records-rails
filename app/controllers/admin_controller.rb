@@ -5,7 +5,7 @@ class AdminController < ApplicationController
   end
 
   def records
-    @posts = Post.order('created_at DESC').with_attached_front
+    @posts = Post.order('created_at DESC')
   end
 
   def labels

@@ -38,15 +38,15 @@
                     <td><%= post.artist.name %></td>
                     <td><%= post.title %></td>
                     <td>
-                      <% if post.front.attached? %>
-                        <%= image_tag url_for(post.front.variant(resize: '200x200')), class: "img-fuid front", size: '65x65' %>
+                      <% if post.image_front.present? %>
+                        <%= image_tag post.image_front.thumbnail.url %>
                       <% else %>
                         <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
                       <% end %>
                     </td>
                     <td>
-                      <% if post.back.attached? %>
-                        <%= image_tag url_for(post.back.variant(resize: '200x200')), class: "img-fuid front", size: '65x65' %>
+                      <% if post.image_back %>
+                        <%= image_tag post.image_back.thumbnail.url %>
                       <% else %>
                         <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
                       <% end %>
@@ -55,11 +55,7 @@
                     <td><%= post.sleeve_grading.name %></td>
 
                     <td>
-                      <% if post.country.flag.attached? %>
-                        <%= image_tag url_for(post.country.flag.variant(resize: '65x65')), class: "img-fuid front" %>
-                      <% else %>
-                        <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
-                      <% end %>
+      
                     </td>
                     <td><%= post.year %></td>
                     <!-- Special attributes -->
