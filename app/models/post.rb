@@ -12,7 +12,7 @@ class Post < ApplicationRecord
   scope :by_label, lambda { | label |
     joins(:record_company).where(record_companies: { name: label })
   }
-  mount_uploader :image_front, PostUploader
+  mount_uploader :image_front, FrontUploader
   has_one_attached :audio_sample
   belongs_to :format
   belongs_to :artist

@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_125529) do
   create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "discogsid"
-    t.string "image_url"
+    t.string "artist_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

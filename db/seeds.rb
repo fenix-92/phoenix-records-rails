@@ -21,7 +21,7 @@ cassette_single = Format.create(name: 'Cassette Single', long_name: 'Cassette Si
 
 
 # Artists
-badlands = Artist.create( name: 'Badlands', discogsid: '323881', image_url: "https://res.cloudinary.com/hbjmnmqbr/image/upload/v1579384923/artists/badlands_lc9voy.jpg")
+badlands = Artist.create( name: 'Badlands', discogsid: '323881')
 #badlands.avatar.attach(io: File.open("#{Rails.root}/resources/artists/badlands.jpg"), filename: "badlands.jpg")
 defleppard = Artist.create( name: 'Def Leppard', discogsid: '252443')
 #defleppard.avatar.attach(io: File.open("#{Rails.root}/resources/artists/def-leppard.jpg"), filename: "def-leppard.jpg")

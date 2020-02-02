@@ -39,7 +39,7 @@
                     <td><%= post.title %></td>
                     <td>
                       <% if post.image_front.present? %>
-                        <%= image_tag post.image_front.thumbnail.url %>
+                        <%= image_tag post.image_front.admin.url, class: "img-fuid front" %>
                       <% else %>
                         <%= image_tag url_for("default.png"), class: "img-fuid front", size: '65x65' %>
                       <% end %>
@@ -55,7 +55,7 @@
                     <td><%= post.sleeve_grading.name %></td>
 
                     <td>
-      
+
                     </td>
                     <td><%= post.year %></td>
                     <!-- Special attributes -->

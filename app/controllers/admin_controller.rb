@@ -34,7 +34,7 @@ class AdminController < ApplicationController
   end
 
   def artists
-    @artists = Artist.order('created_at DESC').with_attached_avatar
+    @artists = Artist.order('created_at DESC')
   end
 
   def articles
@@ -42,7 +42,7 @@ class AdminController < ApplicationController
   end
 
   def labels
-    @labels = RecordCompany.order('created_at DESC').with_attached_photo
+    @labels = RecordCompany.order('created_at DESC')
   end
 
     def check_user_logged
