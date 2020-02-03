@@ -37,6 +37,6 @@ class RecordCompaniesController < ApplicationController
   private
 
   def record_company_params
-    params.require(:record_company).permit(:name, :long_name, :photo)
+    params.require(:record_company).permit(:name, :long_name, :image_label)
   end
 end

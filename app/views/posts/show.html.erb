@@ -24,19 +24,19 @@
 
               });
           </script>
-          <% if @post.front.attached? %>
+          <% if @post.image_front.present? %>
             <ul id="lightgallery">
-              <a title="View images" href="<%= url_for @post.front %>">
-                <%= image_tag url_for(@post.front.variant(resize: '500x500')), class: "img-fluid box", size: '400x400' %>
+              <a title="View images" href="<%= (@post.image_front.url) %>">
+                <%= image_tag (@post.image_front.url), class: "img-fluid box", size: '400x400' %>
               </a>
-              <% if @post.back.attached? %>
-                <li data-src="<%= url_for @post.back %>"></li>
+              <% if @post.image_back.present? %>
+                <li data-src="<%= (@post.image_back.url) %>"></li>
               <% end %>
-              <% if @post.vinyl1.attached? %>
-                <li data-src="<%= url_for @post.vinyl1 %>"></li>
+              <% if @post.image_vinyl_a.present? %>
+                <li data-src="<%= (@post.image_vinyl_a.url) %>"></li>
               <% end %>
-              <% if @post.vinyl2.attached? %>
-                <li data-src="<%= url_for @post.vinyl2 %>"></li>
+              <% if @post.image_vinyl_b.present? %>
+                <li data-src="<%= (@post.image_vinyl_b.url) %>"></li>
               <% end %>
               </ul>
           <% else %>
@@ -70,18 +70,20 @@
                 <% end %>
               </td>
             </tr>
-            <% if @post.country.flag.attached? %>
+            <% if @post.country.image_flag.present? %>
             <tr>
               <td><b>Country:</b></td>
               <td>
-                  <%= (link_to (image_tag url_for(@post.country.flag), class: "img-fluid", size: '30x30'), posts_path(country: @post.country.name)) %>
+                  <%= (link_to (image_tag @post.country.image_flag.url, class: "img-fluid", size: '30x30'), posts_path(country: @post.country.name)) %>
               </td>
             </tr>
             <% end %>
+            <% if @post.year.present? %>
             <tr>
               <td><b>Released:</b></td>
               <td><%= link_to @post.year, posts_path(year: @post.year) %></td>
             </tr>
+            <% end %>
             <tr>
               <td><b>Store:</b></td>
               <td><%= link_to @post.store.name, posts_path(store: @post.store.name) %></td>
@@ -129,10 +131,6 @@
           <% if @post.notes.present? %>
             <b>Notes:</b><br>
             <p><%= @post.notes %></p>
-          <% end %>
-          <br>
-          <% if @post.audio_sample.attached? %>
-            <p><b>Audio</b></p>
           <% end %>
         </div>
       </div>

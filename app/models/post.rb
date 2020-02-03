@@ -13,7 +13,9 @@ class Post < ApplicationRecord
     joins(:record_company).where(record_companies: { name: label })
   }
   mount_uploader :image_front, FrontUploader
-  has_one_attached :audio_sample
+  mount_uploader :image_back, BackUploader
+  mount_uploader :image_vinyl_a, VinylAUploader
+  mount_uploader :image_vinyl_b, VinylBUploader
   belongs_to :format
   belongs_to :artist
   belongs_to :media_grading

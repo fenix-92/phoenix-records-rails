@@ -26,7 +26,7 @@
                     <td><%= c.name %></td>
                     <td><%= c.country_code %></td>
                     <td>
-                    <% if c.flag.attached? %>
+                    <% if c.image_flag.present? %>
                       <%= image_tag url_for(c.flag), class: "img-fluid", size: '65x65' %>
                     <% else %>
 

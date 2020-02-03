@@ -26,8 +26,8 @@
                     <td><%= c.name %></td>
                     <td><%= c.long_name %></td>
                     <td>
-                      <% if c.photo.attached? %>
-                        <%= image_tag url_for(c.photo), class: "img-fluid", size: '65x65' %>
+                      <% if c.image_label.present? %>
+                        <%= image_tag c.image_label.admin.url, class: "img-fluid", size: '65x65' %>
                       <% end %>
                     </td>
                     <td><%= link_to 'Delete',  c,  method: :delete, data: { confirm: 'Are you sure?' } %></td>

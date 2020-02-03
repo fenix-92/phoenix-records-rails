@@ -82,6 +82,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :artist_id, :country_id, :store_id, :format_id, :sleeve_grading_id, :buyed_at, :media_grading_id, :record_company_id, :store_id, :year, :discogsid, :image_front, :back, :audio_sample, :vinyl1, :vinyl2, :q, :hex_color, :featured, :original_inner, :misprint, :double_lp, :unofficial, :colored, :first_press, :gatefold, :notes, :inshrink, :serial_no, :matrix_a, :matrix_b, :sealed)
+    params.require(:post).permit(:title, :artist_id, :country_id, :store_id, :format_id, :sleeve_grading_id, :buyed_at, :media_grading_id, :record_company_id, :store_id, :year, :discogsid, :image_front, :image_back, :image_vinyl_a, :image_vinyl_b, :audio_sample, :vinyl1, :vinyl2, :q, :hex_color, :featured, :original_inner, :misprint, :double_lp, :unofficial, :colored, :first_press, :gatefold, :notes, :inshrink, :serial_no, :matrix_a, :matrix_b, :sealed)
   end
 end

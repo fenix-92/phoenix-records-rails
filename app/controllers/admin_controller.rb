@@ -30,7 +30,7 @@ class AdminController < ApplicationController
   end
 
   def country
-    @country = Country.all.with_attached_flag
+    @country = Country.all
   end
 
   def artists

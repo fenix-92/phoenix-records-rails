@@ -2,61 +2,65 @@
   <br>
     <div class="col-md-4 text-center">
       <%= form_with(model: @post, local: true) do |f| %>
-        <%= f.label :title %>
-        <%= f.text_field :title, :class => "form-control" %><br><br>
-        <%= f.label :artist %>
-        <%= collection_select(:post, :artist_id, Artist.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
-        <%= f.label :year %>
-        <%= f.text_field :year, :class => "form-control" %><br><br>
-        <%= f.label :country %>
-        <%= collection_select(:post, :country_id, Country.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
-        <%= f.label :format %>
-        <%= collection_select(:post, :format_id, Format.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
-        <%= f.label :media_grading %>
-        <%= collection_select(:post, :media_grading_id, MediaGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
-        <%= f.label :sleeve_grading %>
-        <%= collection_select(:post, :sleeve_grading_id, SleeveGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
-        <%= f.label :label %>
-        <%= collection_select(:post, :record_company_id, RecordCompany.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
-        <%= f.label :featured %>
-        <%= f.check_box :featured, :class => "" %>
-        <%= f.label :in_shrink %>
-        <%= f.check_box :inshrink, :class => "" %>
-        <%= f.label :sealed %>
-        <%= f.check_box :sealed, :class => "" %><br><br>
-        <%= f.label :gatefold %>
-        <%= f.check_box :gatefold, :class => "" %>
-        <%= f.label :original_inner %>
-        <%= f.check_box :original_inner, :class => "" %><br><br>
-        <%= f.label :first_press %>
-        <%= f.check_box :first_press, :class => "" %>
-        <%= f.label :double_lp %>
-        <%= f.check_box :double_lp, :class => "" %>
-        <%= f.label :misprint %>
-        <%= f.check_box :misprint, :class => "" %><br><br>
-        <%= f.label :colored %>
-        <%= f.check_box :colored, :class => "" %>
-        <%= f.label :unofficial %>
-        <%= f.check_box :unofficial, :class => "" %><br><br>
-        <%= f.label :discogsid %><br>
-        <%= f.text_field :discogsid, :class => "form-control" %><br><br>
-        <%= f.label :serial_no %><br>
-        <%= f.text_field :serial_no, :class => "form-control" %><br><br>
-        <%= f.label :matrix_a %><br>
-        <%= f.text_field :matrix_a, :class => "form-control" %><br><br>
-        <%= f.label :matrix_b %><br>
-        <%= f.text_field :matrix_b, :class => "form-control" %><br><br>
-        <%= f.label :front %><br>
-        <%= f.file_field :front, :class => ""  %><br><br>
-        <%= f.label :back %><br>
-        <%= f.file_field :back, :class => ""  %><br><br>
-        <%= f.label :notes %>
-        <%= f.text_area :notes, :class => "form-control" %><br><br>
-        <%= f.label :store %>
-        <%= collection_select(:post, :store_id, Store.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
-        <%= f.label :audio_sample %><br>
-        <%= f.file_field :audio_sample, :class => ""  %><br><br>
-        <%= f.submit %>
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => "form-control" %><br><br>
+      <%= f.label :artist %>
+      <%= collection_select(:post, :artist_id, Artist.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+      <%= f.label :year %>
+      <%= f.text_field :year, :class => "form-control" %><br><br>
+      <%= f.label :country %>
+      <%= collection_select(:post, :country_id, Country.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+      <%= f.label :format %>
+      <%= collection_select(:post, :format_id, Format.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+      <%= f.label :media_grading %>
+      <%= collection_select(:post, :media_grading_id, MediaGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+      <%= f.label :sleeve_grading %>
+      <%= collection_select(:post, :sleeve_grading_id, SleeveGrading.all, :id, :text, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+      <%= f.label :label %>
+      <%= collection_select(:post, :record_company_id, RecordCompany.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+      <%= f.label :featured %>
+      <%= f.check_box :featured, :class => "" %>
+      <%= f.label :in_shrink %>
+      <%= f.check_box :inshrink, :class => "" %>
+      <%= f.label :sealed %>
+      <%= f.check_box :sealed, :class => "" %><br><br>
+      <%= f.label :gatefold %>
+      <%= f.check_box :gatefold, :class => "" %>
+      <%= f.label :original_inner %>
+      <%= f.check_box :original_inner, :class => "" %><br><br>
+      <%= f.label :first_press %>
+      <%= f.check_box :first_press, :class => "" %>
+      <%= f.label :double_lp %>
+      <%= f.check_box :double_lp, :class => "" %>
+      <%= f.label :misprint %>
+      <%= f.check_box :misprint, :class => "" %><br><br>
+      <%= f.label :colored %>
+      <%= f.check_box :colored, :class => "" %>
+      <%= f.label :unofficial %>
+      <%= f.check_box :unofficial, :class => "" %><br><br>
+      <%= f.label :discogsid %><br>
+      <%= f.text_field :discogsid, :class => "form-control" %><br><br>
+      <%= f.label :serial_no %><br>
+      <%= f.text_field :serial_no, :class => "form-control" %><br><br>
+      <%= f.label :matrix_a %><br>
+      <%= f.text_field :matrix_a, :class => "form-control" %><br><br>
+      <%= f.label :matrix_b %><br>
+      <%= f.text_field :matrix_b, :class => "form-control" %><br><br>
+      <%= f.label :front %><br>
+      <%= f.file_field :image_front, :class => ""  %><br><br>
+      <%= f.label :back %><br>
+      <%= f.file_field :image_back, :class => ""  %><br><br>
+      <%= f.label :image_vinyl_a %><br>
+      <%= f.file_field :image_vinyl_a, :class => ""  %><br><br>
+      <%= f.label :image_vinyl_b %><br>
+      <%= f.file_field :image_vinyl_b, :class => ""  %><br><br>
+      <%= f.label :notes %>
+      <%= f.text_area :notes, :class => "form-control" %><br><br>
+      <%= f.label :store %>
+      <%= collection_select(:post, :store_id, Store.all, :id, :name, {:prompt => true, :multiple=>false}, {class: "form-control"})  %><br><br>
+      <%= f.label :audio_sample %><br>
+      <%= f.file_field :audio_sample, :class => ""  %><br><br>
+      <%= f.submit %>
       <% end %>
 </div>
 </div>

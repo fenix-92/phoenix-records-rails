@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_125529) do
   create_table "countries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "country_code"
+    t.string "image_flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -116,6 +117,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_125529) do
   create_table "record_companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "long_name"
+    t.string "image_label"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

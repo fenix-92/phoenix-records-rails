@@ -2,9 +2,9 @@
   <li>
     <%= link_to post do %>
       <div class="text-center">
-        <% if post.front.attached? %>
+        <% if post.image_front.present? %>
         <div class="record">
-          <%= image_tag url_for(post.front), class: "img-fluid box sleeve", :size => "300x300", :crop => :fill %>
+          <%= image_tag post.image_front.url, class: "img-fluid box sleeve", :size => "300x300", :crop => :fill %>
         </div>
         <% else %>
           <%= image_tag url_for("default.png"), class: "img-fluid box", size: '300x300' %>
