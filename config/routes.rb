@@ -24,6 +24,13 @@ Rails.application.routes.draw do
 
   resources :posts, :artists, :record_companies, :formats, :articles, :sleeve_gradings, :media_gradings, :countries
 
+  namespace :api do
+    namespace :v1 do
+      resources :artists
+      resources :posts
+    end
+  end
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
