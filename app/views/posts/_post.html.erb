@@ -1,19 +1,18 @@
 <% @posts.each do |post| %>
   <li>
     <%= link_to post do %>
-      <div class="text-center">
         <% if post.image_front.present? %>
-          <%= image_tag post.image_front.url, class: "record img-fluid", :size => "300x300", :crop => :fill %>
+          <%= image_tag post.image_front.url, class: "img-fluid box", :size => "300x300", :crop => :fill %>
         <% else %>
           <%= image_tag url_for("default.png"), class: "img-fluid box", size: '300x300' %>
         <% end %>
-        <h4 style="color: #3C4858; font-weight: 200; margin-top: 10px; margin-bottom: 0px;">
-          <%= post.artist.name %> - <%= post.title %>
-        </h4>
-        <h3 style="color: #3C4858; font-weight: 300; margin: 0 0;">
-
+        <h3 style="color: #3C4858; font-weight: 300; margin-top: 10px; margin-bottom:0px;">
+          <%= post.title %>
         </h3>
-      </div>
+        <h4 style="color: #3C4858; font-weight: 200; margin-top:0px; margin-bottom: 0px;">
+          <%= post.artist.name %>
+        </h4>
+        <br>
     <% end %>
   </li>
 <% end %>
