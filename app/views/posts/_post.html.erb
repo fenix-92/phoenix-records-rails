@@ -2,9 +2,9 @@
   <li>
     <%= link_to post do %>
         <% if post.image_front.present? %>
-          <%= image_tag post.image_front.url, class: "img-fluid box", :size => "300x300", :crop => :fill %>
+          <%= image_tag post.image_front.url, class: "img-fluid record", :size => "300x300", :crop => :fill %>
         <% else %>
-          <%= image_tag url_for("default.png"), class: "img-fluid box", size: '300x300' %>
+          <%= image_tag url_for("default.png"), class: "img-fluid record", size: '300x300' %>
         <% end %>
         <h3 style="color: #3C4858; font-weight: 300; margin-top: 10px; margin-bottom:0px;">
           <%= post.title %>
