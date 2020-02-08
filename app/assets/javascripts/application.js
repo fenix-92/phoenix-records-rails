@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require turbolinks
-//= require core/bootstrap-material-design.min
+//= require jquery_ujs
 //= require core/jquery.min
 //= require core/popper.min
+//= require turbolinks
+//= require core/bootstrap-material-design.min
 //= require plugins/jquery.sharrre
 //= require plugins/moment.min
 //= require plugins/nouislider.min
@@ -23,7 +24,7 @@
 //= require discogs-marketplace-js/util
 //= require material-kit
 //= require material-kit.min
-//= require toastr.js
+//= require toastr
 //= require activestorage
 //= require toastr.min
 //= require lightgallery
