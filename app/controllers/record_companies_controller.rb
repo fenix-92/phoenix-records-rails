@@ -26,6 +26,11 @@ class RecordCompaniesController < ApplicationController
     end
   end
 
+  def edit
+    check_user_logged
+    @label = RecordCompany.find(params[:id])
+  end
+
   def update
     check_user_logged
     @label = RecordCompany.find(params[:id])

@@ -8,13 +8,26 @@ class CountriesController < ApplicationController
 
   def create
     check_user_logged
-    # render plain: params[:artist].inspect
     @country = Country.new country_params
-    # @artist.avatar.attach(params[:avatar])
     if @country.save
       redirect_to admin_countries_path, success: "Country created"
     else
       render 'new', alert: "Country don't created"
+    end
+  end
+
+  def edit
+    check_user_logged
+    @country = Country.find(params[:id])
+  end
+
+  def update
+    check_user_logged
+    @country = Country.find(params[:id])
+    if @country.update(country_params)
+      redirect_to admin_countries_path, success: "Country updated"
+    else
+      render 'edit', alert: "Country don't updated"
     end
   end
 
