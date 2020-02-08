@@ -44,7 +44,10 @@ class CountriesController < ApplicationController
     @country = Country.find(params[:id])
     @country.destroy
 
-    redirect_to admin_countries_path, success: "Country deleted"
+    respond_to do |format|
+      format.html { redirect_to admin_countries_path }
+      format.json { head :no_content }
+    end
   end
 
   private
