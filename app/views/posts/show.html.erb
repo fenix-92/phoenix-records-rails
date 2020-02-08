@@ -26,8 +26,8 @@
           </script>
           <% if @post.image_front.present? %>
             <ul id="lightgallery">
-              <a title="View images" href="<%= (@post.image_front.url) %>">
-                <%= image_tag (@post.image_front.url), class: "img-fluid box", size: '400x400' %>
+              <a title="View images" href="<%= (@post.image_front.standard.url) %>">
+                <%= image_tag (@post.image_front.standard.url), class: "img-fluid record", size: '400x400' %>
               </a>
               <% if @post.image_back.present? %>
                 <li data-src="<%= (@post.image_back.url) %>"></li>
@@ -40,7 +40,7 @@
               <% end %>
               </ul>
           <% else %>
-            <%= image_tag url_for("default.png"), class: "img-fuid" %>
+            <%= image_tag url_for("default.png"), class: "img-fuid record" %>
           <% end %>
           <br>
           </div>

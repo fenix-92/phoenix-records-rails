@@ -5,7 +5,7 @@
           <%= link_to artist do %>
             <div class="text-center">
               <% if artist.artist_image.present? %>
-                <%= image_tag artist.image.url %>
+                <%= image_tag artist.artist_image.front.url, class: "rounded-circle", size: '230x230' %>
               <% else %>
               <%= (link_to (image_tag url_for("user.png"), class: "rounded-circle", size: '230x230'), posts_path(artist: artist.name)) %>
             <% end %>

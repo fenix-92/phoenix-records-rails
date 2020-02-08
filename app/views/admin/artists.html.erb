@@ -27,7 +27,7 @@
                     <td><%= artist.id %></td>
                     <td>
                       <% if artist.artist_image.present? %>
-                        <%= image_tag artist.artist_image.admin.url %>
+                        <%= image_tag artist.artist_image.admin.url, class: "rounded-circle", size: '65x65' %>
                       <% else %>
                         <%= image_tag url_for("user.png"), class: "rounded-circle", size: '65x65' %>
                       <% end %>

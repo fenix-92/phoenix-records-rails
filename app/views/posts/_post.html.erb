@@ -2,7 +2,7 @@
   <li>
     <%= link_to post do %>
         <% if post.image_front.present? %>
-          <%= image_tag post.image_front.url, class: "img-fluid record", :size => "300x300", :crop => :fill %>
+          <%= image_tag post.image_front.front.url, class: "img-fluid record", :size => "300x300", :crop => :fill %>
         <% else %>
           <%= image_tag url_for("default.png"), class: "img-fluid record", size: '300x300' %>
         <% end %>

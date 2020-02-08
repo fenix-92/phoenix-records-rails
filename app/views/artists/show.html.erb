@@ -4,8 +4,8 @@
       <div class="card-avatar">
         <br><br>
         <a href="">
-        <% if @artist.artist_image.present? %>
-          <%= image_tag artist.artist_image.url, class: "rounded-circle", size: '230x230' %>
+        <% if artist.artist_image.present? %>
+          <%= image_tag artist.artist_image.standard.url, class: "rounded-circle", size: '230x230' %>
         <% else %>
             <%= image_tag url_for("user.png"), class: "rounded-circle", size: '230x230' %>
         <% end %>

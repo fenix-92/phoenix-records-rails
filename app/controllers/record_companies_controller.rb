@@ -26,6 +26,16 @@ class RecordCompaniesController < ApplicationController
     end
   end
 
+  def update
+    check_user_logged
+    @label = RecordCompany.find(params[:id])
+    if @label.update(record_company_params)
+      redirect_to admin_labels_path, success: "Label updated"
+    else
+      render 'edit', alert: "Label don't updated"
+    end
+  end
+
   def destroy
     check_user_logged
     @label = RecordCompany.find(params[:id])

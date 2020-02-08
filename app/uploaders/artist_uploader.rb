@@ -19,11 +19,11 @@ class ArtistUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [500, 500, :north]
   end
 
-  version :thumbnail do
-    resize_to_fit(100, 100)
+  version :front do
+    process :resize_to_fill => [300, 300, :north]
   end
 
   version :admin do
-    resize_to_fit(65, 65)
+    resize_to_fit(100, 100)
   end
 end
