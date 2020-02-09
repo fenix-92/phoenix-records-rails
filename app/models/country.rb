@@ -1,3 +1,4 @@
 class Country < ApplicationRecord
-  mount_uploader :image_flag, FlagUploader
+  has_many :posts, :dependent => :delete_all
+  mount_uploader :image_flag, FlagUploader,  dependent: :destroy
 end
