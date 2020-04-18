@@ -20,7 +20,7 @@ class Post < ApplicationRecord
   belongs_to :artist
   belongs_to :media_grading
   belongs_to :sleeve_grading
-  belongs_to :country, :dependent => :delete_all
+  belongs_to :country, :dependent => :delete
   belongs_to :record_company
   belongs_to :store
 end
