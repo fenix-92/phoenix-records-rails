@@ -5,7 +5,9 @@
   <br>
   <% years = Array.new %>
   <% @posts_all.each do |post| %>
-     <% years << post.year %>
+     <% if post.year %>
+        <% years << post.year %>
+     <% end %>
   <% end %>
   <% b = Hash.new(0) %>
   <% years.each do |v| %>
