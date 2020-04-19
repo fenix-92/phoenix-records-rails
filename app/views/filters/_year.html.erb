@@ -11,7 +11,7 @@
   <% years.each do |v| %>
      <% b[v] += 1 %>
   <% end %>
-  <% b.each do |k, v| %>
+  <% b.first(6).each do |k, v| %>
     <span>
       <%= link_to k, params.merge({:year => k}).to_enum.to_h %>
     </span>
