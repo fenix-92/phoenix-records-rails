@@ -196,7 +196,9 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.1009)
-    mimemagic (0.3.4)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
@@ -218,7 +220,8 @@ GEM
       activesupport (>= 5.2)
     popper_js (1.16.0)
     public_suffix (4.0.4)
-    puma (3.12.4)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     rack (2.2.2)
     rack-proxy (0.6.5)
       rack
@@ -347,7 +350,7 @@ DEPENDENCIES
   pg
   pg_search
   popper_js (>= 1.14.3)
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails!
   sass-rails (~> 5.0)
   selenium-webdriver
